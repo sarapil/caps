@@ -1,0 +1,102 @@
+[
+  {
+    "name": "CAPS_view_dashboard",
+    "category": "Module",
+    "description": "Access the CAPS Admin dashboard"
+  },
+  {
+    "name": "CAPS_view_graph",
+    "category": "Module",
+    "description": "Access the Capability Graph explorer"
+  },
+  {
+    "name": "CAPS_compare_users",
+    "category": "Module",
+    "description": "Access the User Comparison tool"
+  },
+  {
+    "name": "CAPS_manage_capabilities",
+    "category": "Action",
+    "description": "Create, edit, delete Capabilities"
+  },
+  {
+    "name": "CAPS_manage_bundles",
+    "category": "Action",
+    "description": "Create, edit, delete Capability Bundles"
+  },
+  {
+    "name": "CAPS_manage_role_maps",
+    "category": "Action",
+    "description": "Create, edit, delete Role Capability Maps"
+  },
+  {
+    "name": "CAPS_assign_capabilities",
+    "category": "Action",
+    "description": "Assign capabilities to users"
+  },
+  {
+    "name": "CAPS_manage_groups",
+    "category": "Action",
+    "description": "Create and manage Permission Groups"
+  },
+  {
+    "name": "CAPS_configure_field_maps",
+    "category": "Field",
+    "description": "Configure field-level restrictions"
+  },
+  {
+    "name": "CAPS_configure_action_maps",
+    "category": "Field",
+    "description": "Configure action-level restrictions"
+  },
+  {
+    "name": "CAPS_manage_policies",
+    "category": "Action",
+    "description": "Create and manage Capability Policies"
+  },
+  {
+    "name": "CAPS_approve_requests",
+    "category": "Action",
+    "description": "Approve or reject Capability Requests"
+  },
+  {
+    "name": "CAPS_view_audit_logs",
+    "category": "Report",
+    "description": "View CAPS Audit Log entries"
+  },
+  {
+    "name": "CAPS_view_reports",
+    "category": "Report",
+    "description": "Access Coverage, Matrix, and Audit reports"
+  },
+  {
+    "name": "CAPS_export_reports",
+    "category": "Report",
+    "description": "Export CAPS reports to CSV/PDF"
+  },
+  {
+    "name": "CAPS_configure_settings",
+    "category": "Action",
+    "description": "Modify CAPS Settings"
+  },
+  {
+    "name": "CAPS_manage_rate_limits",
+    "category": "Action",
+    "description": "Configure Capability Rate Limits"
+  },
+  {
+    "name": "CAPS_manage_integrations",
+    "category": "Action",
+    "description": "Configure CAPS Integration Packs"
+  },
+  {
+    "name": "CAPS_take_snapshots",
+    "category": "Action",
+    "description": "Create Capability Snapshots"
+  },
+  {
+    "name": "CAPS_manage_site_profile",
+    "category": "Action",
+    "description": "Configure CAPS Site Profile"
+  }
+]

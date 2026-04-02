@@ -1,0 +1,62 @@
+/* CAPS — Design Tokens / CSS Variables
+ * Brand color palette and design system tokens.
+ * Prefix: --caps-
+ */
+
+:root {
+  /* Primary */
+  --caps-primary: #EF4444;
+  --caps-primary-light: #EF444422;
+  --caps-primary-dark: #EF4444DD;
+
+  /* Secondary & Accent */
+  --caps-secondary: #64748B;
+  --caps-accent: #EF4444;
+
+  /* Semantic */
+  --caps-success: #10B981;
+  --caps-warning: #F59E0B;
+  --caps-danger: #EF4444;
+  --caps-info: #3B82F6;
+
+  /* Surfaces */
+  --caps-bg: #FFFFFF;
+  --caps-bg-subtle: #F8FAFC;
+  --caps-text: #1E293B;
+  --caps-text-muted: #64748B;
+  --caps-border: #E2E8F0;
+
+  /* Spacing */
+  --caps-space-xs: 0.25rem;
+  --caps-space-sm: 0.5rem;
+  --caps-space-md: 1rem;
+  --caps-space-lg: 1.5rem;
+  --caps-space-xl: 2rem;
+
+  /* Border radius */
+  --caps-radius-sm: 0.375rem;
+  --caps-radius-md: 0.5rem;
+  --caps-radius-lg: 0.75rem;
+  --caps-radius-xl: 1rem;
+
+  /* Shadows */
+  --caps-shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --caps-shadow-md: 0 4px 6px rgba(0,0,0,0.07);
+  --caps-shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+
+  /* Typography */
+  --caps-font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --caps-font-family-ar: "IBM Plex Sans Arabic", "Tajawal", sans-serif;
+}
+
+/* Dark mode overrides */
+[data-theme="dark"] {
+  --caps-bg: #0F172A;
+  --caps-bg-subtle: #1E293B;
+  --caps-text: #F1F5F9;
+  --caps-text-muted: #94A3B8;
+  --caps-border: #334155;
+  --caps-shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
+  --caps-shadow-md: 0 4px 6px rgba(0,0,0,0.4);
+  --caps-shadow-lg: 0 10px 15px rgba(0,0,0,0.5);
+}

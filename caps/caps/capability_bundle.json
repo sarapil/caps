@@ -1,0 +1,28 @@
+[
+  {
+    "name": "CAPS_full_access",
+    "capabilities": [
+      "CAPS_view_dashboard",
+      "CAPS_view_graph",
+      "CAPS_compare_users",
+      "CAPS_manage_capabilities",
+      "CAPS_manage_bundles",
+      "CAPS_manage_role_maps",
+      "CAPS_assign_capabilities",
+      "CAPS_manage_groups",
+      "CAPS_configure_field_maps",
+      "CAPS_configure_action_maps",
+      "CAPS_manage_policies",
+      "CAPS_approve_requests",
+      "CAPS_view_audit_logs",
+      "CAPS_view_reports",
+      "CAPS_export_reports",
+      "CAPS_configure_settings",
+      "CAPS_manage_rate_limits",
+      "CAPS_manage_integrations",
+      "CAPS_take_snapshots",
+      "CAPS_manage_site_profile"
+    ],
+    "description": "Full CAPS access"
+  }
+]
