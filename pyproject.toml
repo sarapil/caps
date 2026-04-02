@@ -1,0 +1,23 @@
+[project]
+name = "caps"
+authors = [
+    { name = "Arkan Labs", email = "dev@arkanlabs.com" }
+]
+description = "CAPS — Capability-Based Access Control System for Frappe"
+requires-python = ">=3.10"
+readme = "README.md"
+dynamic = ["version"]
+
+[build-system]
+requires = ["flit_core >=3.4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.module]
+name = "caps"
+
+[tool.ruff]
+line-length = 110
+indent-width = 4
+
+[tool.ruff.lint]
+select = ["F", "E", "W", "I"]

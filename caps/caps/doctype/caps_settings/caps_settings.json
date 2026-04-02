@@ -1,0 +1,259 @@
+{
+  "actions": [],
+  "creation": "2026-01-15 10:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "general_section",
+    "enable_caps",
+    "debug_mode",
+    "column_break_1",
+    "caps_version",
+    "cache_section",
+    "cache_ttl",
+    "column_break_2",
+    "field_map_cache_ttl",
+    "audit_section",
+    "audit_retention_days",
+    "column_break_3",
+    "enable_audit_logging",
+    "resolution_section",
+    "admin_bypass",
+    "column_break_4",
+    "guest_empty_set",
+    "notifications_section",
+    "expiry_warning_days",
+    "column_break_5",
+    "enable_expiry_notifications",
+    "delegation_section",
+    "enable_delegation",
+    "column_break_6",
+    "require_delegation_reason",
+    "advanced_notifications_section",
+    "notify_on_capability_change",
+    "email_on_request",
+    "column_break_7",
+    "enable_admin_digest",
+    "enable_group_hierarchy"
+  ],
+  "fields": [
+    {
+      "fieldname": "general_section",
+      "fieldtype": "Section Break",
+      "label": "General"
+    },
+    {
+      "default": "1",
+      "description": "Enable or disable CAPS enforcement globally. When disabled, all capability checks return True.",
+      "fieldname": "enable_caps",
+      "fieldtype": "Check",
+      "label": "Enable CAPS"
+    },
+    {
+      "default": "0",
+      "description": "When enabled, CAPS resolution details are logged to the Error Log for debugging.",
+      "fieldname": "debug_mode",
+      "fieldtype": "Check",
+      "label": "Debug Mode"
+    },
+    {
+      "fieldname": "column_break_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "description": "Current CAPS map version (auto-incremented on Field/Action map changes).",
+      "fieldname": "caps_version",
+      "fieldtype": "Int",
+      "label": "CAPS Version",
+      "read_only": 1
+    },
+    {
+      "fieldname": "cache_section",
+      "fieldtype": "Section Break",
+      "label": "Cache Settings"
+    },
+    {
+      "default": "300",
+      "description": "TTL (in seconds) for per-user capability cache in Redis. Default: 300s (5 min).",
+      "fieldname": "cache_ttl",
+      "fieldtype": "Int",
+      "label": "User Cache TTL (seconds)"
+    },
+    {
+      "fieldname": "column_break_2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "600",
+      "description": "TTL (in seconds) for field/action map cache in Redis. Default: 600s (10 min).",
+      "fieldname": "field_map_cache_ttl",
+      "fieldtype": "Int",
+      "label": "Field/Action Map Cache TTL (seconds)"
+    },
+    {
+      "fieldname": "audit_section",
+      "fieldtype": "Section Break",
+      "label": "Audit Settings"
+    },
+    {
+      "default": "90",
+      "description": "Number of days to retain CAPS Audit Logs. Logs older than this are deleted by the daily cleanup task.",
+      "fieldname": "audit_retention_days",
+      "fieldtype": "Int",
+      "label": "Audit Log Retention (days)"
+    },
+    {
+      "fieldname": "column_break_3",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "1",
+      "description": "Enable logging of capability checks, grants, and revocations to the CAPS Audit Log.",
+      "fieldname": "enable_audit_logging",
+      "fieldtype": "Check",
+      "label": "Enable Audit Logging"
+    },
+    {
+      "fieldname": "resolution_section",
+      "fieldtype": "Section Break",
+      "label": "Resolution Behaviour"
+    },
+    {
+      "default": "1",
+      "description": "When enabled, Administrator always gets all active capabilities (bypass CAPS).",
+      "fieldname": "admin_bypass",
+      "fieldtype": "Check",
+      "label": "Administrator Bypass"
+    },
+    {
+      "fieldname": "column_break_4",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "1",
+      "description": "When enabled, Guest users always resolve to an empty capability set.",
+      "fieldname": "guest_empty_set",
+      "fieldtype": "Check",
+      "label": "Guest Empty Set"
+    },
+    {
+      "fieldname": "notifications_section",
+      "fieldtype": "Section Break",
+      "label": "Expiry Notifications"
+    },
+    {
+      "default": "7",
+      "description": "Number of days before a time-boxed capability expires to send a warning notification. Set to 0 to disable.",
+      "fieldname": "expiry_warning_days",
+      "fieldtype": "Int",
+      "label": "Expiry Warning (days)"
+    },
+    {
+      "fieldname": "column_break_5",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "1",
+      "description": "Send system notifications to users when their time-boxed capabilities are about to expire.",
+      "fieldname": "enable_expiry_notifications",
+      "fieldtype": "Check",
+      "label": "Enable Expiry Notifications"
+    },
+    {
+      "fieldname": "delegation_section",
+      "fieldtype": "Section Break",
+      "label": "Delegation"
+    },
+    {
+      "default": "1",
+      "description": "Allow CAPS Managers to delegate capabilities they hold (marked as delegatable) to other users.",
+      "fieldname": "enable_delegation",
+      "fieldtype": "Check",
+      "label": "Enable Delegation"
+    },
+    {
+      "fieldname": "column_break_6",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "0",
+      "description": "Require a reason when delegating capabilities.",
+      "fieldname": "require_delegation_reason",
+      "fieldtype": "Check",
+      "label": "Require Delegation Reason"
+    },
+    {
+      "fieldname": "advanced_notifications_section",
+      "fieldtype": "Section Break",
+      "label": "Advanced Notifications & Groups"
+    },
+    {
+      "default": "1",
+      "description": "Notify users in-app and via realtime push when their capabilities are granted or revoked.",
+      "fieldname": "notify_on_capability_change",
+      "fieldtype": "Check",
+      "label": "Notify on Capability Change"
+    },
+    {
+      "default": "0",
+      "description": "Send email to CAPS Admins when a new capability request is submitted.",
+      "fieldname": "email_on_request",
+      "fieldtype": "Check",
+      "label": "Email on Request Submission"
+    },
+    {
+      "fieldname": "column_break_7",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "0",
+      "description": "Send a weekly summary email to CAPS Admins with request stats and expiring grants.",
+      "fieldname": "enable_admin_digest",
+      "fieldtype": "Check",
+      "label": "Enable Admin Digest"
+    },
+    {
+      "default": "1",
+      "description": "When enabled, members of child groups inherit capabilities from ancestor groups.",
+      "fieldname": "enable_group_hierarchy",
+      "fieldtype": "Check",
+      "label": "Enable Group Hierarchy"
+    }
+  ],
+  "issingle": 1,
+  "links": [],
+  "modified": "2026-01-15 10:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "CAPS",
+  "name": "CAPS Settings",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "print": 1,
+      "read": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "print": 1,
+      "read": 1,
+      "role": "CAPS Admin",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "read": 1,
+      "role": "CAPS Manager"
+    }
+  ],
+  "sort_field": "creation",
+  "sort_order": "DESC",
+  "states": []
+}

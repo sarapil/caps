@@ -1,0 +1,110 @@
+.caps-admin-page {
+	padding: 15px;
+}
+
+.caps-admin-header {
+	margin-bottom: 25px;
+}
+
+.caps-admin-header h2 {
+	margin-bottom: 5px;
+}
+
+/* ── Stat Cards ───────────────────────────────────────────────── */
+.caps-stat-card {
+	background: var(--card-bg, #fff);
+	border: 1px solid var(--border-color, #d1d8dd);
+	border-radius: 8px;
+	padding: 18px 15px;
+	text-align: center;
+	transition: box-shadow 0.2s;
+}
+
+.caps-stat-card:hover {
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.caps-stat-card .stat-value {
+	font-size: 28px;
+	font-weight: 700;
+	color: var(--text-color, #333);
+}
+
+.caps-stat-card .stat-label {
+	font-size: 12px;
+	color: var(--text-muted, #8d99a6);
+	margin-top: 4px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.stat-capabilities .stat-value { color: var(--blue-500, #2490ef); }
+.stat-users .stat-value { color: var(--green-500, #48bb78); }
+.stat-bundles .stat-value { color: var(--purple-500, #805ad5); }
+.stat-pending .stat-value { color: var(--orange-500, #ed8936); }
+
+/* ── Panels ───────────────────────────────────────────────────── */
+.caps-panel {
+	background: var(--card-bg, #fff);
+	border: 1px solid var(--border-color, #d1d8dd);
+	border-radius: 8px;
+	padding: 18px;
+}
+
+.caps-panel h4 {
+	margin-top: 0;
+	margin-bottom: 15px;
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.3px;
+	color: var(--heading-color, #333);
+}
+
+/* ── User Lookup Results ──────────────────────────────────────── */
+.caps-user-caps-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+
+.caps-badge {
+	font-size: 11px;
+	padding: 4px 8px;
+	border-radius: 4px;
+	background-color: var(--blue-100, #e3effd);
+	color: var(--blue-700, #1565c0);
+	font-weight: 500;
+}
+
+/* ── Quick Actions ────────────────────────────────────────────── */
+.caps-quick-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.caps-quick-actions .btn {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+/* ── Tables ───────────────────────────────────────────────────── */
+.caps-panel .table {
+	margin-bottom: 0;
+	font-size: 12px;
+}
+
+.caps-panel .table th {
+	border-top: none;
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: 11px;
+	letter-spacing: 0.3px;
+	color: var(--text-muted, #8d99a6);
+}
+
+.caps-panel .table td {
+	vertical-align: middle;
+}

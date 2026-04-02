@@ -1,0 +1,80 @@
+{
+ "actions": [],
+ "autoname": "field:role",
+ "creation": "2026-03-12 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "role",
+  "section_capabilities",
+  "role_capabilities",
+  "section_bundles",
+  "role_bundles"
+ ],
+ "fields": [
+  {
+   "fieldname": "role",
+   "fieldtype": "Link",
+   "label": "Role",
+   "options": "Role",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "section_capabilities",
+   "fieldtype": "Section Break",
+   "label": "Direct Capabilities"
+  },
+  {
+   "fieldname": "role_capabilities",
+   "fieldtype": "Table",
+   "label": "Capabilities",
+   "options": "Role Capability Item"
+  },
+  {
+   "fieldname": "section_bundles",
+   "fieldtype": "Section Break",
+   "label": "Bundles"
+  },
+  {
+   "fieldname": "role_bundles",
+   "fieldtype": "Table",
+   "label": "Bundles",
+   "options": "Role Capability Bundle"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-03-12 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "CAPS",
+ "name": "Role Capability Map",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "CAPS Admin",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "CAPS Manager"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "role",
+ "track_changes": 1
+}

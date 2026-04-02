@@ -1,0 +1,154 @@
+/* ================================================================
+   CAPS Sidebar — Slim Icon-Only + Hover Expand
+   ================================================================ */
+
+/* ── Base ──────────────────────────────────────────────────── */
+.caps-sidebar {
+	position: fixed;
+	top: var(--navbar-height, 56px);
+	left: 0;
+	bottom: 0;
+	width: 220px;
+	background: var(--card-bg, #fff);
+	border-right: 1px solid var(--border-color, #e2e6ea);
+	display: flex;
+	flex-direction: column;
+	z-index: 1020;
+	overflow-x: hidden;
+	overflow-y: auto;
+	transition: width 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.caps-sidebar-collapsed {
+	width: 52px;
+}
+
+/* ── Brand ─────────────────────────────────────────────────── */
+.caps-sidebar-brand {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 12px 14px;
+	border-bottom: 1px solid var(--border-color);
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.caps-sidebar-logo {
+	width: 26px;
+	height: 26px;
+	flex-shrink: 0;
+}
+
+.caps-sidebar-title {
+	font-weight: 700;
+	font-size: 14px;
+	color: var(--caps-brand, #10B981);
+	opacity: 1;
+	transition: opacity 0.15s;
+}
+
+.caps-sidebar-collapsed .caps-sidebar-title {
+	opacity: 0;
+	pointer-events: none;
+}
+
+/* ── Nav Items ─────────────────────────────────────────────── */
+.caps-sidebar-nav {
+	padding: 8px 6px;
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.caps-nav-item {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 8px 12px;
+	border-radius: 6px;
+	color: var(--text-color);
+	text-decoration: none;
+	white-space: nowrap;
+	overflow: hidden;
+	transition: background 0.15s, color 0.15s;
+	font-size: 13px;
+}
+
+.caps-nav-item:hover {
+	background: var(--caps-brand-bg-subtle, rgba(16, 185, 129, 0.08));
+	color: var(--caps-brand, #10B981);
+	text-decoration: none;
+}
+
+.caps-nav-active {
+	background: var(--caps-brand-bg-subtle, rgba(16, 185, 129, 0.12));
+	color: var(--caps-brand, #10B981);
+	font-weight: 600;
+}
+
+.caps-nav-icon {
+	font-size: 18px;
+	flex-shrink: 0;
+	width: 22px;
+	text-align: center;
+}
+
+.caps-nav-label {
+	opacity: 1;
+	transition: opacity 0.15s;
+}
+
+.caps-sidebar-collapsed .caps-nav-label {
+	opacity: 0;
+	pointer-events: none;
+}
+
+/* ── Dark Mode ─────────────────────────────────────────────── */
+html[data-theme="dark"] .caps-sidebar {
+	background: var(--card-bg, #1a1a2e);
+	border-right-color: var(--border-color, #333);
+}
+
+/* ── RTL ───────────────────────────────────────────────────── */
+html[dir="rtl"] .caps-sidebar {
+	left: auto;
+	right: 0;
+	border-right: none;
+	border-left: 1px solid var(--border-color);
+}
+
+/* ── Push content when sidebar is present ──────────────────── */
+body:has(.caps-sidebar) #page-container,
+body:has(.caps-sidebar) .page-container {
+	margin-left: 52px;
+	transition: margin-left 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body:has(.caps-sidebar:not(.caps-sidebar-collapsed)) #page-container,
+body:has(.caps-sidebar:not(.caps-sidebar-collapsed)) .page-container {
+	margin-left: 220px;
+}
+
+html[dir="rtl"] body:has(.caps-sidebar) #page-container,
+html[dir="rtl"] body:has(.caps-sidebar) .page-container {
+	margin-left: 0;
+	margin-right: 52px;
+}
+
+html[dir="rtl"] body:has(.caps-sidebar:not(.caps-sidebar-collapsed)) #page-container,
+html[dir="rtl"] body:has(.caps-sidebar:not(.caps-sidebar-collapsed)) .page-container {
+	margin-right: 220px;
+}
+
+/* ── Responsive: hide sidebar below 768px ──────────────────── */
+@media (max-width: 768px) {
+	.caps-sidebar {
+		display: none;
+	}
+	body:has(.caps-sidebar) #page-container,
+	body:has(.caps-sidebar) .page-container {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+}

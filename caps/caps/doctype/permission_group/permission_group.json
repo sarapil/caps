@@ -1,0 +1,176 @@
+{
+ "actions": [],
+ "autoname": "prompt",
+ "creation": "2026-03-12 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "label",
+  "group_type",
+  "sync_source",
+  "sync_query",
+  "column_break_1",
+  "sync_frequency",
+  "auto_sync",
+  "parent_group",
+  "section_management",
+  "managed_by",
+  "can_manager_add_members",
+  "can_manager_assign_bundles",
+  "section_members",
+  "members",
+  "section_capabilities",
+  "group_capabilities",
+  "section_bundles",
+  "group_bundles"
+ ],
+ "fields": [
+  {
+   "fieldname": "label",
+   "fieldtype": "Data",
+   "label": "Label",
+   "reqd": 1,
+   "in_list_view": 1,
+   "translatable": 1
+  },
+  {
+   "fieldname": "group_type",
+   "fieldtype": "Select",
+   "label": "Group Type",
+   "options": "Manual\nDepartment Sync\nBranch Sync\nCustom Query",
+   "default": "Manual",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "sync_source",
+   "fieldtype": "Data",
+   "label": "Sync Source",
+   "depends_on": "eval:['Department Sync','Branch Sync'].includes(doc.group_type)",
+   "description": "Department or Branch name to sync from"
+  },
+  {
+   "fieldname": "sync_query",
+   "fieldtype": "Code",
+   "label": "Sync Query",
+   "depends_on": "eval:doc.group_type=='Custom Query'",
+   "options": "Python",
+   "description": "Python expression returning list of user emails"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sync_frequency",
+   "fieldtype": "Select",
+   "label": "Sync Frequency",
+   "options": "Realtime\nHourly\nDaily",
+   "default": "Daily",
+   "depends_on": "eval:doc.group_type!='Manual'"
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_sync",
+   "fieldtype": "Check",
+   "label": "Auto Sync",
+   "depends_on": "eval:doc.group_type!='Manual'"
+  },
+  {
+   "fieldname": "parent_group",
+   "fieldtype": "Link",
+   "label": "Parent Group",
+   "options": "Permission Group"
+  },
+  {
+   "fieldname": "section_management",
+   "fieldtype": "Section Break",
+   "label": "Management"
+  },
+  {
+   "fieldname": "managed_by",
+   "fieldtype": "Link",
+   "label": "Managed By",
+   "options": "User"
+  },
+  {
+   "default": "0",
+   "fieldname": "can_manager_add_members",
+   "fieldtype": "Check",
+   "label": "Manager Can Add Members"
+  },
+  {
+   "default": "0",
+   "fieldname": "can_manager_assign_bundles",
+   "fieldtype": "Check",
+   "label": "Manager Can Assign Bundles"
+  },
+  {
+   "fieldname": "section_members",
+   "fieldtype": "Section Break",
+   "label": "Members"
+  },
+  {
+   "fieldname": "members",
+   "fieldtype": "Table",
+   "label": "Members",
+   "options": "Permission Group Member"
+  },
+  {
+   "fieldname": "section_capabilities",
+   "fieldtype": "Section Break",
+   "label": "Direct Capabilities"
+  },
+  {
+   "fieldname": "group_capabilities",
+   "fieldtype": "Table",
+   "label": "Capabilities",
+   "options": "Permission Group Capability"
+  },
+  {
+   "fieldname": "section_bundles",
+   "fieldtype": "Section Break",
+   "label": "Bundles"
+  },
+  {
+   "fieldname": "group_bundles",
+   "fieldtype": "Table",
+   "label": "Bundles",
+   "options": "Permission Group Bundle"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-03-12 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "CAPS",
+ "name": "Permission Group",
+ "naming_rule": "Set by user",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "CAPS Admin",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "write": 1,
+   "role": "CAPS Manager"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "label",
+ "track_changes": 1
+}

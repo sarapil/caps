@@ -1,0 +1,501 @@
+{
+ "app": "caps",
+ "charts": [],
+ "content": "[{\"id\": \"caps_header\", \"type\": \"header\", \"data\": {\"text\": \"<span class='text-lg'>CAPS \\u2014 Capability-Based Access Permission System</span>\", \"col\": 12}}, {\"id\": \"sc1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Capabilities\", \"col\": 3}}, {\"id\": \"sc2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Capability Bundles\", \"col\": 3}}, {\"id\": \"sc3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"User Capabilities\", \"col\": 3}}, {\"id\": \"sc4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"CAPS Settings\", \"col\": 3}}, {\"id\": \"sp1\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"sc5\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Role Maps\", \"col\": 3}}, {\"id\": \"sc6\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Permission Groups\", \"col\": 3}}, {\"id\": \"sc7\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Field Maps\", \"col\": 3}}, {\"id\": \"sc8\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Action Maps\", \"col\": 3}}, {\"id\": \"sp1b\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"sc9\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Capability Requests\", \"col\": 3}}, {\"id\": \"sc10\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Capability Policies\", \"col\": 3}}, {\"id\": \"sc11\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Capability Snapshots\", \"col\": 3}}, {\"id\": \"sc12\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Audit Log\", \"col\": 3}}, {\"id\": \"sp1c\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"sc13\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Rate Limits\", \"col\": 3}}, {\"id\": \"sc14\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Integration Packs\", \"col\": 3}}, {\"id\": \"sc15\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Site Profiles\", \"col\": 3}}, {\"id\": \"sc16\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"CAPS Admin\", \"col\": 3}}, {\"id\": \"sp2\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"nc1\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Total Capabilities\", \"col\": 3}}, {\"id\": \"nc2\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Total Bundles\", \"col\": 3}}, {\"id\": \"nc3\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Users with Capabilities\", \"col\": 3}}, {\"id\": \"nc4\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Audit Logs (24h)\", \"col\": 3}}, {\"id\": \"nc5\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Pending Requests\", \"col\": 3}}, {\"id\": \"nc6\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Active Policies\", \"col\": 3}}, {\"id\": \"sp3\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"page_hdr\", \"type\": \"header\", \"data\": {\"text\": \"<span class='text-md'>Pages & Tools</span>\", \"col\": 12}}, {\"id\": \"sc_pg1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"CAPS Graph\", \"col\": 4}}, {\"id\": \"sc_pg2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Compare Users\", \"col\": 4}}, {\"id\": \"sc_pg3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"CAPS Admin\", \"col\": 4}}, {\"id\": \"sp4\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"rpt_hdr\", \"type\": \"header\", \"data\": {\"text\": \"<span class='text-md'>Reports</span>\", \"col\": 12}}, {\"id\": \"sc_rpt1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Capability Coverage\", \"col\": 4}}, {\"id\": \"sc_rpt2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"User Access Matrix\", \"col\": 4}}, {\"id\": \"sc_rpt3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"CAPS Audit Report\", \"col\": 4}}, {\"id\": \"sp5\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"card1\", \"type\": \"card\", \"data\": {\"card_name\": \"Dashboard & Pages\", \"col\": 4}}, {\"id\": \"card2\", \"type\": \"card\", \"data\": {\"card_name\": \"Capability Management\", \"col\": 4}}, {\"id\": \"card3\", \"type\": \"card\", \"data\": {\"card_name\": \"Assignment & Groups\", \"col\": 4}}, {\"id\": \"card4\", \"type\": \"card\", \"data\": {\"card_name\": \"Field & Action Restrictions\", \"col\": 4}}, {\"id\": \"card5\", \"type\": \"card\", \"data\": {\"card_name\": \"Policies & Requests\", \"col\": 4}}, {\"id\": \"card6\", \"type\": \"card\", \"data\": {\"card_name\": \"Snapshots & Profiles\", \"col\": 4}}, {\"id\": \"card7\", \"type\": \"card\", \"data\": {\"card_name\": \"Rate Limiting\", \"col\": 4}}, {\"id\": \"card8\", \"type\": \"card\", \"data\": {\"card_name\": \"Audit & Settings\", \"col\": 4}}, {\"id\": \"card9\", \"type\": \"card\", \"data\": {\"card_name\": \"Reports\", \"col\": 4}}]",
+ "creation": "2026-06-01 00:00:00",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "lock",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "CAPS",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Dashboard & Pages",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "CAPS Admin",
+   "link_count": 0,
+   "link_to": "caps-admin",
+   "link_type": "Page",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Capability Graph",
+   "link_count": 0,
+   "link_to": "caps-graph",
+   "link_type": "Page",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Compare Users",
+   "link_count": 0,
+   "link_to": "caps-compare",
+   "link_type": "Page",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "CAPS Onboarding",
+   "link_count": 0,
+   "link_to": "caps-onboarding",
+   "link_type": "Page",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Capability Management",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Capability",
+   "link_count": 0,
+   "link_to": "Capability",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Capability Bundle",
+   "link_count": 0,
+   "link_to": "Capability Bundle",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Role Capability Map",
+   "link_count": 0,
+   "link_to": "Role Capability Map",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Assignment & Groups",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "User Capability",
+   "link_count": 0,
+   "link_to": "User Capability",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Permission Group",
+   "link_count": 0,
+   "link_to": "Permission Group",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Field & Action Restrictions",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Field Capability Map",
+   "link_count": 0,
+   "link_to": "Field Capability Map",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Action Capability Map",
+   "link_count": 0,
+   "link_to": "Action Capability Map",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Policies & Requests",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Capability Policy",
+   "link_count": 0,
+   "link_to": "Capability Policy",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Capability Request",
+   "link_count": 0,
+   "link_to": "Capability Request",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Snapshots & Profiles",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Capability Snapshot",
+   "link_count": 0,
+   "link_to": "Capability Snapshot",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "CAPS Site Profile",
+   "link_count": 0,
+   "link_to": "CAPS Site Profile",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "CAPS Integration Pack",
+   "link_count": 0,
+   "link_to": "CAPS Integration Pack",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rate Limiting",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Capability Rate Limit",
+   "link_count": 0,
+   "link_to": "Capability Rate Limit",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Audit & Settings",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "CAPS Settings",
+   "link_count": 0,
+   "link_to": "CAPS Settings",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "CAPS Audit Log",
+   "link_count": 0,
+   "link_to": "CAPS Audit Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Capability Coverage",
+   "link_count": 0,
+   "link_to": "Capability Coverage",
+   "link_type": "Report",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "User Access Matrix",
+   "link_count": 0,
+   "link_to": "User Access Matrix",
+   "link_type": "Report",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "CAPS Audit Report",
+   "link_count": 0,
+   "link_to": "CAPS Audit Report",
+   "link_type": "Report",
+   "onboard": 1,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-03-16 05:48:11.493073",
+ "modified_by": "Administrator",
+ "module": "CAPS",
+ "name": "CAPS",
+ "number_cards": [
+  {
+   "label": "Total Capabilities"
+  },
+  {
+   "label": "Total Bundles"
+  },
+  {
+   "label": "Users with Capabilities"
+  },
+  {
+   "label": "Audit Logs (24h)"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "restrict_to_domain": "",
+ "roles": [],
+ "sequence_id": 40.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Capabilities",
+   "link_to": "Capability",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Capability Bundles",
+   "link_to": "Capability Bundle",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "label": "User Capabilities",
+   "link_to": "User Capability",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "",
+   "label": "CAPS Settings",
+   "link_to": "CAPS Settings",
+   "type": "DocType"
+  },
+  {
+   "color": "Purple",
+   "doc_view": "List",
+   "label": "Role Maps",
+   "link_to": "Role Capability Map",
+   "type": "DocType"
+  },
+  {
+   "color": "Cyan",
+   "doc_view": "List",
+   "label": "Permission Groups",
+   "link_to": "Permission Group",
+   "type": "DocType"
+  },
+  {
+   "color": "Yellow",
+   "doc_view": "List",
+   "label": "Field Maps",
+   "link_to": "Field Capability Map",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "doc_view": "List",
+   "label": "Audit Log",
+   "link_to": "CAPS Audit Log",
+   "type": "DocType"
+  },
+  {
+   "color": "Yellow",
+   "doc_view": "List",
+   "label": "Capability Requests",
+   "link_to": "Capability Request",
+   "type": "DocType"
+  },
+  {
+   "color": "Pink",
+   "doc_view": "List",
+   "label": "Capability Policies",
+   "link_to": "Capability Policy",
+   "type": "DocType"
+  },
+  {
+   "color": "Cyan",
+   "doc_view": "List",
+   "label": "Capability Snapshots",
+   "link_to": "Capability Snapshot",
+   "type": "DocType"
+  },
+  {
+   "color": "Yellow",
+   "doc_view": "List",
+   "label": "Action Maps",
+   "link_to": "Action Capability Map",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Rate Limits",
+   "link_to": "Capability Rate Limit",
+   "type": "DocType"
+  },
+  {
+   "color": "Purple",
+   "doc_view": "List",
+   "label": "Integration Packs",
+   "link_to": "CAPS Integration Pack",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Site Profiles",
+   "link_to": "CAPS Site Profile",
+   "type": "DocType"
+  },
+  {
+   "color": "Cyan",
+   "doc_view": "",
+   "label": "CAPS Graph",
+   "link_to": "caps-graph",
+   "type": "Page"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "",
+   "label": "Compare Users",
+   "link_to": "caps-compare",
+   "type": "Page"
+  },
+  {
+   "color": "Red",
+   "doc_view": "",
+   "label": "CAPS Admin",
+   "link_to": "caps-admin",
+   "type": "Page"
+  },
+  {
+   "color": "Green",
+   "doc_view": "",
+   "label": "CAPS Onboarding",
+   "link_to": "caps-onboarding",
+   "type": "Page"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "Capability Coverage",
+   "link_to": "Capability Coverage",
+   "type": "Report"
+  },
+  {
+   "color": "Green",
+   "doc_view": "",
+   "label": "User Access Matrix",
+   "link_to": "User Access Matrix",
+   "type": "Report"
+  },
+  {
+   "color": "Red",
+   "doc_view": "",
+   "label": "CAPS Audit Report",
+   "link_to": "CAPS Audit Report",
+   "type": "Report"
+  }
+ ],
+ "title": "CAPS",
+ "type": "Workspace"
+}

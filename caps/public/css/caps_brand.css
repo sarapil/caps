@@ -1,0 +1,161 @@
+/*
+ * CAPS — Brand Variables & Theme
+ * ================================
+ * Brand color: #10B981 (Emerald)
+ * Org: moatazarkan6-lab
+ */
+:root {
+  /* ── Primary Brand ─────────────────────────────────────── */
+  --caps-brand: #10B981;
+  --caps-brand-dark: #059669;
+  --caps-brand-darker: #047857;
+  --caps-brand-light: #34d399;
+  --caps-brand-lighter: #6ee7b7;
+  --caps-brand-bg: #ecfdf5;
+  --caps-brand-bg-subtle: #f0fdf4;
+
+  /* ── Semantic Colors ───────────────────────────────────── */
+  --caps-success: #22c55e;
+  --caps-warning: #f59e0b;
+  --caps-danger: #ef4444;
+  --caps-info: #3b82f6;
+
+  /* ── Map to frappe_visual vars ─────────────────────────── */
+  --fv-accent: #10B981;
+  --fv-accent-dark: #059669;
+  --fv-accent-light: #34d399;
+}
+
+[data-theme="dark"] {
+  --caps-brand-bg: #064e3b;
+  --caps-brand-bg-subtle: #065f46;
+}
+
+/* ── Utility Classes ─────────────────────────────────────── */
+.caps-accent { color: var(--caps-brand) !important; }
+.caps-bg { background: var(--caps-brand) !important; color: #fff !important; }
+.caps-bg-subtle { background: var(--caps-brand-bg) !important; }
+.caps-border { border-color: var(--caps-brand) !important; }
+
+/* ── Badge / Pill ────────────────────────────────────────── */
+.caps-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--caps-brand-bg);
+  color: var(--caps-brand-dark);
+  border: 1px solid var(--caps-brand-lighter);
+}
+.caps-badge.granted { background: #dcfce7; color: #166534; border-color: #86efac; }
+.caps-badge.denied { background: #fee2e2; color: #991b1b; border-color: #fca5a5; }
+.caps-badge.pending { background: #fef3c7; color: #92400e; border-color: #fcd34d; }
+
+/* ── Stat Card ───────────────────────────────────────────── */
+.caps-stat-card {
+  background: var(--card-bg, #fff);
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.caps-stat-card:hover {
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.15);
+  transform: translateY(-2px);
+}
+.caps-stat-card .stat-value {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--caps-brand);
+  line-height: 1.2;
+}
+.caps-stat-card .stat-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+}
+
+/* ── Graph Section (shared by all visual pages) ──────────── */
+.caps-graph-section {
+  background: var(--card-bg, #fff);
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.caps-graph-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.caps-graph-header h5 {
+  margin: 0;
+  font-weight: 700;
+  color: var(--heading-color, #1e293b);
+}
+.caps-command-graph {
+  min-height: 400px;
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* ── Quick Actions Row ───────────────────────────────────── */
+.caps-quick-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.caps-quick-actions .btn {
+  border-radius: 8px;
+  font-size: 12px;
+  padding: 6px 14px;
+}
+
+/* ── Welcome ─────────────────────────────────────────────── */
+.caps-welcome-visual {
+  background: linear-gradient(135deg, var(--caps-brand-bg) 0%, var(--caps-brand-bg-subtle) 100%);
+  border: 1px solid var(--caps-brand-lighter);
+  border-radius: 16px;
+  padding: 24px 32px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* ── Visual KPI row ──────────────────────────────────────── */
+.caps-visual-kpis {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ── Float summary (used in FloatingWindow) ──────────────── */
+.caps-float-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border-color, #e2e8f0);
+  font-size: 12px;
+}
+.caps-float-row:last-child { border-bottom: none; }
+.caps-float-key { color: var(--text-muted); }
+.caps-float-val { font-weight: 600; color: var(--heading-color); }
+
+/* ── Onboarding ──────────────────────────────────────────── */
+.caps-onboarding {
+  background: var(--caps-brand-bg-subtle);
+  border: 1px solid var(--caps-brand-lighter);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}

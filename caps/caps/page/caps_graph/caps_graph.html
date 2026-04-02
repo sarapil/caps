@@ -1,0 +1,21 @@
+<div class="caps-graph-page">
+	<div class="caps-graph-toolbar" style="display:flex;align-items:center;gap:8px;padding:8px 0;flex-wrap:wrap;">
+		<select class="form-control caps-graph-type" style="width:220px;"></select>
+		<div class="caps-graph-search-bar" style="flex:1;min-width:180px;"></div>
+		<div class="caps-graph-toolbar-extra" style="display:flex;gap:4px;"></div>
+		<button class="btn btn-xs btn-default caps-graph-reset" title="Fit to Screen">
+			<span data-fv-icon="maximize" data-fv-size="xs"></span>
+		</button>
+		<button class="btn btn-xs btn-default caps-graph-export-svg" title="Export SVG">
+			<span data-fv-icon="file-vector" data-fv-size="xs"></span>
+		</button>
+		<button class="btn btn-xs btn-default caps-graph-export-png" title="Export PNG">
+			<span data-fv-icon="photo" data-fv-size="xs"></span>
+		</button>
+		<button class="btn btn-xs btn-default" id="btn-caps-graph-help" title="Help">❓</button>
+	</div>
+	<div class="caps-graph-container" style="width:100%;height:calc(100vh - 180px);border:1px solid var(--border-color);border-radius:8px;overflow:hidden;position:relative;">
+		<div class="caps-graph-view-controls" style="position:absolute;top:8px;right:8px;z-index:10;"></div>
+	</div>
+	<div class="caps-graph-legend" style="padding:8px;font-size:0.85em;"></div>
+</div>

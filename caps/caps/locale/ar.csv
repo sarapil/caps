@@ -1,0 +1,678 @@
+source,translated,context
+Access Control,التحكم بالوصول,
+Access Matrix,مصفوفة الوصول,
+Action,إجراء,
+Action Map,خريطة الإجراءات,
+Action Maps,خرائط الإجراءات,
+Action needed,يتطلب إجراء,
+Action Restrictions,قيود الإجراءات,
+active,نشط,
+Active,نشط,
+Active Capability,صلاحية نشطة,
+Active Policies,السياسات النشطة,
+Admin Dashboard,لوحة المشرف,
+Admin: Managing Capabilities,المشرف: إدارة الصلاحيات,
+Admin: Visual Graph Explorer,المشرف: مستكشف الرسم البياني,
+All CAPS caches cleared,تم مسح جميع ذاكرات CAPS المؤقتة,
+App,التطبيق,
+As a CAPS Admin you have full control:,كمشرف CAPS لديك التحكم الكامل:,
+As a CAPS Manager you can delegate capabilities to team members:,كمدير CAPS يمكنك تفويض الصلاحيات لأعضاء الفريق:,
+Assignment & Groups,التعيين والمجموعات,
+Audit & Settings,السجل والإعدادات,
+Audit Log,سجل التدقيق,
+Audit Report,تقرير التدقيق,
+auto-grants,منح تلقائي,
+Auto Sync,مزامنة تلقائية,
+Blue pills = Only User A,الحبوب الزرقاء = المستخدم أ فقط,
+Bridge Frappe roles to CAPS capabilities,ربط أدوار Frappe بصلاحيات CAPS,
+Build Bundles,بناء الحزم,
+Bundle,حزمة,
+Bundle Composition,تكوين الحزمة,
+Bundles,الحزم,
+BUNDLES,الحزم,
+Bust All Caches,مسح كل الذاكرة المؤقتة,
+capabilities,صلاحيات,
+Capabilities,الصلاحيات,
+CAPABILITIES,الصلاحيات,
+Capability,صلاحية,
+Capability Bundle,حزمة الصلاحيات,
+Capability-Based Access Control,التحكم بالوصول القائم على الصلاحيات,
+Capability-Based Access Control Dashboard,لوحة التحكم بالوصول القائم على الصلاحيات,
+Capability Coverage,تغطية الصلاحيات,
+Capability Hierarchy,تسلسل الصلاحيات,
+Capability Policy,سياسة الصلاحيات,
+Capability Rate Limit,حد معدل الصلاحية,
+Capability Request,طلب صلاحية,
+Capability Snapshot,لقطة الصلاحيات,
+CAPS,نظام الصلاحيات,
+CAPS Admin,مشرف الصلاحيات,
+CAPS Admin Help,مساعدة مشرف الصلاحيات,
+CAPS Administration,إدارة الصلاحيات,
+CAPS Administration Dashboard,لوحة إدارة الصلاحيات,
+CAPS Audit Log,سجل تدقيق الصلاحيات,
+CAPS Audit Report,تقرير تدقيق الصلاحيات,
+CAPS Graph,رسم الصلاحيات البياني,
+CAPS Graph Explorer,مستكشف رسم الصلاحيات,
+CAPS Help,مساعدة الصلاحيات,
+CAPS Impersonation Active,انتحال هوية CAPS نشط,
+CAPS Integration Pack,حزمة تكامل CAPS,
+CAPS Manager,مدير الصلاحيات,
+CAPS Module Map,خريطة وحدات الصلاحيات,
+CAPS Onboarding,دليل بدء الصلاحيات,
+CAPS provides fine-grained capability-based access control for your Frappe applications. Instead of coarse roles CAPS lets you define atomic capabilities and compose them into bundles groups and policies.,يوفر CAPS تحكماً دقيقاً بالوصول القائم على الصلاحيات لتطبيقات Frappe. بدلاً من الأدوار العامة يتيح لك CAPS تعريف صلاحيات ذرية وتجميعها في حزم ومجموعات وسياسات.,
+CAPS Settings,إعدادات الصلاحيات,
+CAPS Site Profile,ملف الموقع,
+CAPS works behind the scenes to control what you can see and do:,يعمل CAPS خلف الكواليس للتحكم فيما يمكنك رؤيته وفعله:,
+Category,الفئة,
+Certain buttons or actions may be restricted,قد تكون بعض الأزرار أو الإجراءات مقيدة,
+Choose your role to get a tailored walkthrough:,اختر دورك للحصول على جولة مخصصة:,
+Click a node for details. Double-click to navigate. Use toolbar to switch layouts.,انقر على عقدة للتفاصيل. انقر مرتين للانتقال. استخدم شريط الأدوات لتبديل التخطيطات.,
+Click nodes for details. Double-click to navigate. Export as SVG or PNG.,انقر على العقد للتفاصيل. انقر مرتين للانتقال. تصدير كـ SVG أو PNG.,
+Common,مشترك,
+common,مشترك,
+Compare,مقارنة,
+Compare Help,مساعدة المقارنة,
+Compare User Capabilities,مقارنة صلاحيات المستخدمين,
+Compare user capabilities side-by-side,مقارنة صلاحيات المستخدمين جنباً إلى جنب,
+Compare Users,مقارنة المستخدمين,
+Comparing...,جارٍ المقارنة...,
+Comparison failed,فشلت المقارنة,
+Config exported,تم تصدير الإعدادات,
+Config exported. Check downloads.,تم تصدير الإعدادات. تحقق من التنزيلات.,
+Config imported,تم استيراد الإعدادات,
+Configure Policies,تكوين السياسات,
+Control field visibility and button access per capability,التحكم في ظهور الحقول والوصول إلى الأزرار حسب الصلاحية,
+Could not load audit log,تعذر تحميل سجل التدقيق,
+Could not load expiring items,تعذر تحميل العناصر المنتهية,
+Could not load policies,تعذر تحميل السياسات,
+Coverage,التغطية,
+Create Capabilities,إنشاء صلاحيات,
+Dashboard,لوحة القيادة,
+Dashboard & Pages,لوحة القيادة والصفحات,
+Define atomic permissions like 'view_reports' or 'approve_invoices',تعريف أذونات ذرية مثل 'عرض_التقارير' أو 'اعتماد_الفواتير',
+Delegatable,قابل للتفويض,
+DocType,نوع المستند,
+Error loading graph,خطأ في تحميل الرسم البياني,
+Expires,تنتهي,
+Expiring Soon,تنتهي قريباً,
+Explore Graph,استكشاف الرسم البياني,
+Export Config,تصدير الإعدادات,
+Field & Action,الحقل والإجراء,
+Field & Action Restrictions,قيود الحقول والإجراءات,
+Field/Action Maps,خرائط الحقول/الإجراءات,
+Field Capability Map,خريطة صلاحية الحقل,
+Field Map,خريطة الحقل,
+Field Maps,خرائط الحقول,
+Field Restrictions,قيود الحقول,
+Fields may be hidden or read-only based on your capabilities,قد تكون الحقول مخفية أو للقراءة فقط بناءً على صلاحياتك,
+Fit to Screen,ملاءمة الشاشة,
+Frappe role → CAPS capability mappings,تعيينات أدوار Frappe → صلاحيات CAPS,
+Full Onboarding Guide →,دليل البدء الكامل →,
+Go to Admin Dashboard →,الذهاب إلى لوحة المشرف →,
+Go to CAPS Workspace,الذهاب إلى مساحة عمل الصلاحيات,
+Go to Dashboard,الذهاب إلى لوحة القيادة,
+Grant capabilities you hold to other users,منح الصلاحيات التي تملكها لمستخدمين آخرين,
+granted,ممنوح,
+grants,يمنح,
+Graph,رسم بياني,
+Graph Explorer Help,مساعدة مستكشف الرسم البياني,
+Great for auditing access during role changes or offboarding,مفيد لتدقيق الوصول أثناء تغيير الأدوار أو إنهاء الخدمة,
+Green pills = Common,الحبوب الخضراء = مشترك,
+Group,مجموعة,
+grouped,مجمّع,
+grouped into,مجمّع في,
+Group Hierarchy,تسلسل المجموعات,
+Groups,المجموعات,
+Hard Prerequisite,شرط مسبق إلزامي,
+hard prerequisite,شرط مسبق إلزامي,
+Help,مساعدة,
+Hierarchy,التسلسل الهرمي,
+Import Config,استيراد الإعدادات,
+Inactive,غير نشط,
+inherits,يرث,
+Integration Packs,حزم التكامل,
+KPI cards show key metrics — click to drill down,بطاقات مؤشرات الأداء تعرض المقاييس الرئيسية — انقر للتفصيل,
+Last 24h,آخر 24 ساعة,
+Loading...,جارٍ التحميل...,
+Loading graph...,جارٍ تحميل الرسم البياني...,
+Loading help for:,تحميل المساعدة لـ:,
+Manager,المدير,
+Manager: Comparing Users,المدير: مقارنة المستخدمين,
+Manager: Delegating Capabilities,المدير: تفويض الصلاحيات,
+Manage User Capabilities →,إدارة صلاحيات المستخدم →,
+mandatory,إلزامي,
+Map Roles,تعيين الأدوار,
+maps,يعيّن,
+Members,الأعضاء,
+members,أعضاء,
+Module map shows CAPS components — click nodes to navigate,خريطة الوحدات تعرض مكونات CAPS — انقر على العقد للانتقال,
+New Capability,صلاحية جديدة,
+No,لا,
+No active policies,لا توجد سياسات نشطة,
+No audit entries,لا توجد إدخالات تدقيق,
+No audit logs,لا توجد سجلات تدقيق,
+No capabilities expiring soon,لا توجد صلاحيات تنتهي قريباً,
+No capabilities found,لم يتم العثور على صلاحيات,
+No data to display for this graph mode,لا توجد بيانات لعرضها في وضع الرسم هذا,
+None,لا شيء,
+Nothing expiring soon,لا شيء ينتهي قريباً,
+Onboarding,البدء,
+Onboarding Complete!,اكتمل دليل البدء!,
+Onboarding complete! Welcome to CAPS.,اكتمل دليل البدء! مرحباً بك في CAPS.,
+Only in,فقط في,
+Only in {0},فقط في {0},
+Open Compare →,فتح المقارنة →,
+Open Graph Explorer →,فتح مستكشف الرسم →,
+optional,اختياري,
+Orange pills = Only User B,الحبوب البرتقالية = المستخدم ب فقط,
+Organize users into permission groups with hierarchies,تنظيم المستخدمين في مجموعات أذونات مع تسلسل هرمي,
+Overview of your Capability-Based Access Control system.,نظرة عامة على نظام التحكم بالوصول القائم على الصلاحيات.,
+Parent→child capability relationships,علاقات الصلاحيات الأب→الابن,
+Pending,معلّق,
+Pending Requests,الطلبات المعلقة,
+PENDING REQUESTS,الطلبات المعلقة,
+Permission Group,مجموعة الأذونات,
+Permission Groups,مجموعات الأذونات,
+Permission group tree structure,هيكل شجرة مجموعات الأذونات,
+Please select both users,يرجى اختيار كلا المستخدمين,
+Policies,السياسات,
+Policies & Requests,السياسات والطلبات,
+Policy,سياسة,
+Prerequisites,المتطلبات المسبقة,
+Quick Actions,إجراءات سريعة,
+Quick actions: export/import config bust cache,إجراءات سريعة: تصدير/استيراد الإعدادات ومسح الذاكرة المؤقتة,
+Rate Limiting,تحديد المعدل,
+Rate Limits,حدود المعدل,
+Recent Audit Log,سجل التدقيق الأخير,
+Refresh,تحديث,
+Regular User,مستخدم عادي,
+Reports,التقارير,
+Request a Capability →,طلب صلاحية →,
+Requests,الطلبات,
+restricts,يقيّد,
+Review capability requests from your team,مراجعة طلبات الصلاحيات من فريقك,
+Role,دور,
+Role → Capability Map,خريطة الدور → الصلاحية,
+Role Capability Map,خريطة صلاحيات الأدوار,
+Role Map,خريطة الدور,
+Role Maps,خرائط الأدوار,
+Rules,القواعد,
+Select a user...,اختر مستخدم...,
+Select two users and click Compare to see their capability differences.,اختر مستخدمين وانقر مقارنة لرؤية اختلافات الصلاحيات.,
+Select two users to see their common and unique capabilities,اختر مستخدمين لرؤية صلاحياتهم المشتركة والفريدة,
+Set time-boxed (temporary) capability grants,تعيين منح صلاحيات مؤقتة محددة الوقت,
+Settings,الإعدادات,
+Set Up Groups,إعداد المجموعات,
+Shows capability parent→child relationships grouped by category,يعرض علاقات الصلاحيات الأب→الابن مجمعة حسب الفئة,
+Shows Frappe roles mapped to CAPS capabilities,يعرض أدوار Frappe المعينة لصلاحيات CAPS,
+Shows hard/soft prerequisite dependencies between capabilities,يعرض التبعيات المسبقة الإلزامية/الاختيارية بين الصلاحيات,
+Shows permission group hierarchy and membership,يعرض تسلسل مجموعات الأذونات والعضوية,
+Shows which capabilities are grouped into bundles,يعرض الصلاحيات المجمعة في حزم,
+Site Profiles,ملفات المواقع,
+Skip to Dashboard,تخطي إلى لوحة القيادة,
+Snapshots,اللقطات,
+Snapshots & Profiles,اللقطات والملفات,
+Soft Prerequisite,شرط مسبق اختياري,
+soft prerequisite,شرط مسبق اختياري,
+subgroup,مجموعة فرعية,
+System Architecture,بنية النظام,
+Template,قالب,
+The Graph Explorer visualizes your entire CAPS configuration:,يعرض مستكشف الرسم تكوين CAPS بالكامل:,
+Toggle graph view for a visual network comparison,تبديل عرض الرسم لمقارنة شبكية مرئية,
+Toggle the graph view for a visual network comparison.,تبديل عرض الرسم لمقارنة شبكية مرئية.,
+Toggle Sidebar,تبديل الشريط الجانبي,
+Total,الإجمالي,
+total for,الإجمالي لـ,
+Type,النوع,
+Unique,فريد,
+User,مستخدم,
+User A,المستخدم أ,
+User B,المستخدم ب,
+User Capabilities,صلاحيات المستخدم,
+User Capability,صلاحية المستخدم,
+User Capability Lookup,البحث عن صلاحيات المستخدم,
+User Caps,صلاحيات المستخدم,
+User lookup inspects any user's capabilities,البحث يفحص صلاحيات أي مستخدم,
+USERS,المستخدمون,
+Users with Capabilities,المستخدمون ذوو الصلاحيات,
+User Access Matrix,مصفوفة وصول المستخدم,
+Use the Compare page to audit user access:,استخدم صفحة المقارنة لتدقيق وصول المستخدم:,
+Version,الإصدار,
+Viewing as,العرض كـ,
+Welcome to CAPS,مرحباً بك في الصلاحيات,
+What's Your Role?,ما هو دورك؟,
+Which capabilities form each bundle,ما الصلاحيات التي تشكل كل حزمة,
+with capabilities,مع صلاحيات,
+Yes,نعم,
+You can request additional capabilities if needed,يمكنك طلب صلاحيات إضافية عند الحاجة,
+You're All Set!,أنت جاهز!,
+You're ready to use CAPS. Remember you can always access help by clicking the ❓ icon on any CAPS page.,أنت جاهز لاستخدام CAPS. تذكر أنه يمكنك دائماً الوصول إلى المساعدة بالنقر على أيقونة ❓ في أي صفحة.,
+Your Capabilities,صلاحياتك,
+Your manager or admin assigns capabilities to you,يقوم مديرك أو المشرف بتعيين الصلاحيات لك,
+Zone,المنطقة,
+Export SVG,تصدير SVG,
+Export PNG,تصدير PNG,
+About CAPS,عن CAPS,
+Action-Level Control,التحكم على مستوى الإجراءات,
+Action Restriction,تقييد الإجراء,
+Actions are enabled/disabled per your permissions,يتم تفعيل/تعطيل الإجراءات حسب صلاحياتك,
+All reports: Coverage&#44; Access Matrix&#44; Audit,جميع التقارير: التغطية، مصفوفة الوصول، التدقيق,
+Any Frappe app can declare CAPS capabilities via hooks.py,يمكن لأي تطبيق Frappe الإعلان عن صلاحيات CAPS عبر hooks.py,
+App Map&#44; ERD&#44; Dependency Graph&#44; Storyboard&#44; Floating Window,خريطة التطبيق، ERD، رسم التبعيات، القصة المصورة، النافذة العائمة,
+Approve or reject capability requests,الموافقة على أو رفض طلبات الصلاحيات,
+Assign capabilities directly or via permission groups.,تعيين الصلاحيات مباشرة أو عبر مجموعات الأذونات.,
+Assign capabilities from your delegated pool,تعيين الصلاحيات من مجموعتك المفوضة,
+Assign to User,تعيين للمستخدم,
+Assign to Users,تعيين للمستخدمين,
+Audit&#44; Compliance & Reporting,التدقيق والامتثال والتقارير,
+Auto-grant capabilities based on conditions,منح الصلاحيات تلقائياً بناءً على الشروط,
+Boot session injection&#44; doc_events hooks&#44; real-time cache invalidation,حقن جلسة التمهيد، خطافات أحداث المستندات، إبطال ذاكرة التخزين المؤقت,
+Bundle Item Help,مساعدة عنصر الحزمة,
+Bundle & Map,تجميع وربط,
+Capability Bundle Help,مساعدة حزمة الصلاحيات,
+Capability Bundles,حزم الصلاحيات,
+Capability Graph Explorer,مستكشف رسم الصلاحيات,
+Capability Help,مساعدة الصلاحية,
+Capability Policy Help,مساعدة سياسة الصلاحية,
+Capability Prerequisite Help,مساعدة متطلبات الصلاحية,
+Capability Rate Limit Help,مساعدة حد معدل الصلاحية,
+Capability Request Help,مساعدة طلب الصلاحية,
+Capability Snapshot Help,مساعدة لقطة الصلاحيات,
+Capability Snapshots,لقطات الصلاحيات,
+Capability-Based Access Control,التحكم بالوصول المبني على الصلاحيات,
+CAPS Admin Dashboard with real-time stats,لوحة مشرف CAPS مع إحصائيات فورية,
+CAPS Audit Log Help,مساعدة سجل تدقيق CAPS,
+CAPS Integration Pack Help,مساعدة حزمة تكامل CAPS,
+CAPS Managers,مدراء CAPS,
+CAPS Settings Help,مساعدة إعدادات CAPS,
+CAPS Site Profile Help,مساعدة ملف موقع CAPS,
+Circular parent group reference detected.,تم اكتشاف مرجع دائري لمجموعة أب.,
+Cleaner UI — no irrelevant fields or buttons,واجهة أنظف — بدون حقول أو أزرار غير ذات صلة,
+Configure field & action restrictions,إعداد قيود الحقول والإجراءات,
+Configure field and action maps for fine-grained control.,إعداد خرائط الحقول والإجراءات للتحكم الدقيق.,
+Context,السياق,
+Create atomic capabilities like 'View Cost Data' or 'Approve Invoice'.,إنشاء صلاحيات ذرية مثل 'عرض بيانات التكلفة' أو 'الموافقة على الفاتورة'.,
+Create permission groups for teams,إنشاء مجموعات أذونات للفرق,
+Create policies for automatic capability evaluation.,إنشاء سياسات لتقييم الصلاحيات التلقائي.,
+Define Capabilities,تعريف الصلاحيات,
+Define capabilities & bundles,تعريف الصلاحيات والحزم,
+Define Capability,تعريف صلاحية,
+Delegate capabilities to team members within your scope:,تفويض الصلاحيات لأعضاء الفريق ضمن نطاقك:,
+Direct Users,المستخدمون المباشرون,
+Employee-linked capability assignment&#44; department-based groups,تعيين صلاحيات مرتبطة بالموظف، مجموعات على أساس القسم,
+Enable Policies,تفعيل السياسات,
+End Users,المستخدمون النهائيون,
+Entity Relationships,علاقات الكيانات,
+Faster workflows — see only what matters,سير عمل أسرع — اعرض فقط ما يهم,
+Field Capability Map Help,مساعدة خريطة صلاحيات الحقول,
+Field-level cost masking&#44; action restrictions on transactions,إخفاء التكلفة على مستوى الحقل، تقييد الإجراءات على المعاملات,
+Field-Level Restrictions,قيود على مستوى الحقل,
+Field Restriction,تقييد الحقل,
+Fields are automatically hidden or masked based on capabilities,يتم إخفاء الحقول أو تقنيعها تلقائياً بناءً على الصلاحيات,
+Fine-Grained Capabilities,صلاحيات دقيقة,
+For CAPS Managers,لمدراء CAPS,
+For End Users,للمستخدمين النهائيين,
+For more help&#44; visit,لمزيد من المساعدة، قم بزيارة,
+For System Administrators,لمسؤولي النظام,
+Full Name,الاسم الكامل,
+Getting Started,البدء,
+Go to CAPS Admin,الذهاب إلى إدارة CAPS,
+Group Bundle Help,مساعدة حزمة المجموعة,
+Group capabilities into bundles and map them to Frappe roles.,تجميع الصلاحيات في حزم وربطها بأدوار Frappe.,
+Group Capability Help,مساعدة صلاحية المجموعة,
+Group into Bundle,تجميع في حزمة,
+Group Member Help,مساعدة عضو المجموعة,
+Group related capabilities into reusable bundles,تجميع الصلاحيات المترابطة في حزم قابلة لإعادة الاستخدام,
+Group Users,تجميع المستخدمين,
+Hard/soft dependency chains,سلاسل تبعية صارمة/مرنة,
+How CAPS Connects,كيف يتصل CAPS,
+How CAPS DocTypes connect to each other.,كيف تتصل أنواع مستندات CAPS ببعضها.,
+How it helps,كيف يساعد,
+Impersonation stopped,تم إيقاف انتحال الشخصية,
+Install frappe_visual for workflow visualization.,ثبّت frappe_visual لعرض سير العمل.,
+Install frappe_visual to see the ERD.,ثبّت frappe_visual لعرض مخطط علاقات الكيانات.,
+Install frappe_visual to see the interactive App Map.,ثبّت frappe_visual لعرض خريطة التطبيق التفاعلية.,
+Integration Map,خريطة التكامل,
+Interactive map of all CAPS modules and their relationships.,خريطة تفاعلية لجميع وحدات CAPS وعلاقاتها.,
+IP Address,عنوان IP,
+Label,التسمية,
+Login audit integration,تكامل تدقيق تسجيل الدخول,
+Manage site profiles & integrations,إدارة ملفات الموقع والتكاملات,
+Map to Role,ربط بالدور,
+Module Map,خريطة الوحدات,
+Next,التالي,
+or,أو,
+Other Apps,تطبيقات أخرى,
+Pending capability requests,طلبات الصلاحيات المعلقة,
+Permission Group Help,مساعدة مجموعة الأذونات,
+Permission group membership,عضوية مجموعة الأذونات,
+Point-in-time snapshots of user capabilities for compliance reviews.,لقطات لحظية لصلاحيات المستخدم لمراجعات الامتثال.,
+Policy Engine,محرك السياسات,
+Policy engine with conditional rules,محرك سياسات بقواعد شرطية,
+Policy Evaluation,تقييم السياسة,
+Previous,السابق,
+Quick actions: export/import config&#44; bust cache,إجراءات سريعة: تصدير/استيراد الإعدادات، مسح الذاكرة المؤقتة,
+Quick Start Guide,دليل البدء السريع,
+Rate limiting per capability to prevent abuse,تحديد المعدل لكل صلاحية لمنع الإساءة,
+Real-time cache invalidation on permission changes,إبطال ذاكرة التخزين المؤقت فورياً عند تغيير الأذونات,
+Request additional capabilities when needed,طلب صلاحيات إضافية عند الحاجة,
+Result,النتيجة,
+Review audit logs & snapshots,مراجعة سجلات التدقيق واللقطات,
+Role Capability Bundle Help,مساعدة حزمة صلاحيات الدور,
+Role Capability Item Help,مساعدة عنصر صلاحيات الدور,
+Role Capability Map Help,مساعدة خريطة صلاحيات الدور,
+Runtime Enforcement,التطبيق أثناء التشغيل,
+Security Features,ميزات الأمان,
+Security & Reports,الأمان والتقارير,
+Self-service capability requests,طلبات صلاحيات الخدمة الذاتية,
+Set Restrictions,تعيين القيود,
+Set time-boxed access for temporary needs,تعيين وصول محدد المدة للاحتياجات المؤقتة,
+Set up policies & rate limits,إعداد السياسات وحدود المعدل,
+Start Onboarding,بدء التأهيل,
+Stop,إيقاف,
+System Administrators,مسؤولو النظام,
+Team capability overview,نظرة عامة على صلاحيات الفريق,
+Time-Boxed Access,وصول محدد المدة,
+Time-boxed capabilities with automatic expiry,صلاحيات محددة المدة مع انتهاء تلقائي,
+Timestamp,الطابع الزمني,
+Total Coverage,التغطية الكلية,
+Transparent access reasoning,تبرير الوصول الشفاف,
+User Capability Bundle Help,مساعدة حزمة صلاحيات المستخدم,
+User Capability Help,مساعدة صلاحيات المستخدم,
+User Capability Item Help,مساعدة عنصر صلاحيات المستخدم,
+User Comparison Tool,أداة مقارنة المستخدمين,
+Users,المستخدمون,
+View your current capability profile,عرض ملف صلاحياتك الحالي,
+What is CAPS?,ما هو CAPS?,
+What you do,ما تفعله,
+What you experience,ما تختبره,
+What you see,ما تراه,
+Workflow: Granting Access,سير العمل: منح الوصول,
+100%,١٠٠%
+"A Capability represents a single atomic permission — e.g. 'View Cost Data' or 'Approve Invoice'. Capabilities are the building blocks of CAPS access control. They can be assigned directly to users, grouped into bundles, or mapped to Frappe roles.","الصلاحية تمثّل إذن ذري واحد — مثل 'عرض بيانات التكلفة' أو 'اعتماد الفاتورة'. الصلاحيات هي اللبنات الأساسية للتحكم في الوصول عبر CAPS. يمكن تعيينها مباشرة للمستخدمين أو تجميعها في حزم أو ربطها بأدوار Frappe."
+Action Capability Map,خريطة صلاحيات الإجراءات
+Action Capability Map Help,مساعدة خريطة صلاحيات الإجراءات
+Action Capability Maps — which buttons and workflows are gated,خرائط صلاحيات الإجراءات — أي الأزرار ومسارات العمل مقيّدة
+Action Gates,بوابات الإجراءات
+Action-Level Gates,بوابات مستوى الإجراء
+Action-level gating,تقييد على مستوى الإجراء
+Activity Log only,سجل النشاط فقط
+"Any Frappe app can declare caps_capabilities and caps_field_maps in hooks.py for instant CAPS integration.","يمكن لأي تطبيق Frappe الإعلان عن caps_capabilities و caps_field_maps في hooks.py للتكامل الفوري مع CAPS."
+"Any Frappe app can declare its capabilities in hooks.py — CAPS auto-discovers and enforces them.","يمكن لأي تطبيق Frappe الإعلان عن صلاحياته في hooks.py — يكتشفها CAPS تلقائياً ويطبّقها."
+App Map · ERD · Dependency Graph · Storyboard · Floating Window · Icon System,خريطة التطبيق · ERD · رسم التبعيات · القصة المصوّرة · النافذة العائمة · نظام الأيقونات
+"As an auditor, CAPS provides comprehensive access verification tools:",بصفتك مدققاً، يوفر لك CAPS أدوات شاملة للتحقق من الوصول:
+"As ERPNext System Manager, CAPS bridges Frappe roles to granular business access:",بصفتك مدير نظام ERPNext، يربط CAPS أدوار Frappe بصلاحيات الأعمال الدقيقة:
+"As Information Security Manager, CAPS is your compliance engine:","بصفتك مدير أمن المعلومات، CAPS هو محرك الامتثال لديك:"
+"A single capability entry within a Capability Bundle. Each item references one Capability and optionally sets override parameters.","إدخال صلاحية واحد ضمن حزمة صلاحيات. يشير كل عنصر إلى صلاحية واحدة مع إمكانية تعيين معلمات تجاوز."
+"A single capability entry within a Role Capability Map. Links one Frappe role to one CAPS capability.","إدخال صلاحية واحد ضمن خريطة صلاحيات الدور. يربط دور Frappe واحد بصلاحية CAPS واحدة."
+"A single capability entry within a User Capability record. Tracks assignment source, dates, and delegation status.","إدخال صلاحية واحد ضمن سجل صلاحيات المستخدم. يتتبع مصدر التعيين والتواريخ وحالة التفويض."
+"As IT Manager, you own the CAPS infrastructure:","بصفتك مدير تقنية المعلومات، أنت المسؤول عن بنية CAPS:"
+Assign to Users & Groups,التعيين للمستخدمين والمجموعات
+"As the IT manager, CAPS gives you centralized control over system-wide access policies — from multi-site deployment to integration management.","بصفتك مدير تقنية المعلومات، يمنحك CAPS تحكماً مركزياً في سياسات الوصول على مستوى النظام — من النشر متعدد المواقع إلى إدارة التكامل."
+Atomic capabilities,صلاحيات ذرية
+Atomic Capabilities,صلاحيات ذرية
+Audit log shows if conflicting capabilities were ever co-assigned,يُظهر سجل التدقيق ما إذا كانت صلاحيات متعارضة قد عُيّنت معاً
+📋 Auditor,📋 مدقق
+Auditor: Compliance Checks,المدقق: فحوصات الامتثال
+Auditor → relies on the audit trail and snapshots you configure,المدقق ← يعتمد على مسار التدقيق واللقطات التي تُعدّها
+Auditor: Review Process,المدقق: عملية المراجعة
+Auditor — Verification & Compliance Assurance,المدقق — التحقق وضمان الامتثال
+"Audit Report — full trail of grants, revocations, and escalations","تقرير التدقيق — مسار كامل للمنح والسحب والتصعيد"
+Audit trail,مسار التدقيق
+Audit Trail,مسار التدقيق
+Audit workflows,سير عمل التدقيق
+"A user's membership in a Permission Group. Can have an expiry date for temporary membership. When expired, the user loses group capabilities automatically.","عضوية المستخدم في مجموعة أذونات. يمكن تحديد تاريخ انتهاء للعضوية المؤقتة. عند الانتهاء، يفقد المستخدم صلاحيات المجموعة تلقائياً."
+"Auto-grant/revoke capabilities based on conditions (department, role, time)","منح/سحب تلقائي للصلاحيات بناءً على شروط (القسم، الدور، الوقت)"
+BOM cost protection — restrict access to production costs,حماية تكلفة قائمة المواد — تقييد الوصول لتكاليف الإنتاج
+"Boot session injection · doc_events hooks · Real-time cache invalidation · Permission query builder override","حقن جلسة التمهيد · خطافات أحداث المستندات · إبطال ذاكرة التخزين المؤقت فورياً · تجاوز منشئ استعلام الأذونات"
+"Bridge the gap between Frappe roles and real business needs. CAPS lets you control exactly which fields, actions, and workflows each user can access — down to individual form fields.","سد الفجوة بين أدوار Frappe واحتياجات الأعمال الحقيقية. يتيح لك CAPS التحكم بدقة في الحقول والإجراءات ومسارات العمل لكل مستخدم — حتى مستوى حقل النموذج الفردي."
+Build Bundles & Map Roles,بناء الحزم وربط الأدوار
+"Build Capability Bundles for common job functions (Accountant, Sales Manager, etc.)","بناء حزم صلاحيات للوظائف الشائعة (محاسب، مدير مبيعات، إلخ)"
+Built-in,مدمج
+Built-in Frappe Roles,أدوار Frappe المدمجة
+"Bundles group related capabilities together for easier assignment. For example, a 'Finance Viewer' bundle might include 'View Invoices', 'View Payments', and 'View Cost Data'. Assign a bundle instead of individual capabilities.","تجمع الحزم الصلاحيات المتعلقة معاً لتسهيل التعيين. مثلاً، حزمة 'عارض المالية' قد تشمل 'عرض الفواتير' و'عرض المدفوعات' و'عرض بيانات التكلفة'. عيّن حزمة بدلاً من صلاحيات فردية."
+Business value,القيمة التجارية
+Capability Coverage report — gaps in access control across the system,تقرير تغطية الصلاحيات — ثغرات التحكم في الوصول عبر النظام
+Capability Coverage Report — identify unused or over-assigned capabilities,تقرير تغطية الصلاحيات — تحديد الصلاحيات غير المستخدمة أو المفرطة التعيين
+Capability Graph Explorer — full system topology,مستكشف رسم الصلاحيات — الهيكل الكامل للنظام
+Capability Policies,سياسات الصلاحيات
+Capability Requests,طلبات الصلاحيات
+Capability Snapshots — point-in-time access states for any date,لقطات الصلاحيات — حالة الوصول في أي تاريخ محدد
+CAPS Admin Dashboard — real-time capability utilization metrics,لوحة إدارة CAPS — مقاييس استخدام الصلاحيات فورياً
+CAPS Audit Log — every capability change timestamped and attributed,سجل تدقيق CAPS — كل تغيير في الصلاحيات مؤرخ ومنسوب
+"CAPS brings enterprise-grade access governance to the Frappe ecosystem — at a fraction of the cost of SAP GRC or Oracle Access Governance, with deep native integration.","يجلب CAPS حوكمة وصول بمستوى المؤسسات لنظام Frappe — بجزء بسيط من تكلفة SAP GRC أو Oracle Access Governance، مع تكامل أصلي عميق."
+"CAPS delivers enterprise-grade, fine-grained access governance for Frappe applications. Move beyond traditional role-based permissions to atomic capability control — every user receives precisely the access they need, fully auditable and compliant.","يقدم CAPS حوكمة وصول دقيقة بمستوى المؤسسات لتطبيقات Frappe. تجاوز الأذونات التقليدية القائمة على الأدوار إلى التحكم الذري بالصلاحيات — كل مستخدم يحصل على الوصول المطلوب تحديداً، قابل للتدقيق ومتوافق تماماً."
+"CAPS discovers capabilities from all installed apps at boot time. No code changes needed in the CAPS app itself.","يكتشف CAPS الصلاحيات من جميع التطبيقات المثبتة عند التشغيل. لا حاجة لتغييرات برمجية في تطبيق CAPS نفسه."
+"CAPS has 14 core DocTypes that form a complete access governance framework. Here's how they connect:","يحتوي CAPS على 14 نوع مستند أساسي تشكّل إطار حوكمة وصول متكامل. إليك كيفية ارتباطها:"
+"CAPS integrates natively with the Frappe/ERPNext ecosystem — no middleware, no external dependencies.","يتكامل CAPS أصلياً مع نظام Frappe/ERPNext — بدون وسيط، بدون تبعيات خارجية."
+"CAPS is domain-agnostic — it provides the access governance layer that adapts to any industry's compliance requirements.","CAPS محايد للمجال — يوفر طبقة حوكمة الوصول التي تتكيف مع متطلبات الامتثال لأي قطاع."
+"CAPS is your compliance engine — enforce least-privilege access, implement separation of duties, and maintain a complete audit trail for every access decision.","CAPS هو محرك الامتثال لديك — فرض الحد الأدنى من الصلاحيات، تطبيق الفصل بين الواجبات، والحفاظ على مسار تدقيق كامل لكل قرار وصول."
+"CAPS provides comprehensive audit infrastructure — verify access policies, review historical states, and generate compliance evidence without relying on manual logs.","يوفر CAPS بنية تدقيق شاملة — التحقق من سياسات الوصول، مراجعة الحالات التاريخية، وتوليد أدلة الامتثال دون الاعتماد على سجلات يدوية."
+"CAPS provides enterprise-grade, fine-grained access governance for your Frappe applications. Instead of coarse roles, CAPS lets you define atomic capabilities and compose them into bundles, groups, and policies — fully auditable and compliant.","يوفر CAPS حوكمة وصول دقيقة بمستوى المؤسسات لتطبيقات Frappe. بدلاً من الأدوار العامة، يتيح لك CAPS تعريف صلاحيات ذرية وتجميعها في حزم ومجموعات وسياسات — قابلة للتدقيق ومتوافقة تماماً."
+CAPS vs. Alternatives,CAPS مقابل البدائل
+Change history — all capability modifications fully traceable,سجل التغييرات — جميع تعديلات الصلاحيات قابلة للتتبع بالكامل
+Choose your role to get a tailored walkthrough of CAPS:,اختر دورك للحصول على جولة إرشادية مخصصة في CAPS:
+Compare any two snapshots to detect drift and unauthorized changes,مقارنة أي لقطتين لاكتشاف الانحراف والتغييرات غير المصرح بها
+Compare Users tool — side-by-side permission diff for any two users,أداة مقارنة المستخدمين — مقارنة الأذونات جنباً إلى جنب لأي مستخدمين
+Complete,مكتمل
+Complete audit infrastructure for compliance assurance:,بنية تدقيق متكاملة لضمان الامتثال:
+"Complete trail — every grant, revocation, policy trigger, and escalation with timestamps and actors.","مسار كامل — كل منح وسحب ومحفز سياسة وتصعيد بالتوقيت والفاعل."
+Compliance alignment,توافق الامتثال
+Compliance Snapshot,لقطة الامتثال
+Compliance snapshots,لقطات الامتثال
+Compliance Snapshots,لقطات الامتثال
+Compliance Snapshots — point-in-time access state for external audits,لقطات الامتثال — حالة الوصول في وقت محدد للتدقيق الخارجي
+Conditional rules,قواعد شرطية
+"Configure CAPS Settings — cache, enforcement mode, fallback behavior","إعداد CAPS — الذاكرة المؤقتة، وضع التطبيق، سلوك التراجع"
+"Configure enforcement mode, cache strategy, fallback behavior","إعداد وضع التطبيق، استراتيجية الذاكرة المؤقتة، سلوك التراجع"
+Configure Field Maps →,إعداد خرائط الحقول →
+"Configure field masking — hide cost data, PII, or sensitive fields","إعداد إخفاء الحقول — إخفاء بيانات التكلفة أو PII أو الحقول الحساسة"
+"Configure field restrictions — mask cost, salary, margin data per role","إعداد قيود الحقول — إخفاء بيانات التكلفة والرواتب والهامش حسب الدور"
+Configure Policies →,إعداد السياسات →
+Configure Restrictions,إعداد القيود
+Configure Role Maps →,إعداد خرائط الأدوار →
+Construction & Contracting,البناء والمقاولات
+"Controls which actions (buttons, workflows, submissions) are available based on capabilities. Map a capability to a specific DocType action to enable/disable it per user.","يتحكم في الإجراءات المتاحة (الأزرار، مسارات العمل، التقديم) بناءً على الصلاحيات. ربط صلاحية بإجراء محدد لنوع مستند لتمكينه/تعطيله لكل مستخدم."
+"Controls which fields are visible or editable based on capabilities. Map a capability to a specific DocType field with behavior: 'hide' (remove field), 'mask' (show ***), or 'read_only' (disable editing).","يتحكم في الحقول المرئية أو القابلة للتعديل بناءً على الصلاحيات. ربط صلاحية بحقل محدد مع سلوك: 'إخفاء' (إزالة الحقل)، 'إخفاء القيمة' (عرض ***)، أو 'للقراءة فقط' (تعطيل التعديل)."
+Cost,التكلفة
+Coverage Report,تقرير التغطية
+Coverage report shows which users have more access than needed,يُظهر تقرير التغطية المستخدمين الذين لديهم وصول أكثر من اللازم
+"Create atomic capabilities like 'View Cost Data', 'Approve Invoice', 'Export Report'.","إنشاء صلاحيات ذرية مثل 'عرض بيانات التكلفة'، 'اعتماد الفاتورة'، 'تصدير التقارير'."
+"Create automated policies, set rate limits, schedule compliance snapshots, and review audit logs.","إنشاء سياسات آلية، تعيين حدود المعدل، جدولة لقطات الامتثال، ومراجعة سجلات التدقيق."
+Create department/team groups with capability inheritance,إنشاء مجموعات الأقسام/الفرق مع وراثة الصلاحيات
+"Create Permission Groups for departments, teams, branches","إنشاء مجموعات أذونات للأقسام والفرق والفروع"
+"Cross-reference users × capabilities. Filter by role, department, or bundle. Export for external audits.","مرجع تقاطعي للمستخدمين × الصلاحيات. التصفية حسب الدور أو القسم أو الحزمة. التصدير للتدقيق الخارجي."
+Deep Ecosystem Integration,تكامل عميق مع النظام البيئي
+Define Capability Policies — auto-grant/revoke based on conditions,تعريف سياسات الصلاحيات — منح/سحب تلقائي بناءً على الشروط
+"Defines a prerequisite relationship: a user must have Capability A before they can be granted Capability B. Prevents invalid capability combinations.","يحدد علاقة شرط مسبق: يجب أن يمتلك المستخدم الصلاحية أ قبل منحه الصلاحية ب. يمنع تركيبات الصلاحيات غير الصالحة."
+"Defines how external apps integrate with CAPS. An integration pack declares which capabilities the external app provides, which DocTypes it protects, and how to sync permissions.","يحدد كيفية تكامل التطبيقات الخارجية مع CAPS. تُعلن حزمة التكامل الصلاحيات التي يوفرها التطبيق الخارجي وأنواع المستندات المحمية وطريقة مزامنة الأذونات."
+Define system-wide capabilities and bundles,تعريف الصلاحيات والحزم على مستوى النظام
+Delegate capability management to team leads via CAPS Manager role,تفويض إدارة الصلاحيات لقادة الفرق عبر دور مدير CAPS
+Delegation,التفويض
+Department-based groups for regional offices,مجموعات قائمة على الأقسام للمكاتب الإقليمية
+"Direct capability assignment to a specific user. You can set start/end dates for time-boxed access, mark capabilities as delegatable, and track the assignment source (manual, role-map, or policy).","تعيين صلاحية مباشر لمستخدم محدد. يمكنك تحديد تواريخ البدء/الانتهاء للوصول المؤقت، تمييز الصلاحيات كقابلة للتفويض، وتتبع مصدر التعيين (يدوي، خريطة دور، أو سياسة)."
+Direct per-user capability assignment for exceptions,تعيين صلاحيات مباشر لكل مستخدم للاستثناءات
+DocType level,مستوى نوع المستند
+Education,التعليم
+"Employee-linked capability assignment · Department/designation-based groups · Salary field masking","تعيين صلاحيات مرتبط بالموظف · مجموعات قائمة على القسم/المسمى · إخفاء حقول الرواتب"
+Enable Policies & Monitoring,تفعيل السياسات والمراقبة
+Enforce time-boxed access for temporary elevated privileges,فرض وصول مؤقت للصلاحيات المرتفعة المؤقتة
+Enterprise Audit & Compliance Infrastructure,بنية التدقيق والامتثال المؤسسي
+Enterprise license,ترخيص مؤسسي
+🏢 ERPNext Admin,🏢 مدير ERPNext
+ERPNext Admin — Business-Level Access Control,مدير ERPNext — التحكم في الوصول على مستوى الأعمال
+ERPNext Admin: Field & Action Control,مدير ERPNext: التحكم بالحقول والإجراءات
+ERPNext Admin: Roles & Bundles,مدير ERPNext: الأدوار والحزم
+ERPNext Admin → uses bundles and role maps you create,مدير ERPNext ← يستخدم الحزم وخرائط الأدوار التي تنشئها
+Every capability change timestamped and attributed to a user,كل تغيير في الصلاحيات مؤرخ ومنسوب لمستخدم
+"Every capability check, assignment change, and policy evaluation is logged here. Use audit logs for security reviews, compliance reporting, and troubleshooting access issues.","كل فحص صلاحية وتغيير تعيين وتقييم سياسة يُسجَّل هنا. استخدم سجلات التدقيق لمراجعات الأمان وتقارير الامتثال واستكشاف مشاكل الوصول."
+Exam management — time-boxed access during exam periods,إدارة الامتحانات — وصول مؤقت خلال فترات الامتحان
+Export users × capabilities as CSV/PDF for external audit evidence,تصدير المستخدمين × الصلاحيات بصيغة CSV/PDF كدليل للتدقيق الخارجي
+External audit: Export Access Matrix and Audit Reports as evidence,التدقيق الخارجي: تصدير مصفوفة الوصول وتقارير التدقيق كأدلة
+Feature,الميزة
+Field Capability Maps — which fields are visible/masked per capability,خرائط صلاحيات الحقول — أي الحقول مرئية/مخفية لكل صلاحية
+"Field-level cost/margin masking · Action restrictions on Sales/Purchase transactions · Workflow gate integration","إخفاء التكلفة/الهامش على مستوى الحقل · تقييد الإجراءات على معاملات البيع/الشراء · تكامل بوابات مسار العمل"
+Field-level masking,إخفاء على مستوى الحقل
+Field-Level Masking,إخفاء على مستوى الحقل
+Field Masking,إخفاء الحقول
+Financial Services,الخدمات المالية
+Fine-grained control over what users see and do in ERPNext forms:,تحكم دقيق فيما يراه ويفعله المستخدمون في نماذج ERPNext:
+For Auditors,للمدققين
+For ERPNext System Managers,لمديري نظام ERPNext
+For Information Security Managers,لمديري أمن المعلومات
+For IT Managers,لمديري تقنية المعلومات
+"For more help, visit","لمزيد من المساعدة، زُر"
+Frappe native,أصلي في Frappe
+Free,مجاني
+"From capability definition through policy evaluation to runtime enforcement — the complete access governance lifecycle.","من تعريف الصلاحية عبر تقييم السياسة إلى التطبيق أثناء التشغيل — دورة حياة حوكمة الوصول الكاملة."
+Full,كامل
+Full About Page,صفحة التعريف الكاملة
+"Full audit trail — every grant, revocation, and policy trigger logged","مسار تدقيق كامل — كل منح وسحب ومحفز سياسة مسجّل"
+"Gate actions — approve, submit, amend, export restricted by capability","تقييد الإجراءات — الاعتماد والتقديم والتعديل والتصدير مقيدة بالصلاحية"
+"Gate Approve, Submit, Amend, Cancel, Export buttons per capability","تقييد أزرار الاعتماد والتقديم والتعديل والإلغاء والتصدير حسب الصلاحية"
+Gate discount approval actions by amount threshold,تقييد إجراءات اعتماد الخصم حسب حد المبلغ
+Gate project approval actions by project value threshold,تقييد إجراءات اعتماد المشروع حسب حد قيمة المشروع
+"Global CAPS configuration: enforcement mode, cache TTL, audit log retention, notification preferences, and integration settings. Changes here affect the entire CAPS system.","إعداد CAPS العام: وضع التطبيق، مدة الذاكرة المؤقتة، الاحتفاظ بسجل التدقيق، تفضيلات الإشعارات، وإعدادات التكامل. التغييرات هنا تؤثر على نظام CAPS بالكامل."
+Go to CAPS Settings →,الذهاب إلى إعدادات CAPS →
+Grant capabilities directly or through Permission Groups for team-based assignment.,منح الصلاحيات مباشرة أو عبر مجموعات الأذونات للتعيين على مستوى الفريق.
+Grant CAPS Manager role to team leads for decentralized management,منح دور مدير CAPS لقادة الفرق للإدارة اللامركزية
+Grant temporary elevated privileges that auto-expire,منح صلاحيات مرتفعة مؤقتة تنتهي تلقائياً
+Granular control without creating dozens of custom roles,تحكم دقيق دون إنشاء عشرات الأدوار المخصصة
+Graph Explorer,مستكشف الرسم البياني
+"Group related capabilities into job function bundles (Accountant, Purchaser)","تجميع الصلاحيات المتعلقة في حزم وظائف (محاسب، مشتري)"
+Group related capabilities into reusable bundles. Map Frappe roles to CAPS capabilities.,تجميع الصلاحيات المتعلقة في حزم قابلة لإعادة الاستخدام. ربط أدوار Frappe بصلاحيات CAPS.
+Hard/soft dependency chains between capabilities,سلاسل تبعيات صلبة/مرنة بين الصلاحيات
+Healthcare,الرعاية الصحية
+"Hide cost data, PII, salary fields from unauthorized users","إخفاء بيانات التكلفة والمعلومات الشخصية وحقول الرواتب عن المستخدمين غير المصرح لهم"
+HIPAA-aligned field masking for patient PII,إخفاء حقول متوافق مع HIPAA لبيانات المريض الشخصية
+How Apps Integrate with CAPS,كيف تتكامل التطبيقات مع CAPS
+How CAPS Adapts to Your Industry,كيف يتكيف CAPS مع قطاعك
+How Frappe roles map to CAPS capabilities,كيف ترتبط أدوار Frappe بصلاحيات CAPS
+How your work connects,كيف يرتبط عملك
+"Identify gaps — which capabilities are assigned, which are unused, which users lack coverage.","تحديد الثغرات — أي الصلاحيات معيّنة، أيها غير مستخدمة، أي المستخدمين يفتقرون للتغطية."
+Identify over-assigned capabilities and potential risk areas,تحديد الصلاحيات المفرطة التعيين ومناطق المخاطر المحتملة
+Identify unused capabilities and over-privileged users,تحديد الصلاحيات غير المستخدمة والمستخدمين ذوي الصلاحيات المفرطة
+Incident Response,الاستجابة للحوادث
+Incident response: Trace exact capabilities a user had at incident time,الاستجابة للحوادث: تتبع الصلاحيات الدقيقة للمستخدم وقت الحادثة
+Included,مضمّن
+Industry Use Cases,حالات الاستخدام القطاعية
+InfoSec: Audit & Compliance,أمن المعلومات: التدقيق والامتثال
+🔐 InfoSec Manager,🔐 مدير أمن المعلومات
+InfoSec Manager → receives capability framework you define,مدير أمن المعلومات ← يستلم إطار الصلاحيات الذي تعرّفه
+InfoSec Manager — Security Policy & Compliance,مدير أمن المعلومات — سياسة الأمان والامتثال
+InfoSec: Security Policies,أمن المعلومات: سياسات الأمان
+"Integration Pack configuration for ERPNext, HRMS, and third-party apps","إعداد حزم التكامل لـ ERPNext وHRMS والتطبيقات الخارجية"
+Interactive,تفاعلي
+Interactive map of all CAPS modules and their relationships — click any node to explore.,خريطة تفاعلية لجميع وحدات CAPS وعلاقاتها — انقر على أي عقدة للاستكشاف.
+🖥️ IT Manager,🖥️ مدير تقنية المعلومات
+IT Manager — Infrastructure & System Governance,مدير تقنية المعلومات — البنية التحتية وحوكمة النظام
+IT Manager: System Setup,مدير تقنية المعلومات: إعداد النظام
+IT Manager: Visual Graph Explorer,مدير تقنية المعلومات: مستكشف الرسم البياني المرئي
+Key compliance verification workflows:,سير عمل التحقق من الامتثال الرئيسية:
+Least-Privilege,الحد الأدنى من الصلاحيات
+Least-privilege compliance — no user has unnecessary access,امتثال الحد الأدنى — لا مستخدم لديه وصول غير ضروري
+Least-privilege enforcement — every user gets minimum needed access,تطبيق الحد الأدنى من الصلاحيات — كل مستخدم يحصل على الحد الأدنى المطلوب
+Limited,محدود
+"Links a Capability Bundle to a Permission Group. All group members receive all capabilities in the bundle.","يربط حزمة صلاحيات بمجموعة أذونات. يحصل جميع أعضاء المجموعة على جميع صلاحيات الحزمة."
+"Links a Capability Bundle to a Role Capability Map. All users with the mapped role receive all capabilities in the bundle.","يربط حزمة صلاحيات بخريطة صلاحيات الدور. يحصل جميع المستخدمين بالدور المربوط على جميع صلاحيات الحزمة."
+"Links a Capability Bundle to a User Capability record. The user receives all capabilities in the bundle.","يربط حزمة صلاحيات بسجل صلاحيات المستخدم. يحصل المستخدم على جميع صلاحيات الحزمة."
+Links a single Capability to a Permission Group. All group members receive this capability.,يربط صلاحية واحدة بمجموعة أذونات. يحصل جميع أعضاء المجموعة على هذه الصلاحية.
+Login audit integration — correlate access events with session data,تكامل تدقيق تسجيل الدخول — ربط أحداث الوصول ببيانات الجلسة
+Manage capability sets per environment (dev/staging/prod),إدارة مجموعات الصلاحيات لكل بيئة (تطوير/اختبار/إنتاج)
+Manage Site Profiles for different environments (dev/staging/prod),إدارة ملفات الموقع للبيئات المختلفة (تطوير/اختبار/إنتاج)
+Manufacturing,التصنيع
+"Map existing Frappe roles (Accounts User, Sales Manager) to CAPS capabilities","ربط أدوار Frappe الحالية (مستخدم حسابات، مدير مبيعات) بصلاحيات CAPS"
+Map Frappe roles to CAPS capabilities via Role Capability Map,ربط أدوار Frappe بصلاحيات CAPS عبر خريطة صلاحيات الدور
+"Maps Frappe roles to CAPS capabilities. When a user has a specific Frappe role, they automatically receive the mapped capabilities. This bridges traditional role-based access with capability-based control.","يربط أدوار Frappe بصلاحيات CAPS. عندما يمتلك المستخدم دور Frappe محدد، يحصل تلقائياً على الصلاحيات المربوطة. يجسر هذا الوصول التقليدي القائم على الأدوار مع التحكم القائم على الصلاحيات."
+Mask cost data from site engineers (Field Capability Map),إخفاء بيانات التكلفة عن مهندسي الموقع (خريطة صلاحيات الحقول)
+"Mask cost fields, salary data, margin columns per capability","إخفاء حقول التكلفة وبيانات الرواتب وأعمدة الهامش حسب الصلاحية"
+Mask pricing/margin data from sales floor staff,إخفاء بيانات التسعير/الهامش عن موظفي قاعة المبيعات
+Monitor rate limits and system health via audit logs,مراقبة حدود المعدل وصحة النظام عبر سجلات التدقيق
+Multi-campus site profiles with separate capability sets,ملفات مواقع متعددة الحرم مع مجموعات صلاحيات منفصلة
+No more over-privileged users with System Manager role,لا مزيد من المستخدمين ذوي الصلاحيات المفرطة بدور مدير النظام
+Onboarding/Offboarding,الإلحاق/المغادرة
+Onboarding/Offboarding: Verify complete capability grant/revoke cycles,الإلحاق/المغادرة: التحقق من دورات منح/سحب الصلاحيات الكاملة
+Open Audit Report →,فتح تقرير التدقيق →
+Oracle only,Oracle فقط
+Per-App CAPS Integration,تكامل CAPS لكل تطبيق
+Per button/workflow,لكل زر/مسار عمل
+Per capability,لكل صلاحية
+Periodic attestation via snapshots and coverage reports,إثبات دوري عبر اللقطات وتقارير التغطية
+Periodic compliance snapshots for regulatory audits,لقطات امتثال دورية للتدقيق التنظيمي
+Periodic review: Compare current snapshot with previous for drift detection,مراجعة دورية: مقارنة اللقطة الحالية بالسابقة لاكتشاف الانحراف
+"Permission Groups are collections of users who share the same set of capabilities. Add members to a group and assign capabilities to the group — all members inherit them. Supports temporary membership with expiry dates.","مجموعات الأذونات هي مجموعات من المستخدمين يتشاركون نفس مجموعة الصلاحيات. أضف أعضاء لمجموعة وعيّن صلاحيات للمجموعة — جميع الأعضاء يرثونها. تدعم العضوية المؤقتة بتواريخ انتهاء."
+Permission Groups — team-based capability inheritance,مجموعات الأذونات — وراثة صلاحيات قائمة على الفريق
+Permission group tree structure with inheritance,هيكل شجري لمجموعات الأذونات مع الوراثة
+Point-in-time freeze of all user capabilities. Compare snapshots to detect drift over time.,تجميد لحظي لجميع صلاحيات المستخدم. مقارنة اللقطات لاكتشاف الانحراف مع الوقت.
+Point-in-time freeze of all user capabilities for regulatory reviews,تجميد لحظي لجميع صلاحيات المستخدم للمراجعات التنظيمية
+"Point-in-time snapshots of a user's complete capability set. Used for compliance audits, historical reviews, and before/after comparisons when capability changes are made.","لقطات لحظية لمجموعة صلاحيات المستخدم الكاملة. تُستخدم لتدقيق الامتثال والمراجعات التاريخية ومقارنات قبل/بعد عند إجراء تغييرات على الصلاحيات."
+"Policies define conditional rules for capability evaluation. A policy can grant or revoke capabilities based on conditions like time of day, IP range, department, or custom expressions. Policies are evaluated daily and on-demand.","تُعرّف السياسات قواعد شرطية لتقييم الصلاحيات. يمكن للسياسة منح أو سحب صلاحيات بناءً على شروط مثل الوقت ونطاق IP والقسم أو تعبيرات مخصصة. تُقيَّم السياسات يومياً وعند الطلب."
+Policy automation,أتمتة السياسات
+Policy consistency — automated rules match written security policies,اتساق السياسات — القواعد الآلية تطابق سياسات الأمان المكتوبة
+Policy engine — conditional rules auto-grant/revoke based on context,محرك السياسات — قواعد شرطية تمنح/تسحب تلقائياً بناءً على السياق
+Policy Engine dashboard — active policies, condition evaluation logs,لوحة محرك السياسات — السياسات النشطة وسجلات تقييم الشروط
+Prevent conflicting capabilities from being co-assigned,منع تعيين صلاحيات متعارضة معاً
+Quality control gates — restrict QC approval to certified users,بوابات مراقبة الجودة — تقييد اعتماد الجودة للمستخدمين المعتمدين
+Rate Limit Check,فحص حد المعدل
+Rate limiting,تحديد المعدل
+Rate limiting on high-value transaction approvals,تحديد المعدل على اعتمادات المعاملات عالية القيمة
+Rate limiting per capability — prevent abuse of sensitive operations,تحديد المعدل لكل صلاحية — منع إساءة استخدام العمليات الحساسة
+"Rate limiting prevents abuse by restricting how often a capability can be exercised. Set limits per minute/hour/day for sensitive capabilities like data exports or bulk operations.","يمنع تحديد المعدل إساءة الاستخدام بتقييد عدد مرات ممارسة الصلاحية. حدد قيوداً بالدقيقة/الساعة/اليوم للصلاحيات الحساسة كتصدير البيانات أو العمليات الجماعية."
+Rate Limit monitoring to prevent system abuse,مراقبة حدود المعدل لمنع إساءة استخدام النظام
+Real-time cache invalidation — permission changes take effect instantly,إبطال الذاكرة المؤقتة فورياً — تغييرات الأذونات تسري على الفور
+Real-time stats on capability utilization and system health,إحصائيات فورية عن استخدام الصلاحيات وصحة النظام
+Reconstruct exact capabilities a user had at any point in time,إعادة بناء الصلاحيات الدقيقة التي كان يمتلكها المستخدم في أي وقت
+Regional groups for franchise/branch management,مجموعات إقليمية لإدارة الامتياز/الفروع
+"Restrict approve, submit, delete, export actions per capability","تقييد إجراءات الاعتماد والتقديم والحذف والتصدير حسب الصلاحية"
+Retail & E-Commerce,البيع بالتجزئة والتجارة الإلكترونية
+Review and approve Capability Requests from users,مراجعة واعتماد طلبات الصلاحيات من المستخدمين
+Role-based access to medical records vs. billing,وصول قائم على الدور للسجلات الطبية مقابل الفواتير
+Role Capability Maps — how Frappe roles translate to CAPS capabilities,خرائط صلاحيات الأدوار — كيف تُترجم أدوار Frappe لصلاحيات CAPS
+Roles only,أدوار فقط
+SAP only,SAP فقط
+Schedule periodic Capability Snapshots for compliance reviews,جدولة لقطات صلاحيات دورية لمراجعات الامتثال
+"Search by user, capability, date range, action type — complete change history","البحث حسب المستخدم والصلاحية ونطاق التاريخ ونوع الإجراء — سجل تغييرات كامل"
+Security & Compliance Reports,تقارير الأمان والامتثال
+Security Enforcement,تطبيق الأمان
+See how CAPS compares to built-in Frappe permissions and enterprise access governance solutions.,شاهد كيف يقارن CAPS مع أذونات Frappe المدمجة وحلول حوكمة الوصول المؤسسية.
+Self-service capability requests reduce IT bottleneck,طلبات الصلاحيات الذاتية تقلل اختناقات تقنية المعلومات
+Separation of Duties,الفصل بين الواجبات
+Separation of duties — conflicting capabilities detected and blocked,الفصل بين الواجبات — الصلاحيات المتعارضة تُكتشف وتُحظر
+Separation of duties — conflicting capabilities not co-assigned,الفصل بين الواجبات — الصلاحيات المتعارضة لا تُعيَّن معاً
+Separation of duties — prevent same user from creating and approving,الفصل بين الواجبات — منع نفس المستخدم من الإنشاء والاعتماد
+Set per-capability rate limits to prevent system abuse,تعيين حدود معدل لكل صلاحية لمنع إساءة استخدام النظام
+"Set up action gates — restrict approvals, deletions, exports","إعداد بوابات الإجراءات — تقييد الاعتمادات والحذف والتصدير"
+Set up Field Capability Maps (mask sensitive data) and Action Capability Maps (gate workflows).,إعداد خرائط صلاحيات الحقول (إخفاء البيانات الحساسة) وخرائط صلاحيات الإجراءات (تقييد مسارات العمل).
+Set up Integration Packs to sync capabilities with external systems,إعداد حزم التكامل لمزامنة الصلاحيات مع الأنظمة الخارجية
+Shift-based time-boxed access for production supervisors,وصول مؤقت قائم على المناوبة لمشرفي الإنتاج
+Side-by-side diff of any two users' capabilities — great for role audits,مقارنة جنباً إلى جنب لصلاحيات أي مستخدمين — ممتازة لتدقيق الأدوار
+Site Profile management for multi-tenant deployments,إدارة ملفات الموقع للنشر متعدد المستأجرين
+"Stores site-wide CAPS configuration including default policies, enforcement mode (strict/permissive), and capability inheritance rules. Each Frappe site can have its own profile.","يخزن إعدادات CAPS على مستوى الموقع بما في ذلك السياسات الافتراضية ووضع التطبيق (صارم/متساهل) وقواعد وراثة الصلاحيات. يمكن لكل موقع Frappe أن يكون له ملفه الخاص."
+Student data privacy — restrict grade/record access by department,خصوصية بيانات الطلاب — تقييد الوصول للدرجات/السجلات حسب القسم
+"Sync CAPS with ERPNext, HRMS, and third-party apps","مزامنة CAPS مع ERPNext وHRMS والتطبيقات الخارجية"
+Temporal Access,الوصول المؤقت
+Temporal access — time-boxed capabilities expired as scheduled,الوصول المؤقت — الصلاحيات المؤقتة انتهت كما هو مجدول
+The CAPS data model — 14 interconnected DocTypes forming a complete access governance framework.,نموذج بيانات CAPS — 14 نوع مستند مترابط يشكّل إطار حوكمة وصول متكامل.
+The Graph Explorer gives you a complete topology of your CAPS configuration:,يمنحك مستكشف الرسم البياني طوبولوجيا كاملة لإعدادات CAPS الخاصة بك:
+Third-Party Apps,تطبيقات خارجية
+Time-boxed access,وصول مؤقت محدد المدة
+Time-boxed access for visiting consultants,وصول مؤقت للاستشاريين الزائرين
+Time-boxed capabilities — automatic expiry with no manual cleanup,صلاحيات مؤقتة — انتهاء تلقائي بدون تنظيف يدوي
+Trace complete capability grant/revoke cycles per user,تتبع دورات منح/سحب الصلاحيات الكاملة لكل مستخدم
+Transaction level,مستوى المعاملة
+User Access Matrix — comprehensive user × capability cross-reference,مصفوفة وصول المستخدم — مرجع تقاطعي شامل للمستخدمين × الصلاحيات
+User Access Matrix — cross-reference users × capabilities,مصفوفة وصول المستخدم — مرجع تقاطعي للمستخدمين × الصلاحيات
+User Capability assignments — per-user permission profiles,تعيينات صلاحيات المستخدم — ملفات أذونات لكل مستخدم
+"Users can request additional capabilities through this DocType. Requests go through an approval workflow — managers review and approve/reject. Approved requests create User Capability records automatically.","يمكن للمستخدمين طلب صلاحيات إضافية عبر نوع المستند هذا. تمر الطلبات بسير عمل اعتماد — يراجع المديرون ويوافقون/يرفضون. الطلبات المعتمدة تنشئ سجلات صلاحيات المستخدم تلقائياً."
+Users can self-service request additional capabilities with approval workflow,يمكن للمستخدمين طلب صلاحيات إضافية ذاتياً مع سير عمل اعتماد
+Users × capabilities cross-reference for external auditors,مرجع تقاطعي للمستخدمين × الصلاحيات للمدققين الخارجيين
+Verify time-boxed capabilities expired on schedule,التحقق من انتهاء الصلاحيات المؤقتة في الموعد المحدد
+Via GRC rules,عبر قواعد GRC
+View Audit Log →,عرض سجل التدقيق →
+View Snapshots →,عرض اللقطات →
+Visual graph explorer,مستكشف الرسم البياني المرئي
+Visual graph explorer makes complex permissions understandable,مستكشف الرسم البياني يجعل الأذونات المعقدة مفهومة
+What you verify,ما تتحقق منه
+Why CAPS? — Competitive Comparison,لماذا CAPS؟ — مقارنة تنافسية
+Workflow: Access Governance Lifecycle,مسار العمل: دورة حياة حوكمة الوصول
+"You're ready to use CAPS. Remember, you can always access help by clicking the ❓ icon on any CAPS page.","أنت جاهز لاستخدام CAPS. تذكّر، يمكنك دائماً الوصول للمساعدة بالنقر على أيقونة ❓ في أي صفحة CAPS."

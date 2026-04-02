@@ -1,0 +1,122 @@
+{
+ "actions": [],
+ "autoname": "hash",
+ "creation": "2026-03-12 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "doctype_name",
+  "fieldname",
+  "field_label",
+  "column_break_1",
+  "capability",
+  "behavior",
+  "section_advanced",
+  "mask_pattern",
+  "custom_handler",
+  "priority"
+ ],
+ "fields": [
+  {
+   "fieldname": "doctype_name",
+   "fieldtype": "Link",
+   "label": "DocType",
+   "options": "DocType",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "fieldname",
+   "fieldtype": "Data",
+   "label": "Field Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "field_label",
+   "fieldtype": "Data",
+   "label": "Field Label",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "capability",
+   "fieldtype": "Link",
+   "label": "Required Capability",
+   "options": "Capability",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "behavior",
+   "fieldtype": "Select",
+   "label": "Behavior When Missing",
+   "options": "hide\nread_only\nmask\ncustom",
+   "default": "hide",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "section_advanced",
+   "fieldtype": "Section Break",
+   "label": "Advanced"
+  },
+  {
+   "fieldname": "mask_pattern",
+   "fieldtype": "Data",
+   "label": "Mask Pattern",
+   "depends_on": "eval:doc.behavior=='mask'",
+   "description": "e.g., ***{last4}"
+  },
+  {
+   "fieldname": "custom_handler",
+   "fieldtype": "Code",
+   "label": "Custom Handler",
+   "depends_on": "eval:doc.behavior=='custom'",
+   "options": "JS",
+   "description": "JavaScript expression to apply"
+  },
+  {
+   "default": "0",
+   "fieldname": "priority",
+   "fieldtype": "Int",
+   "label": "Priority",
+   "description": "Higher takes precedence on conflict"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-03-12 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "CAPS",
+ "name": "Field Capability Map",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "CAPS Admin",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "CAPS Manager"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

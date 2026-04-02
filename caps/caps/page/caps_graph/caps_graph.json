@@ -1,0 +1,26 @@
+{
+ "content": null,
+ "creation": "2026-03-15 00:00:00.000000",
+ "doctype": "Page",
+ "icon": "fa fa-project-diagram",
+ "modified": "2026-03-15 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "CAPS",
+ "name": "caps-graph",
+ "owner": "Administrator",
+ "page_name": "caps-graph",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "CAPS Admin"
+  },
+  {
+   "role": "CAPS Manager"
+  }
+ ],
+ "standard": "Yes",
+ "system_page": 0,
+ "title": "CAPS Graph"
+}

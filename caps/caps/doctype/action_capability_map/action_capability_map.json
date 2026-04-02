@@ -1,0 +1,102 @@
+{
+ "actions": [],
+ "autoname": "hash",
+ "creation": "2026-03-12 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "doctype_name",
+  "action_id",
+  "action_type",
+  "column_break_1",
+  "capability",
+  "fallback_behavior",
+  "fallback_message"
+ ],
+ "fields": [
+  {
+   "fieldname": "doctype_name",
+   "fieldtype": "Link",
+   "label": "DocType",
+   "options": "DocType",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "action_id",
+   "fieldtype": "Data",
+   "label": "Action ID",
+   "reqd": 1,
+   "in_list_view": 1,
+   "description": "Button label or action identifier"
+  },
+  {
+   "fieldname": "action_type",
+   "fieldtype": "Select",
+   "label": "Action Type",
+   "options": "button\nmenu_item\nworkflow_action\nprint_format\ncustom",
+   "default": "button",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "capability",
+   "fieldtype": "Link",
+   "label": "Required Capability",
+   "options": "Capability",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "fallback_behavior",
+   "fieldtype": "Select",
+   "label": "Fallback Behavior",
+   "options": "hide\ndisable\nredirect",
+   "default": "hide",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fallback_message",
+   "fieldtype": "Data",
+   "label": "Fallback Message",
+   "description": "Shown when action is disabled or redirected"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-03-12 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "CAPS",
+ "name": "Action Capability Map",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "CAPS Admin",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "CAPS Manager"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

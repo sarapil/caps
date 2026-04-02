@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+  <defs>
+    <linearGradient id="splg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/><stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+  </defs>
+  <path d="M60 15 L90 30 L90 60 C90 80 75 92 60 100 C45 92 30 80 30 60 L30 30 Z"
+        fill="url(#splg)" stroke="#059669" stroke-width="2">
+    <animate attributeName="opacity" values="0.9;1;0.9" dur="2s" repeatCount="indefinite"/>
+  </path>
+  <rect x="48" y="52" width="24" height="20" rx="4" fill="#fff" opacity="0.95"/>
+  <path d="M52 52 L52 46 C52 40 55 37 60 37 C65 37 68 40 68 46 L68 52" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="60" cy="60" r="3" fill="#059669"/>
+  <text x="130" y="55" font-family="system-ui,sans-serif" font-weight="800" font-size="42" fill="#10B981">CAPS</text>
+  <text x="130" y="82" font-family="system-ui,sans-serif" font-weight="400" font-size="14" fill="#6b7280">Capability-Based Access Control</text>
+  <text x="130" y="102" font-family="system-ui,sans-serif" font-weight="300" font-size="11" fill="#9ca3af">by Arkan Labs</text>
+</svg>

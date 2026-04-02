@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="sg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/><stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <radialGradient id="pg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.4"/><stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="32" cy="32" r="30" fill="url(#pg)">
+    <animate attributeName="r" values="26;31;26" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <path d="M32 6 L52 16 L52 32 C52 46 42 54 32 58 C22 54 12 46 12 32 L12 16 Z"
+        fill="url(#sg)" stroke="#059669" stroke-width="1.2" stroke-linejoin="round"/>
+  <rect x="25" y="28" width="14" height="12" rx="2.5" fill="#fff" opacity="0.95"/>
+  <path d="M27.5 28 L27.5 24 C27.5 20.5 29.5 18 32 18 C34.5 18 36.5 20.5 36.5 24 L36.5 28"
+        fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0.9">
+    <animate attributeName="d"
+             values="M27.5 28 L27.5 24 C27.5 20.5 29.5 18 32 18 C34.5 18 36.5 20.5 36.5 24 L36.5 28;M27.5 28 L27.5 24 C27.5 20.5 29.5 18 32 18 C34.5 18 36.5 20.5 36.5 24 L36.5 22;M27.5 28 L27.5 24 C27.5 20.5 29.5 18 32 18 C34.5 18 36.5 20.5 36.5 24 L36.5 28"
+             dur="4s" repeatCount="indefinite" keyTimes="0;0.5;1"/>
+  </path>
+  <circle cx="32" cy="32.5" r="2" fill="#059669"/>
+  <path d="M31 33.5 L33 33.5 L32.5 37.5 L31.5 37.5 Z" fill="#059669"/>
+  <circle r="2" fill="#34d399" opacity="0.9">
+    <animateMotion dur="6s" repeatCount="indefinite"
+      path="M32,8 C48,8 56,20 56,32 C56,44 48,56 32,56 C16,56 8,44 8,32 C8,20 16,8 32,8"/>
+  </circle>
+</svg>

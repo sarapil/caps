@@ -1,0 +1,128 @@
+{
+ "actions": [],
+ "autoname": "hash",
+ "creation": "2026-03-12 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "user",
+  "snapshot_label",
+  "column_break_1",
+  "snapshot_date",
+  "created_by",
+  "section_data",
+  "capabilities_json",
+  "section_metadata",
+  "source",
+  "column_break_2",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "User",
+   "options": "User",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "snapshot_label",
+   "fieldtype": "Data",
+   "label": "Label",
+   "in_list_view": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "snapshot_date",
+   "fieldtype": "Datetime",
+   "label": "Snapshot Date",
+   "reqd": 1,
+   "in_list_view": 1,
+   "read_only": 1,
+   "default": "Now"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_data",
+   "fieldtype": "Section Break",
+   "label": "Resolved Capabilities"
+  },
+  {
+   "fieldname": "capabilities_json",
+   "fieldtype": "JSON",
+   "label": "Capabilities (JSON)",
+   "reqd": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_metadata",
+   "fieldtype": "Section Break",
+   "label": "Metadata"
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Select",
+   "label": "Source",
+   "options": "manual\nscheduled\npre_change\npost_change",
+   "default": "manual",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-03-12 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "CAPS",
+ "name": "Capability Snapshot",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "CAPS Admin",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "CAPS Manager"
+  }
+ ],
+ "sort_field": "snapshot_date",
+ "sort_order": "DESC",
+ "track_changes": 0,
+ "in_create": 1
+}

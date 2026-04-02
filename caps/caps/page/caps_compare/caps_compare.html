@@ -1,0 +1,52 @@
+<div class="caps-compare-page">
+	<div class="caps-compare-toolbar row" style="margin-bottom:16px;">
+		<div class="col-md-4">
+			<label class="caps-label-user-a">User A</label>
+			<div class="caps-compare-user-a"></div>
+		</div>
+		<div class="col-md-4 text-center" style="padding-top:24px;">
+			<button class="btn btn-primary btn-sm caps-compare-btn">
+				<span data-fv-icon="arrows-exchange" data-fv-size="sm"></span>
+				Compare
+			</button>
+			<button class="btn btn-default btn-sm caps-compare-toggle-graph" disabled style="margin-left:8px;">
+				<span data-fv-icon="chart-dots" data-fv-size="sm"></span>
+				Graph
+			</button>
+			<button class="btn btn-xs btn-default" id="btn-caps-compare-help" style="margin-left:8px;">❓</button>
+		</div>
+		<div class="col-md-4">
+			<label class="caps-label-user-b">User B</label>
+			<div class="caps-compare-user-b"></div>
+		</div>
+	</div>
+
+	<div class="caps-compare-loading text-center text-muted" style="display:none;padding:20px;">
+		Comparing...
+	</div>
+
+	<div class="caps-compare-results" style="display:none;">
+		<div class="caps-compare-summary" style="margin-bottom:16px;"></div>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="caps-compare-card" style="border-left:3px solid #3b82f6;">
+					<h6>Only in <span class="user-a-name">User A</span></h6>
+					<div class="caps-only-a"></div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="caps-compare-card" style="border-left:3px solid var(--caps-brand, #10B981);">
+					<h6>Common</h6>
+					<div class="caps-common"></div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="caps-compare-card" style="border-left:3px solid #f59e0b;">
+					<h6>Only in <span class="user-b-name">User B</span></h6>
+					<div class="caps-only-b"></div>
+				</div>
+			</div>
+		</div>
+		<div class="caps-compare-graph-container" style="display:none;width:100%;height:400px;border:1px solid var(--border-color);border-radius:8px;margin-top:16px;overflow:hidden;"></div>
+	</div>
+</div>

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="50%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <radialGradient id="pulseGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="lockGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#d1fae5"/>
+    </linearGradient>
+    <linearGradient id="scanGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#34d399" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#34d399" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="g"/>
+      <feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <!-- Pulsing background -->
+  <circle cx="256" cy="256" r="240" fill="url(#pulseGlow)">
+    <animate attributeName="r" values="210;248;210" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Shield body -->
+  <path d="M256 48 L416 128 L416 256 C416 368 336 432 256 464 C176 432 96 368 96 256 L96 128 Z"
+        fill="url(#shieldGrad)" stroke="#059669" stroke-width="4" stroke-linejoin="round" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.92;1;0.92" dur="3s" repeatCount="indefinite"/>
+  </path>
+  <!-- Inner highlight -->
+  <path d="M256 80 L384 144 L384 256 C384 348 320 404 256 432 C192 404 128 348 128 256 L128 144 Z"
+        fill="none" stroke="#6ee7b7" stroke-width="2" stroke-linejoin="round" opacity="0.4"/>
+  <!-- Lock body -->
+  <rect x="200" y="224" width="112" height="96" rx="16" fill="url(#lockGrad)" opacity="0.95"/>
+  <!-- Lock shackle -->
+  <path d="M220 224 L220 192 C220 164 236 144 256 144 C276 144 292 164 292 192 L292 224"
+        fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" opacity="0.9">
+    <animate attributeName="d"
+             values="M220 224 L220 192 C220 164 236 144 256 144 C276 144 292 164 292 192 L292 224;M220 224 L220 192 C220 164 236 144 256 144 C276 144 292 164 292 192 L292 176;M220 224 L220 192 C220 164 236 144 256 144 C276 144 292 164 292 192 L292 224"
+             dur="4s" repeatCount="indefinite" keyTimes="0;0.5;1"/>
+  </path>
+  <!-- Keyhole -->
+  <circle cx="256" cy="260" r="14" fill="#059669"/>
+  <path d="M248 268 L264 268 L260 300 L252 300 Z" fill="#059669"/>
+  <!-- Scan beam -->
+  <rect x="112" y="0" width="288" height="24" fill="url(#scanGrad)" rx="12" opacity="0.6">
+    <animate attributeName="y" values="80;432;80" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  <!-- Orbiting dots -->
+  <circle r="10" fill="#34d399" opacity="0.9">
+    <animateMotion dur="6s" repeatCount="indefinite"
+      path="M256,64 C384,64 448,160 448,256 C448,352 384,448 256,448 C128,448 64,352 64,256 C64,160 128,64 256,64"/>
+  </circle>
+  <circle r="8" fill="#6ee7b7" opacity="0.8">
+    <animateMotion dur="6s" repeatCount="indefinite" begin="-2s"
+      path="M256,64 C384,64 448,160 448,256 C448,352 384,448 256,448 C128,448 64,352 64,256 C64,160 128,64 256,64"/>
+  </circle>
+  <circle r="6" fill="#a7f3d0" opacity="0.7">
+    <animateMotion dur="6s" repeatCount="indefinite" begin="-4s"
+      path="M256,64 C384,64 448,160 448,256 C448,352 384,448 256,448 C128,448 64,352 64,256 C64,160 128,64 256,64"/>
+  </circle>
+  <!-- Check flash -->
+  <path d="M208 264 L240 296 L304 216" fill="none" stroke="#34d399" stroke-width="14"
+        stroke-linecap="round" stroke-linejoin="round" opacity="0">
+    <animate attributeName="opacity" values="0;0;0.9;0.9;0" dur="4s" repeatCount="indefinite"
+             keyTimes="0;0.6;0.7;0.85;1"/>
+  </path>
+  <!-- CAPS text -->
+  <text x="256" y="500" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="800"
+        font-size="40" fill="#059669" letter-spacing="8" opacity="0.7">CAPS</text>
+</svg>

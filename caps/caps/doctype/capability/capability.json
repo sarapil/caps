@@ -1,0 +1,184 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "field:name1",
+ "creation": "2026-03-12 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "label",
+  "category",
+  "column_break_1",
+  "scope_doctype",
+  "scope_field",
+  "scope_action",
+  "section_hierarchy",
+  "parent_capability",
+  "section_details",
+  "description",
+  "column_break_2",
+  "is_active",
+  "is_delegatable",
+  "app_name",
+  "section_prerequisites",
+  "prerequisites"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Capability Name",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "description": "Format: {category}:{scope_doctype}:{scope_field_or_action}"
+  },
+  {
+   "fieldname": "label",
+   "fieldtype": "Data",
+   "label": "Label",
+   "reqd": 1,
+   "in_list_view": 1,
+   "translatable": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "Field\nAction\nWorkflow\nReport\nAPI\nModule\nCustom",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "scope_doctype",
+   "fieldtype": "Link",
+   "label": "Scope DocType",
+   "options": "DocType",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "scope_field",
+   "fieldtype": "Data",
+   "label": "Scope Field",
+   "depends_on": "eval:doc.category=='Field'"
+  },
+  {
+   "fieldname": "scope_action",
+   "fieldtype": "Data",
+   "label": "Scope Action",
+   "depends_on": "eval:['Action','Workflow','API'].includes(doc.category)"
+  },
+  {
+   "fieldname": "section_hierarchy",
+   "fieldtype": "Section Break",
+   "label": "Hierarchy",
+   "collapsible": 1,
+   "description": "Parent capability: granting the parent automatically grants all its children"
+  },
+  {
+   "fieldname": "parent_capability",
+   "fieldtype": "Link",
+   "label": "Parent Capability",
+   "options": "Capability",
+   "in_standard_filter": 1,
+   "description": "If set, users who have the parent capability automatically inherit this one"
+  },
+  {
+   "fieldname": "section_details",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active",
+   "default": "1"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_delegatable",
+   "fieldtype": "Check",
+   "label": "Is Delegatable",
+   "description": "When enabled, CAPS Managers who hold this capability can delegate it to other users"
+  },
+  {
+   "fieldname": "app_name",
+   "fieldtype": "Data",
+   "label": "App Name",
+   "in_standard_filter": 1,
+   "description": "Which app registered this capability"
+  },
+  {
+   "fieldname": "section_prerequisites",
+   "fieldtype": "Section Break",
+   "label": "Prerequisites",
+   "collapsible": 1,
+   "description": "Other capabilities that must be present for this capability to be effective"
+  },
+  {
+   "fieldname": "prerequisites",
+   "fieldtype": "Table",
+   "label": "Prerequisites",
+   "options": "Capability Prerequisite"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-03-12 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "CAPS",
+ "name": "Capability",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "CAPS Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "CAPS Manager"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "label",
+ "track_changes": 1
+}

@@ -1,0 +1,195 @@
+{
+ "actions": [],
+ "autoname": "field:policy_name",
+ "creation": "2026-03-14 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "policy_name",
+  "is_active",
+  "column_break_1",
+  "priority",
+  "section_target",
+  "target_type",
+  "target_role",
+  "target_department",
+  "column_break_2",
+  "target_users",
+  "section_grant",
+  "capability",
+  "bundle",
+  "column_break_3",
+  "grant_type",
+  "section_schedule",
+  "starts_on",
+  "column_break_4",
+  "ends_on",
+  "section_details",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "policy_name",
+   "fieldtype": "Data",
+   "label": "Policy Name",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active",
+   "default": "1",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Int",
+   "label": "Priority",
+   "default": "10",
+   "description": "Higher priority policies are applied first (for conflict resolution)"
+  },
+  {
+   "fieldname": "section_target",
+   "fieldtype": "Section Break",
+   "label": "Target"
+  },
+  {
+   "fieldname": "target_type",
+   "fieldtype": "Select",
+   "label": "Target Type",
+   "options": "Role\nDepartment\nUser List",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "target_role",
+   "fieldtype": "Link",
+   "label": "Target Role",
+   "options": "Role",
+   "depends_on": "eval:doc.target_type=='Role'",
+   "mandatory_depends_on": "eval:doc.target_type=='Role'"
+  },
+  {
+   "fieldname": "target_department",
+   "fieldtype": "Link",
+   "label": "Target Department",
+   "options": "Department",
+   "depends_on": "eval:doc.target_type=='Department'",
+   "mandatory_depends_on": "eval:doc.target_type=='Department'"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "target_users",
+   "fieldtype": "Small Text",
+   "label": "Target Users",
+   "depends_on": "eval:doc.target_type=='User List'",
+   "description": "Comma-separated list of user emails"
+  },
+  {
+   "fieldname": "section_grant",
+   "fieldtype": "Section Break",
+   "label": "Grant"
+  },
+  {
+   "fieldname": "capability",
+   "fieldtype": "Link",
+   "label": "Capability",
+   "options": "Capability",
+   "in_list_view": 1,
+   "description": "Capability to grant (mutually exclusive with Bundle)"
+  },
+  {
+   "fieldname": "bundle",
+   "fieldtype": "Link",
+   "label": "Bundle",
+   "options": "Capability Bundle",
+   "description": "Bundle to grant (mutually exclusive with Capability)"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "grant_type",
+   "fieldtype": "Select",
+   "label": "Grant Type",
+   "options": "Capability\nBundle",
+   "default": "Capability",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_schedule",
+   "fieldtype": "Section Break",
+   "label": "Schedule"
+  },
+  {
+   "fieldname": "starts_on",
+   "fieldtype": "Datetime",
+   "label": "Starts On",
+   "description": "Leave blank to start immediately"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ends_on",
+   "fieldtype": "Datetime",
+   "label": "Ends On",
+   "description": "Leave blank for no expiry"
+  },
+  {
+   "fieldname": "section_details",
+   "fieldtype": "Section Break",
+   "label": "Details",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-03-14 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "CAPS",
+ "name": "Capability Policy",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "System Manager"
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "CAPS Admin"
+  },
+  {
+   "read": 1,
+   "role": "CAPS Manager"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "policy_name",
+ "track_changes": 1
+}

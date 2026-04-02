@@ -1,0 +1,158 @@
+{
+ "actions": [],
+ "autoname": "hash",
+ "creation": "2026-03-15 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "capability",
+  "column_break_1",
+  "is_active",
+  "limits_section",
+  "max_per_hour",
+  "max_per_day",
+  "column_break_2",
+  "max_per_week",
+  "max_per_month",
+  "scope_section",
+  "scope",
+  "column_break_3",
+  "notify_on_limit",
+  "details_section",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "capability",
+   "fieldtype": "Link",
+   "label": "Capability",
+   "options": "Capability",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Active",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "limits_section",
+   "fieldtype": "Section Break",
+   "label": "Usage Limits"
+  },
+  {
+   "default": "0",
+   "description": "Maximum uses per hour per user. 0 = unlimited.",
+   "fieldname": "max_per_hour",
+   "fieldtype": "Int",
+   "label": "Max Per Hour",
+   "in_list_view": 1
+  },
+  {
+   "default": "0",
+   "description": "Maximum uses per day per user. 0 = unlimited.",
+   "fieldname": "max_per_day",
+   "fieldtype": "Int",
+   "label": "Max Per Day",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "description": "Maximum uses per week per user. 0 = unlimited.",
+   "fieldname": "max_per_week",
+   "fieldtype": "Int",
+   "label": "Max Per Week"
+  },
+  {
+   "default": "0",
+   "description": "Maximum uses per month per user. 0 = unlimited.",
+   "fieldname": "max_per_month",
+   "fieldtype": "Int",
+   "label": "Max Per Month"
+  },
+  {
+   "fieldname": "scope_section",
+   "fieldtype": "Section Break",
+   "label": "Scope & Notifications"
+  },
+  {
+   "default": "Per User",
+   "fieldname": "scope",
+   "fieldtype": "Select",
+   "label": "Scope",
+   "options": "Per User\nGlobal",
+   "description": "Per User: each user has their own counter. Global: shared counter across all users."
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "notify_on_limit",
+   "fieldtype": "Check",
+   "label": "Notify on Limit Reached",
+   "description": "Create a notification when a user hits their rate limit."
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "issingle": 0,
+ "links": [],
+ "modified": "2026-03-15 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "CAPS",
+ "name": "Capability Rate Limit",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "CAPS Admin",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "CAPS Manager",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

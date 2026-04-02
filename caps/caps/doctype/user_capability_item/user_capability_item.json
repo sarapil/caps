@@ -1,0 +1,64 @@
+{
+ "actions": [],
+ "creation": "2026-03-12 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": ["capability", "granted_by", "granted_on", "expires_on", "delegated_by", "notes"],
+ "fields": [
+  {
+   "fieldname": "capability",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Capability",
+   "options": "Capability",
+   "reqd": 1
+  },
+  {
+   "fieldname": "granted_by",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Granted By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "granted_on",
+   "fieldtype": "Datetime",
+   "label": "Granted On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "expires_on",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Expires On"
+  },
+  {
+   "fieldname": "delegated_by",
+   "fieldtype": "Link",
+   "label": "Delegated By",
+   "options": "User",
+   "read_only": 1,
+   "description": "If set, this grant was delegated by a CAPS Manager (not an admin grant)"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes",
+   "read_only": 1,
+   "hidden": 1,
+   "description": "Internal metadata (e.g. policy source tag)"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-03-12 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "CAPS",
+ "name": "User Capability Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
