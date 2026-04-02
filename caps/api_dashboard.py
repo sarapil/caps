@@ -11,7 +11,8 @@ from frappe.utils import now_datetime, add_days, getdate
 @frappe.whitelist()
 def get_dashboard_stats():
     """Return summary numbers for the CAPS dashboard."""
-    frappe.only_for(["CAPS Admin", "CAPS Manager", "System Manager"])
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
 
     total_capabilities = frappe.db.count("Capability")
     active_capabilities = frappe.db.count("Capability", {"is_active": 1})
@@ -66,7 +67,8 @@ def get_dashboard_stats():
 @frappe.whitelist()
 def get_capability_distribution():
     """Chart data: how many users hold each capability (top 20)."""
-    frappe.only_for(["CAPS Admin", "CAPS Manager", "System Manager"])
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
 
     data = frappe.db.sql("""
         SELECT uci.capability, COUNT(*) as user_count
@@ -88,7 +90,8 @@ def get_capability_distribution():
 @frappe.whitelist()
 def get_audit_timeline(days=30):
     """Chart data: audit log activity grouped by day."""
-    frappe.only_for(["CAPS Admin", "CAPS Manager", "System Manager"])
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
 
     days = int(days)
     start_date = add_days(getdate(), -days)
@@ -129,7 +132,8 @@ def get_audit_timeline(days=30):
 @frappe.whitelist()
 def get_expiry_forecast(days=30):
     """Chart data: capability grants expiring in the next N days, grouped by day."""
-    frappe.only_for(["CAPS Admin", "CAPS Manager", "System Manager"])
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
 
     days = int(days)
     current = now_datetime()
@@ -156,7 +160,8 @@ def get_expiry_forecast(days=30):
 @frappe.whitelist()
 def get_request_summary():
     """Breakdown of capability requests by status."""
-    frappe.only_for(["CAPS Admin", "CAPS Manager", "System Manager"])
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
 
     data = frappe.db.sql("""
         SELECT status, COUNT(*) as count
@@ -176,7 +181,8 @@ def get_request_summary():
 @frappe.whitelist()
 def get_delegation_summary():
     """Summary of delegation activity."""
-    frappe.only_for(["CAPS Admin", "CAPS Manager", "System Manager"])
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
 
     # Top delegators
     top_delegators = frappe.db.sql("""
@@ -207,7 +213,8 @@ def get_delegation_summary():
 @frappe.whitelist()
 def get_policy_summary():
     """Summary of policy status and impact."""
-    frappe.only_for(["CAPS Admin", "CAPS Manager", "System Manager"])
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
 
     active = frappe.db.count("Capability Policy", {"is_active": 1})
     inactive = frappe.db.count("Capability Policy", {"is_active": 0})

@@ -222,7 +222,8 @@ def get_available_packs() -> list[dict]:
 
     Returns list of packs with install status.
     """
-    frappe.only_for(["System Manager", "CAPS Admin"])
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
 
     packs = []
 
@@ -270,7 +271,8 @@ def get_available_packs() -> list[dict]:
 @frappe.whitelist()
 def preview_pack(pack_name: str) -> dict:
     """Preview contents of a pack without installing."""
-    frappe.only_for(["System Manager", "CAPS Admin"])
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
 
     config = _get_pack_config(pack_name)
     return {
@@ -290,7 +292,8 @@ def install_pack(pack_name: str) -> dict:
     Creates capabilities, bundles, field maps, and action maps
     defined in the pack. Skips items that already exist.
     """
-    frappe.only_for(["System Manager", "CAPS Admin"])
+    frappe.only_for(["System Manager"])
+
 
     config = _get_pack_config(pack_name)
     results = {"created": 0, "skipped": 0, "errors": []}
@@ -393,7 +396,8 @@ def uninstall_pack(pack_name: str) -> dict:
     Removes capabilities, bundles, and maps created by this pack.
     Only removes items that still match the pack definition.
     """
-    frappe.only_for(["System Manager", "CAPS Admin"])
+    frappe.only_for(["System Manager"])
+
 
     config = _get_pack_config(pack_name)
     results = {"removed": 0, "skipped": 0, "errors": []}

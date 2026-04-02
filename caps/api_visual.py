@@ -15,6 +15,8 @@ from frappe import _
 @frappe.whitelist()
 def get_caps_node_types():
     """Return CAPS-specific node type definitions for ColorSystem."""
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
     return {
         "capability": {
             "bg": "#10B981", "border": "#059669", "text": "#ffffff",
@@ -77,6 +79,8 @@ def get_capability_hierarchy():
     Returns full capability hierarchy as nodes+edges for GraphEngine.
     Grouped by category, parent→child edges.
     """
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
     caps = frappe.get_all(
         "Capability",
         fields=["name", "name1", "capability_label", "category",
@@ -145,6 +149,8 @@ def get_prerequisite_graph():
     Returns prerequisite dependency graph.
     Capability → prerequisite edges with hard/soft types.
     """
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
     caps = frappe.get_all(
         "Capability",
         fields=["name", "capability_label", "name1", "is_active", "category"],
@@ -196,6 +202,8 @@ def get_bundle_graph():
     """
     Returns bundle→capability composition graph.
     """
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
     bundles = frappe.get_all(
         "Capability Bundle",
         fields=["name", "bundle_label", "is_template", "app_name"],
@@ -262,6 +270,8 @@ def get_group_hierarchy():
     """
     Returns permission group hierarchy as graph.
     """
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
     groups = frappe.get_all(
         "Permission Group",
         fields=["name", "group_label", "parent_group", "group_type",
@@ -315,6 +325,8 @@ def get_role_capability_graph():
     Returns role→capability mapping graph.
     Shows which Frappe roles map to which CAPS capabilities.
     """
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
     maps = frappe.get_all(
         "Role Capability Map",
         fields=["name", "role"],
@@ -382,7 +394,8 @@ def get_user_comparison_graph(user_a: str, user_b: str):
     """
     Returns graph showing common/unique capabilities between two users.
     """
-    frappe.only_for(["System Manager", "CAPS Admin", "CAPS Manager"])
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
 
     from caps.utils.resolver import resolve_capabilities
 
@@ -459,6 +472,8 @@ def get_dashboard_graph():
     Returns CAPS module overview graph — shows all major components
     and their relationships as a navigable map.
     """
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
     stats = _get_quick_stats()
 
     nodes = [

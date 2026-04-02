@@ -21,7 +21,8 @@ def get_group_tree() -> list[dict]:
 
     Returns top-level groups (no parent) with children nested recursively.
     """
-    frappe.only_for(["System Manager", "CAPS Admin"])
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
 
     groups = frappe.get_all(
         "Permission Group",
@@ -82,7 +83,10 @@ def get_group_ancestors(group: str) -> list[str]:
     Returns:
         List of ancestor group names from immediate parent to root.
     """
-    frappe.only_for(["System Manager", "CAPS Admin"])
+    frappe.only_for(["System Manager", "CAPS Admin", "CAPS User"])
+    frappe.only_for(["System Manager", "CAPS Admin", "CAPS User"])
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
 
     if not frappe.db.exists("Permission Group", group):
         frappe.throw(f"Permission Group '{group}' not found")
@@ -114,7 +118,10 @@ def get_group_descendants(group: str) -> list[str]:
     Returns:
         List of descendant group names.
     """
-    frappe.only_for(["System Manager", "CAPS Admin"])
+    frappe.only_for(["System Manager", "CAPS Admin", "CAPS User"])
+    frappe.only_for(["System Manager", "CAPS Admin", "CAPS User"])
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
 
     if not frappe.db.exists("Permission Group", group):
         frappe.throw(f"Permission Group '{group}' not found")
@@ -160,7 +167,10 @@ def get_effective_members(group: str, include_ancestors: bool = False) -> list[d
     Returns:
         List of {user, group, is_direct, valid_from, valid_till}
     """
-    frappe.only_for(["System Manager", "CAPS Admin"])
+    frappe.only_for(["System Manager", "CAPS Admin", "CAPS User"])
+    frappe.only_for(["System Manager", "CAPS Admin", "CAPS User"])
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
 
     if isinstance(include_ancestors, str):
         include_ancestors = include_ancestors in ("true", "True", "1")
@@ -234,7 +244,10 @@ def add_temp_member(group: str, user: str, valid_from: str = None, valid_till: s
     Returns:
         {success: True, member: {user, group, valid_from, valid_till}}
     """
-    frappe.only_for(["System Manager", "CAPS Admin"])
+    frappe.only_for(["System Manager", "CAPS Admin", "CAPS User"])
+    frappe.only_for(["System Manager", "CAPS Admin", "CAPS User"])
+    frappe.only_for(["CAPS Manager", "System Manager"])
+
 
     if not frappe.db.exists("Permission Group", group):
         frappe.throw(f"Permission Group '{group}' not found")
@@ -284,7 +297,10 @@ def get_effective_capabilities(group: str, include_ancestors: bool = False) -> l
     Returns:
         List of {capability, source_group, is_direct}
     """
-    frappe.only_for(["System Manager", "CAPS Admin"])
+    frappe.only_for(["System Manager", "CAPS Admin", "CAPS User"])
+    frappe.only_for(["System Manager", "CAPS Admin", "CAPS User"])
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
 
     if isinstance(include_ancestors, str):
         include_ancestors = include_ancestors in ("true", "True", "1")

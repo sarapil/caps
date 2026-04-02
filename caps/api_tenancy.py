@@ -34,7 +34,8 @@ def snapshot_site_config(profile_name: str | None = None) -> dict:
 
     Returns the profile name and summary.
     """
-    frappe.only_for(["System Manager", "CAPS Admin"])
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
 
     from caps.api_transfer import export_config
     config = export_config()
@@ -83,7 +84,10 @@ def compare_site_profiles(profile_a: str, profile_b: str) -> dict:
             "action_maps": {"only_in_a": int, "only_in_b": int, "common": int},
         }
     """
-    frappe.only_for(["System Manager", "CAPS Admin"])
+    frappe.only_for(["System Manager", "CAPS Admin", "CAPS User"])
+    frappe.only_for(["System Manager", "CAPS Admin", "CAPS User"])
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
 
     config_a = _load_profile_config(profile_a)
     config_b = _load_profile_config(profile_b)
@@ -119,7 +123,8 @@ def compare_with_current(profile_name: str) -> dict:
 
     Returns the same diff structure as compare_site_profiles.
     """
-    frappe.only_for(["System Manager", "CAPS Admin"])
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
 
     from caps.api_transfer import export_config
     current_config = export_config()
@@ -166,7 +171,10 @@ def apply_site_profile(profile_name: str, mode: str = "merge") -> dict:
     Returns:
         import_config result dict
     """
-    frappe.only_for(["System Manager", "CAPS Admin"])
+    frappe.only_for(["System Manager"])
+    frappe.only_for(["System Manager"])
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
 
     config = _load_profile_config(profile_name)
 
@@ -183,7 +191,8 @@ def apply_site_profile(profile_name: str, mode: str = "merge") -> dict:
 @frappe.whitelist()
 def get_site_profiles() -> list[dict]:
     """Return all CAPS Site Profiles with summary info."""
-    frappe.only_for(["System Manager", "CAPS Admin"])
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
 
     profiles = frappe.get_all(
         "CAPS Site Profile",
@@ -208,7 +217,8 @@ def get_site_profiles() -> list[dict]:
 @frappe.whitelist()
 def get_profile_detail(profile_name: str) -> dict:
     """Return detailed information about a site profile."""
-    frappe.only_for(["System Manager", "CAPS Admin"])
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
 
     config = _load_profile_config(profile_name)
     doc = frappe.get_doc("CAPS Site Profile", profile_name)

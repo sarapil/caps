@@ -44,6 +44,8 @@ app_include_css = [
 # After Install / Before Uninstall
 # ---------------------------------------------------------------------------
 after_install = "caps.install.after_install"
+
+after_migrate = ["caps.caps.seed.seed_data"]
 before_uninstall = "caps.install.before_uninstall"
 
 # ---------------------------------------------------------------------------

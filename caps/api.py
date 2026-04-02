@@ -12,6 +12,7 @@ from frappe.utils import now_datetime
 @frappe.whitelist()
 def check_capability(capability: str) -> bool:
     """Check if the current user has a specific capability."""
+    frappe.only_for(["System Manager", "CAPS Admin", "CAPS User"])
     from caps.utils.resolver import has_capability
     return has_capability(capability)
 
@@ -22,6 +23,8 @@ def check_capabilities(capabilities: str | list) -> dict:
     Check multiple capabilities at once.
     Returns {capability: True/False}.
     """
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
     from caps.utils.resolver import resolve_capabilities
 
     if isinstance(capabilities, str):
@@ -35,6 +38,8 @@ def check_capabilities(capabilities: str | list) -> dict:
 @frappe.whitelist()
 def get_my_capabilities() -> list[str]:
     """Return list of all capabilities for the current user."""
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
     from caps.utils.resolver import resolve_capabilities
     return sorted(resolve_capabilities(frappe.session.user))
 
@@ -45,6 +50,8 @@ def get_restrictions(doctype: str) -> dict:
     Return field + action restrictions for the current user on a doctype.
     Called by frappe.caps.getRestrictions() on the client.
     """
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
     from caps.utils.resolver import get_action_restrictions, get_field_restrictions
 
     return {
@@ -59,6 +66,8 @@ def get_dependency_graph(capability: str | None = None) -> dict:
     Return the dependency graph for a capability (or all capabilities).
     Returns {nodes: [...], edges: [...]} for visualization.
     """
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
     from caps.utils.resolver import get_dependency_graph as _get_graph
     return _get_graph(capability)
 
@@ -69,11 +78,13 @@ def check_prerequisites(capability: str, user: str | None = None) -> dict:
     Check whether all prerequisites for a capability are met for a user.
     Returns {met: bool, missing: [str], capability: str}.
     """
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
     from caps.utils.resolver import resolve_capabilities
 
     user = user or frappe.session.user
     if user != frappe.session.user:
-        frappe.only_for(["System Manager", "CAPS Admin"])
+        frappe.only_for(["System Manager", "CAPS Manager"])
 
     user_caps = resolve_capabilities(user)
 
@@ -100,6 +111,8 @@ def get_all_restrictions() -> dict:
     Return ALL field + action restrictions for current user.
     Used for client-side cache refresh.
     """
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
     from caps.utils.resolver import (
         get_action_restrictions_all,
         get_field_restrictions_all,
@@ -115,6 +128,8 @@ def get_all_restrictions() -> dict:
 @frappe.whitelist()
 def bust_cache():
     """Force-refresh the current user's capability cache."""
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
     from caps.utils.resolver import invalidate_user_cache
     invalidate_user_cache(frappe.session.user)
     return {"status": "ok"}
@@ -129,7 +144,8 @@ def get_user_capabilities(user: str) -> dict:
     Admin tool: get full capability breakdown for any user.
     Shows which capabilities come from which channel.
     """
-    frappe.only_for(["System Manager", "CAPS Admin"])
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
 
     from caps.utils.resolver import (
         _all_active_capability_names,
@@ -163,7 +179,8 @@ def compare_users(user1: str, user2: str) -> dict:
     Admin tool: compare capabilities between two users.
     Returns shared, only_user1, only_user2.
     """
-    frappe.only_for(["System Manager", "CAPS Admin"])
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
 
     from caps.utils.resolver import resolve_capabilities
 
@@ -182,7 +199,8 @@ def compare_users(user1: str, user2: str) -> dict:
 @frappe.whitelist()
 def grant_capability(user: str, capability: str, expires_on: str | None = None):
     """Admin tool: grant a capability directly to a user."""
-    frappe.only_for(["System Manager", "CAPS Admin"])
+    frappe.only_for(["CAPS Manager", "System Manager"])
+
 
     from caps.utils.resolver import invalidate_user_cache, resolve_capabilities
 
@@ -243,7 +261,8 @@ def grant_capability(user: str, capability: str, expires_on: str | None = None):
 @frappe.whitelist()
 def revoke_capability(user: str, capability: str):
     """Admin tool: revoke a directly-assigned capability from a user."""
-    frappe.only_for(["System Manager", "CAPS Admin"])
+    frappe.only_for(["CAPS Manager", "System Manager"])
+
 
     from caps.utils.resolver import invalidate_user_cache
 
@@ -290,6 +309,8 @@ def get_capability_tree(root: str | None = None) -> dict:
     Returns:
         {nodes: [{name, label, parent, children: [...]}, ...]}
     """
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
     all_caps = frappe.get_all(
         "Capability",
         fields=["name", "name1", "label", "parent_capability", "is_active", "category"],

@@ -29,7 +29,10 @@ def bulk_grant(users: str | list, capabilities: str | list) -> dict:
     Returns:
         {granted: int, skipped: int, errors: [{user, capability, error}]}
     """
-    frappe.only_for(["System Manager", "CAPS Admin"])
+    frappe.only_for(["System Manager"])
+    frappe.only_for(["System Manager"])
+    frappe.only_for(["CAPS Manager", "System Manager"])
+
 
     import json
     if isinstance(users, str):
@@ -108,7 +111,8 @@ def bulk_revoke(users: str | list, capabilities: str | list) -> dict:
     Returns:
         {revoked: int, skipped: int, errors: [{user, capability, error}]}
     """
-    frappe.only_for(["System Manager", "CAPS Admin"])
+    frappe.only_for(["CAPS Manager", "System Manager"])
+
 
     import json
     if isinstance(users, str):
@@ -184,7 +188,8 @@ def clone_user_capabilities(source_user: str, target_user: str, include_bundles:
     Returns:
         {capabilities_cloned: int, bundles_cloned: int, skipped: int}
     """
-    frappe.only_for(["System Manager", "CAPS Admin"])
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
 
     if isinstance(include_bundles, str):
         include_bundles = include_bundles.lower() in ("true", "1", "yes")
@@ -261,7 +266,8 @@ def capability_usage_report() -> list[dict]:
     Returns list of:
         {capability, label, is_active, user_count, channels: {direct, group, role}}
     """
-    frappe.only_for(["System Manager", "CAPS Admin"])
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
 
     capabilities = frappe.get_all(
         "Capability",
@@ -309,7 +315,8 @@ def effective_permissions_matrix(users: str | list | None = None) -> list[dict]:
     Returns list of:
         {user, total_count, capabilities: [str]}
     """
-    frappe.only_for(["System Manager", "CAPS Admin"])
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
 
     import json
     if isinstance(users, str):
@@ -348,7 +355,8 @@ def trace_capability(user: str, capability: str) -> dict:
     Returns a detailed trace showing which channel(s) provide the capability
     and why it may be missing.
     """
-    frappe.only_for(["System Manager", "CAPS Admin"])
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
 
     from caps.utils.resolver import (
         _all_active_capability_names,
@@ -472,7 +480,8 @@ def explain_user(user: str) -> dict:
         {user, total, channels: {direct: [caps], groups: {group: [caps]}, roles: {role: [caps]}},
          prereq_removed: [caps]}
     """
-    frappe.only_for(["System Manager", "CAPS Admin"])
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
 
     from caps.utils.resolver import (
         _all_active_capability_names,

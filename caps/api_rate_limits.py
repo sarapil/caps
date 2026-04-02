@@ -11,6 +11,8 @@ import frappe
 @frappe.whitelist()
 def check_rate_limit(capability: str) -> dict:
     """Check if the current user is within rate limits for a capability."""
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
     from caps.rate_limiter import check_rate_limit as _check
     return _check(capability, frappe.session.user)
 
@@ -18,6 +20,8 @@ def check_rate_limit(capability: str) -> dict:
 @frappe.whitelist()
 def record_usage(capability: str):
     """Record a usage event for a capability."""
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
     from caps.rate_limiter import record_usage as _record
     _record(capability, frappe.session.user)
 
@@ -25,6 +29,8 @@ def record_usage(capability: str):
 @frappe.whitelist()
 def get_usage_stats(capability: str) -> dict:
     """Get usage statistics for the current user and a capability."""
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
     from caps.rate_limiter import get_usage_stats as _stats
     return _stats(capability, frappe.session.user)
 
@@ -32,7 +38,8 @@ def get_usage_stats(capability: str) -> dict:
 @frappe.whitelist()
 def reset_user_usage(capability: str, user: str | None = None):
     """Reset rate limit counters for a user (admin only)."""
-    frappe.only_for(["System Manager", "CAPS Admin"])
+    frappe.only_for(["System Manager"])
+
     from caps.rate_limiter import reset_usage
     reset_usage(capability, user or frappe.session.user)
     return {"status": "ok"}
@@ -41,7 +48,8 @@ def reset_user_usage(capability: str, user: str | None = None):
 @frappe.whitelist()
 def get_all_rate_limits() -> list[dict]:
     """List all active rate limit rules (admin only)."""
-    frappe.only_for(["System Manager", "CAPS Admin", "CAPS Manager"])
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
 
     return frappe.get_all(
         "Capability Rate Limit",

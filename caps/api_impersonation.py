@@ -47,7 +47,10 @@ def start_impersonation(target_user: str) -> dict:
     Returns:
         {status: "active", target_user: str, started_at: str}
     """
-    frappe.only_for(["System Manager", "CAPS Admin"])
+    frappe.only_for(["System Manager"])
+    frappe.only_for(["System Manager"])
+    frappe.only_for(["CAPS Manager", "System Manager"])
+
 
     real_user = frappe.session.user
     if real_user == target_user:
@@ -90,7 +93,8 @@ def stop_impersonation() -> dict:
     Returns:
         {status: "stopped"} or {status: "not_active"}
     """
-    frappe.only_for(["System Manager", "CAPS Admin"])
+    frappe.only_for(["CAPS Manager", "System Manager"])
+
 
     real_user = frappe.session.user
     state = get_impersonation_state(real_user)
@@ -119,6 +123,8 @@ def get_impersonation_status() -> dict:
     Returns:
         {active: bool, target_user: str|None, started_at: str|None}
     """
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
     state = get_impersonation_state(frappe.session.user)
     if state:
         return {

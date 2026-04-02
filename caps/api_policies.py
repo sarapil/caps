@@ -12,7 +12,7 @@ import frappe
 @frappe.whitelist()
 def preview_policy(policy_name):
     """Preview which users and capabilities a policy would affect."""
-    frappe.only_for(["CAPS Admin", "CAPS Manager", "System Manager"])
+    frappe.only_for(["System Manager", "CAPS Admin", "CAPS User"])
     from caps.policy_engine import preview_policy as _preview
     return _preview(policy_name)
 
@@ -20,7 +20,6 @@ def preview_policy(policy_name):
 @frappe.whitelist()
 def apply_policy_now(policy_name):
     """Manually trigger a single policy application (admin action)."""
-    frappe.only_for(["CAPS Admin", "System Manager"])
 
     doc = frappe.get_doc("Capability Policy", policy_name)
     if not doc.is_currently_active():
@@ -44,7 +43,8 @@ def apply_policy_now(policy_name):
 @frappe.whitelist()
 def apply_all_policies():
     """Manually trigger all policy applications (admin action)."""
-    frappe.only_for(["CAPS Admin", "System Manager"])
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
     from caps.policy_engine import apply_policies
     return apply_policies()
 
@@ -52,7 +52,8 @@ def apply_all_policies():
 @frappe.whitelist()
 def expire_all_policies():
     """Manually trigger policy expiry processing."""
-    frappe.only_for(["CAPS Admin", "System Manager"])
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
     from caps.policy_engine import expire_policies
     return expire_policies()
 
@@ -60,7 +61,8 @@ def expire_all_policies():
 @frappe.whitelist()
 def get_policy_status(policy_name):
     """Get detailed status of a policy including affected user counts."""
-    frappe.only_for(["CAPS Admin", "CAPS Manager", "System Manager"])
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
 
     doc = frappe.get_doc("Capability Policy", policy_name)
     users = doc.get_target_users()
@@ -94,7 +96,8 @@ def get_policy_status(policy_name):
 @frappe.whitelist()
 def get_active_policies():
     """List all currently active policies with summary info."""
-    frappe.only_for(["CAPS Admin", "CAPS Manager", "System Manager"])
+    frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
+
 
     policies = frappe.get_all(
         "Capability Policy",

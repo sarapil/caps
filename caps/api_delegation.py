@@ -159,6 +159,7 @@ def get_delegatable_capabilities() -> list[dict]:
     1. It's marked ``is_delegatable`` on the Capability DocType
     2. The current user holds it in their resolved set
     """
+    frappe.only_for(["System Manager", "CAPS Admin", "CAPS User"])
     from caps.utils.resolver import resolve_capabilities
 
     user_caps = resolve_capabilities(frappe.session.user)
@@ -180,6 +181,7 @@ def get_my_delegations() -> list[dict]:
     """
     Return all capabilities the current user has delegated to others.
     """
+    frappe.only_for(["System Manager", "CAPS Admin", "CAPS User"])
     delegator = frappe.session.user
 
     rows = frappe.get_all(

@@ -108,6 +108,7 @@ def cancel_request(request_name: str) -> dict:
 @frappe.whitelist()
 def get_my_requests(status: str | None = None) -> list[dict]:
     """Return the current user's capability requests."""
+    frappe.only_for(["System Manager", "CAPS Admin", "CAPS User"])
     filters = {"user": frappe.session.user}
     if status:
         filters["status"] = status
