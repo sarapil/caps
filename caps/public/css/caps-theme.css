@@ -1,0 +1,120 @@
+/* CAPS — Theme CSS Variables
+ * Brand colors and design tokens for CAPS
+ * Domain: Capability-Based Access Control
+ */
+
+:root {
+  /* Primary Colors */
+  --caps-primary: #EF4444;
+  --caps-primary-dark: #DC2626;
+  --caps-primary-light: #EF444433;
+  --caps-primary-subtle: #EF44440D;
+
+  /* Neutral Colors */
+  --caps-bg: #FFFFFF;
+  --caps-bg-subtle: #F8FAFC;
+  --caps-text: #1E293B;
+  --caps-text-muted: #64748B;
+  --caps-border: #E2E8F0;
+
+  /* Status Colors */
+  --caps-success: #10B981;
+  --caps-warning: #F59E0B;
+  --caps-danger: #EF4444;
+  --caps-info: #3B82F6;
+
+  /* Spacing */
+  --caps-radius-sm: 6px;
+  --caps-radius-md: 10px;
+  --caps-radius-lg: 16px;
+
+  /* Shadows */
+  --caps-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --caps-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --caps-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+  /* Typography */
+  --caps-font-family: 'Inter', 'Noto Sans Arabic', sans-serif;
+  --caps-font-size-xs: 0.75rem;
+  --caps-font-size-sm: 0.875rem;
+  --caps-font-size-base: 1rem;
+  --caps-font-size-lg: 1.125rem;
+  --caps-font-size-xl: 1.25rem;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+  --caps-bg: #0F172A;
+  --caps-bg-subtle: #1E293B;
+  --caps-text: #F1F5F9;
+  --caps-text-muted: #94A3B8;
+  --caps-border: #334155;
+  --caps-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --caps-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --caps-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+}
+
+/* RTL Support */
+[dir="rtl"] .caps-sidebar {
+  border-inline-start: 2px solid var(--caps-primary);
+  margin-inline-start: 0;
+  margin-inline-end: 1rem;
+}
+
+/* Glassmorphism Card */
+.caps-glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--caps-border);
+  border-radius: var(--caps-radius-lg);
+  box-shadow: var(--caps-shadow-md);
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.caps-glass-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--caps-shadow-lg);
+}
+
+[data-theme="dark"] .caps-glass-card {
+  background: rgba(30, 41, 59, 0.7);
+}
+
+/* Status Badge */
+.caps-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: var(--caps-font-size-xs);
+  font-weight: 600;
+}
+
+.caps-badge--success { background: var(--caps-success)1A; color: var(--caps-success); }
+.caps-badge--warning { background: var(--caps-warning)1A; color: var(--caps-warning); }
+.caps-badge--danger { background: var(--caps-danger)1A; color: var(--caps-danger); }
+.caps-badge--info { background: var(--caps-info)1A; color: var(--caps-info); }
+
+/* Workspace Header */
+.caps-ws-header {
+  background: linear-gradient(135deg, var(--caps-primary), var(--caps-primary-dark));
+  color: white;
+  padding: 2rem;
+  border-radius: var(--caps-radius-lg);
+  margin-bottom: 1.5rem;
+}
+
+.caps-ws-header h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.caps-ws-header p {
+  margin: 0.5rem 0 0;
+  opacity: 0.85;
+  font-size: var(--caps-font-size-sm);
+}

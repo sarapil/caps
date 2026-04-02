@@ -36,6 +36,7 @@ app_include_js = [
 ]
 
 app_include_css = [
+    "/assets/caps/css/caps-theme.css",
     "/assets/caps/css/caps_brand.css",
     "/assets/caps/css/caps_sidebar.css",
 ]
@@ -179,4 +180,10 @@ caps_field_maps = [
     {"capability": "CAPS_manage_rate_limits", "doctype": "Capability Rate Limit", "field": "*", "behavior": "read_only"},
     {"capability": "CAPS_manage_integrations", "doctype": "CAPS Integration Pack", "field": "*", "behavior": "read_only"},
     {"capability": "CAPS_manage_site_profile", "doctype": "CAPS Site Profile", "field": "*", "behavior": "read_only"},
+]
+
+# Website Route Rules
+# --------------------------------------------------------
+website_route_rules = [
+    {"from_route": "/caps/<path:app_path>", "to_route": "caps/<app_path>"},
 ]
