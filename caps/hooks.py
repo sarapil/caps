@@ -46,7 +46,7 @@ app_include_css = [
 # ---------------------------------------------------------------------------
 after_install = "caps.install.after_install"
 
-after_migrate = ["caps.caps.seed.seed_data"]
+after_migrate = ["caps.seed.seed_data"]
 before_uninstall = "caps.install.before_uninstall"
 
 # ---------------------------------------------------------------------------
@@ -142,6 +142,14 @@ fixtures = [
     {
         "dt": "Role",
         "filters": [["name", "in", ["CAPS Admin", "CAPS Manager"]]],
+    },
+    {
+        "dt": "Workspace",
+        "filters": [["module", "=", "CAPS"]],
+    },
+    {
+        "dt": "Desktop Icon",
+        "filters": [["app", "=", "caps"]],
     },
 ]
 

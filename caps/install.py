@@ -6,6 +6,15 @@ import frappe
 def after_install():
     """Create default roles and seed initial data."""
     _create_roles()
+    # ── Desktop Icon injection (Frappe v16 /desk) ──
+    from caps.desktop_utils import inject_app_desktop_icon
+    inject_app_desktop_icon(
+        app="caps",
+        label="CAPS",
+        route="/desk/caps-admin",
+        logo_url="/assets/caps/images/caps-logo-animated.svg",
+        bg_color="#10B981",
+    )
     frappe.db.commit()
 
 
