@@ -20,7 +20,7 @@ def preview_policy(policy_name):
 @frappe.whitelist()
 def apply_policy_now(policy_name):
     """Manually trigger a single policy application (admin action)."""
-
+    frappe.only_for(["System Manager", "CAPS Admin"])
     doc = frappe.get_doc("Capability Policy", policy_name)
     if not doc.is_currently_active():
         frappe.throw(f"Policy '{policy_name}' is not currently active or within schedule")
