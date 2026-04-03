@@ -84,8 +84,6 @@ def compare_site_profiles(profile_a: str, profile_b: str) -> dict:
             "action_maps": {"only_in_a": int, "only_in_b": int, "common": int},
         }
     """
-    frappe.only_for(["System Manager", "CAPS Admin", "CAPS User"])
-    frappe.only_for(["System Manager", "CAPS Admin", "CAPS User"])
     frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
 
 
@@ -171,8 +169,6 @@ def apply_site_profile(profile_name: str, mode: str = "merge") -> dict:
     Returns:
         import_config result dict
     """
-    frappe.only_for(["System Manager"])
-    frappe.only_for(["System Manager"])
     frappe.only_for(["CAPS User", "CAPS Manager", "System Manager"])
 
 

@@ -47,8 +47,6 @@ def start_impersonation(target_user: str) -> dict:
     Returns:
         {status: "active", target_user: str, started_at: str}
     """
-    frappe.only_for(["System Manager"])
-    frappe.only_for(["System Manager"])
     frappe.only_for(["CAPS Manager", "System Manager"])
 
 

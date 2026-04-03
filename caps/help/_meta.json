@@ -1,0 +1,12 @@
+{
+  "app": "caps",
+  "name": "CAPS",
+  "icon": "shield",
+  "color": "#E74C3C",
+  "languages": [
+    "en",
+    "ar"
+  ],
+  "default_language": "en",
+  "fallback_language": "en"
+}

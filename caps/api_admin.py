@@ -29,8 +29,6 @@ def bulk_grant(users: str | list, capabilities: str | list) -> dict:
     Returns:
         {granted: int, skipped: int, errors: [{user, capability, error}]}
     """
-    frappe.only_for(["System Manager"])
-    frappe.only_for(["System Manager"])
     frappe.only_for(["CAPS Manager", "System Manager"])
 
 
