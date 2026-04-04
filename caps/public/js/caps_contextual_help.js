@@ -1,3 +1,8 @@
+// Copyright (c) 2024, Moataz M Hassan (Arkan Lab)
+// Developer Website: https://arkan.it.com
+// License: MIT
+// For license information, please see license.txt
+
 /**
  * CAPS Contextual Help — adds ❓ help button to all CAPS DocType forms,
  * reports, and settings pages. Opens help in frappe.visual.floatingWindow()

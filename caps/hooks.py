@@ -1,9 +1,14 @@
+# Copyright (c) 2024, Moataz M Hassan (Arkan Lab)
+# Developer Website: https://arkan.it.com
+# License: MIT
+# For license information, please see license.txt
+
 app_name = "caps"
 app_title = "CAPS"
 app_publisher = "Arkan Labs"
 app_description = "Capability-Based Access Control System for Frappe"
 app_email = "dev@arkanlabs.com"
-app_license = "Proprietary"
+app_license = "MIT"
 app_version = "1.0.0"
 
 required_apps = ["frappe", "frappe_visual", "arkan_help"]
@@ -33,6 +38,7 @@ app_include_js = [
     "/assets/caps/js/caps_controller.js",
     "/assets/caps/js/caps_sidebar.js",
     "/assets/caps/js/caps_contextual_help.js",
+    "/assets/caps/js/fv_integration.js",
 ]
 
 app_include_css = [
