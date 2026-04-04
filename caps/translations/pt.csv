@@ -1,0 +1,456 @@
+source,source
+Capability,Capability
+Capability Bundle,Capability Bundle
+Capability Bundle Item,Capability Bundle Item
+Capability Policy,Capability Policy
+Capability Prerequisite,Capability Prerequisite
+Capability Rate Limit,Capability Rate Limit
+Capability Request,Capability Request
+Capability Snapshot,Capability Snapshot
+CAPS Audit Log,CAPS Audit Log
+CAPS Settings,CAPS Settings
+CAPS Integration Pack,CAPS Integration Pack
+CAPS Site Profile,CAPS Site Profile
+Action Capability Map,Action Capability Map
+Field Capability Map,Field Capability Map
+Permission Group,Permission Group
+Permission Group Bundle,Permission Group Bundle
+Permission Group Capability,Permission Group Capability
+Permission Group Member,Permission Group Member
+Role Capability Map,Role Capability Map
+Role Capability Item,Role Capability Item
+Role Capability Bundle,Role Capability Bundle
+User Capability,User Capability
+User Capability Bundle,User Capability Bundle
+User Capability Item,User Capability Item
+Hierarchy,Hierarchy
+Details,Details
+Prerequisites,Prerequisites
+Capabilities,Capabilities
+Target,Target
+Grant,Grant
+Schedule,Schedule
+Request Details,Request Details
+Resolution,Resolution
+Resolved Capabilities,Resolved Capabilities
+Metadata,Metadata
+Context,Context
+General,General
+Cache Settings,Cache Settings
+Audit Settings,Audit Settings
+Resolution Behaviour,Resolution Behaviour
+Expiry Notifications,Expiry Notifications
+Delegation,Delegation
+Advanced Notifications & Groups,Advanced Notifications & Groups
+Description,Description
+Configuration,Configuration
+Capability Configuration,Capability Configuration
+Usage Limits,Usage Limits
+Scope & Notifications,Scope & Notifications
+Advanced,Advanced
+Direct Capabilities,Direct Capabilities
+Bundles,Bundles
+Members,Members
+Management,Management
+Capability Name,Capability Name
+Label,Label
+Category,Category
+Scope DocType,Scope DocType
+Scope Field,Scope Field
+Scope Action,Scope Action
+Parent Capability,Parent Capability
+Is Active,Is Active
+Is Delegatable,Is Delegatable
+App Name,App Name
+Is Template,Is Template
+Policy Name,Policy Name
+Priority,Priority
+Target Type,Target Type
+Target Role,Target Role
+Target Department,Target Department
+Target Users,Target Users
+Bundle,Bundle
+Grant Type,Grant Type
+Starts On,Starts On
+Ends On,Ends On
+Prerequisite Capability,Prerequisite Capability
+Hard Prerequisite,Hard Prerequisite
+Is Mandatory,Is Mandatory
+Required Capability,Required Capability
+Fallback Behavior,Fallback Behavior
+Fallback Message,Fallback Message
+DocType,DocType
+Action ID,Action ID
+Action Type,Action Type
+Field Name,Field Name
+Field Label,Field Label
+Behavior When Missing,Behavior When Missing
+Mask Pattern,Mask Pattern
+Custom Handler,Custom Handler
+Group Type,Group Type
+Sync Source,Sync Source
+Sync Query,Sync Query
+Sync Frequency,Sync Frequency
+Auto Sync,Auto Sync
+Parent Group,Parent Group
+Managed By,Managed By
+Manager Can Add Members,Manager Can Add Members
+Manager Can Assign Bundles,Manager Can Assign Bundles
+Requesting User,Requesting User
+Status,Status
+Reason,Reason
+Approver,Approver
+Resolution Note,Resolution Note
+Resolved On,Resolved On
+Grant Expires On,Grant Expires On
+User,User
+Snapshot Date,Snapshot Date
+Created By,Created By
+Capabilities (JSON),Capabilities (JSON)
+Source,Source
+Notes,Notes
+Action,Action
+Result,Result
+Target User,Target User
+Target Group,Target Group
+Timestamp,Timestamp
+IP Address,IP Address
+Enable CAPS,Enable CAPS
+Debug Mode,Debug Mode
+CAPS Version,CAPS Version
+User Cache TTL (seconds),User Cache TTL (seconds)
+Field/Action Map Cache TTL (seconds),Field/Action Map Cache TTL (seconds)
+Audit Log Retention (days),Audit Log Retention (days)
+Enable Audit Logging,Enable Audit Logging
+Administrator Bypass,Administrator Bypass
+Guest Empty Set,Guest Empty Set
+Expiry Warning (days),Expiry Warning (days)
+Enable Expiry Notifications,Enable Expiry Notifications
+Enable Delegation,Enable Delegation
+Require Delegation Reason,Require Delegation Reason
+Notify on Capability Change,Notify on Capability Change
+Email on Request Submission,Email on Request Submission
+Enable Admin Digest,Enable Admin Digest
+Enable Group Hierarchy,Enable Group Hierarchy
+Pack Name,Pack Name
+Target App,Target App
+Version,Version
+Installed,Installed
+Pack Configuration JSON,Pack Configuration JSON
+Configuration JSON,Configuration JSON
+Site Name,Site Name
+Site URL,Site URL
+Active,Active
+Last Sync,Last Sync
+Notify on Limit Reached,Notify on Limit Reached
+Max Per Hour,Max Per Hour
+Max Per Day,Max Per Day
+Max Per Week,Max Per Week
+Max Per Month,Max Per Month
+Scope,Scope
+Role,Role
+Granted By,Granted By
+Granted On,Granted On
+Expires On,Expires On
+Delegated By,Delegated By
+Added By,Added By
+Added On,Added On
+Valid From,Valid From
+Valid Till,Valid Till
+Full Name,Full Name
+Field,Field
+Workflow,Workflow
+Report,Report
+API,API
+Module,Module
+Custom,Custom
+Pending,Pending
+Approved,Approved
+Rejected,Rejected
+Cancelled,Cancelled
+Low,Low
+Medium,Medium
+High,High
+Department,Department
+User List,User List
+Manual,Manual
+Department Sync,Department Sync
+Branch Sync,Branch Sync
+Custom Query,Custom Query
+Realtime,Realtime
+Hourly,Hourly
+Daily,Daily
+Per User,Per User
+Global,Global
+hide,hide
+read_only,read_only
+mask,mask
+custom,custom
+disable,disable
+redirect,redirect
+button,button
+menu_item,menu_item
+workflow_action,workflow_action
+print_format,print_format
+manual,manual
+scheduled,scheduled
+allowed,allowed
+denied,denied
+Dashboard,Dashboard
+Graph,Graph
+Compare,Compare
+Groups,Groups
+User Caps,User Caps
+Role Maps,Role Maps
+Field Maps,Field Maps
+Action Maps,Action Maps
+Policies,Policies
+Requests,Requests
+Rate Limits,Rate Limits
+Audit Log,Audit Log
+Settings,Settings
+CAPS Help,CAPS Help
+Loading help for:,Loading help for:
+Full Onboarding Guide →,Full Onboarding Guide →
+CAPS Impersonation Active,CAPS Impersonation Active
+Viewing as,Viewing as
+Stop,Stop
+Impersonation stopped,Impersonation stopped
+Capability Help,Capability Help
+Capability Bundle Help,Capability Bundle Help
+Role Capability Map Help,Role Capability Map Help
+User Capability Help,User Capability Help
+Permission Group Help,Permission Group Help
+Field Capability Map Help,Field Capability Map Help
+Action Capability Map Help,Action Capability Map Help
+Capability Policy Help,Capability Policy Help
+Capability Request Help,Capability Request Help
+Capability Snapshot Help,Capability Snapshot Help
+CAPS Site Profile Help,CAPS Site Profile Help
+CAPS Integration Pack Help,CAPS Integration Pack Help
+Capability Rate Limit Help,Capability Rate Limit Help
+CAPS Settings Help,CAPS Settings Help
+CAPS Audit Log Help,CAPS Audit Log Help
+Bundle Item Help,Bundle Item Help
+Capability Prerequisite Help,Capability Prerequisite Help
+Group Member Help,Group Member Help
+Group Bundle Help,Group Bundle Help
+Group Capability Help,Group Capability Help
+Role Capability Bundle Help,Role Capability Bundle Help
+Role Capability Item Help,Role Capability Item Help
+User Capability Bundle Help,User Capability Bundle Help
+User Capability Item Help,User Capability Item Help
+Help,Help
+For more help&#44; visit,For more help&#44; visit
+CAPS Onboarding,CAPS Onboarding
+or,or
+About CAPS,About CAPS
+CAPS Graph Explorer,CAPS Graph Explorer
+Capability Hierarchy,Capability Hierarchy
+Bundle Composition,Bundle Composition
+Group Hierarchy,Group Hierarchy
+Role → Capability Map,Role → Capability Map
+Loading graph...,Loading graph...
+No data to display for this graph mode,No data to display for this graph mode
+Error loading graph,Error loading graph
+Active Capability,Active Capability
+Inactive,Inactive
+Hard Prerequisite,Hard Prerequisite
+Soft Prerequisite,Soft Prerequisite
+Graph Explorer Help,Graph Explorer Help
+Shows capability parent→child relationships grouped by category,Shows capability parent→child relationships grouped by category
+Shows hard/soft prerequisite dependencies between capabilities,Shows hard/soft prerequisite dependencies between capabilities
+Shows which capabilities are grouped into bundles,Shows which capabilities are grouped into bundles
+Shows permission group hierarchy and membership,Shows permission group hierarchy and membership
+Role Map,Role Map
+Shows Frappe roles mapped to CAPS capabilities,Shows Frappe roles mapped to CAPS capabilities
+Click a node for details. Double-click to navigate. Use toolbar to switch layouts.,Click a node for details. Double-click to navigate. Use toolbar to switch layouts.
+Compare User Capabilities,Compare User Capabilities
+User A,User A
+User B,User B
+Please select both users,Please select both users
+total for,total for
+common,common
+Comparison failed,Comparison failed
+None,None
+Compare Help,Compare Help
+Select two users and click Compare to see their capability differences.,Select two users and click Compare to see their capability differences.
+CAPS Administration,CAPS Administration
+Refresh,Refresh
+CAPABILITIES,CAPABILITIES
+active,active
+USERS,USERS
+with capabilities,with capabilities
+BUNDLES,BUNDLES
+PENDING REQUESTS,PENDING REQUESTS
+Action needed,Action needed
+Select a user...,Select a user...
+Loading...,Loading...
+No capabilities found,No capabilities found
+Config exported. Check downloads.,Config exported. Check downloads.
+Config imported,Config imported
+All CAPS caches cleared,All CAPS caches cleared
+CAPS Admin Help,CAPS Admin Help
+CAPS Administration Dashboard,CAPS Administration Dashboard
+Overview of your Capability-Based Access Control system.,Overview of your Capability-Based Access Control system.
+No active policies,No active policies
+Could not load policies,Could not load policies
+No audit entries,No audit entries
+Could not load audit log,Could not load audit log
+No capabilities expiring soon,No capabilities expiring soon
+Could not load expiring items,Could not load expiring items
+What is CAPS?,What is CAPS?
+Capability-Based Access Control,Capability-Based Access Control
+Atomic Capabilities,Atomic Capabilities
+Capability Bundles,Capability Bundles
+Field-Level Masking,Field-Level Masking
+Action-Level Gates,Action-Level Gates
+Policy Engine,Policy Engine
+Time-Boxed Access,Time-Boxed Access
+Compliance Snapshots,Compliance Snapshots
+Module Map,Module Map
+Entity Relationships,Entity Relationships
+For IT Managers,For IT Managers
+For Information Security Managers,For Information Security Managers
+For ERPNext System Managers,For ERPNext System Managers
+For Auditors,For Auditors
+Why CAPS? — Competitive Comparison,Why CAPS? — Competitive Comparison
+CAPS vs. Alternatives,CAPS vs. Alternatives
+Feature,Feature
+Built-in Frappe Roles,Built-in Frappe Roles
+Atomic capabilities,Atomic capabilities
+Full,Full
+Roles only,Roles only
+Limited,Limited
+Field-level masking,Field-level masking
+Per capability,Per capability
+Action-level gating,Action-level gating
+Per button/workflow,Per button/workflow
+DocType level,DocType level
+Transaction level,Transaction level
+Policy automation,Policy automation
+Conditional rules,Conditional rules
+Time-boxed access,Time-boxed access
+Built-in,Built-in
+Audit trail,Audit trail
+Complete,Complete
+Activity Log only,Activity Log only
+Compliance snapshots,Compliance snapshots
+Visual graph explorer,Visual graph explorer
+Interactive,Interactive
+Rate limiting,Rate limiting
+Frappe native,Frappe native
+Cost,Cost
+Included,Included
+Free,Free
+Enterprise license,Enterprise license
+Industry Use Cases,Industry Use Cases
+Construction & Contracting,Construction & Contracting
+Healthcare,Healthcare
+Financial Services,Financial Services
+Education,Education
+Retail & E-Commerce,Retail & E-Commerce
+Manufacturing,Manufacturing
+Integration Map,Integration Map
+Deep Ecosystem Integration,Deep Ecosystem Integration
+Third-Party Apps,Third-Party Apps
+Security & Compliance Reports,Security & Compliance Reports
+Enterprise Audit & Compliance Infrastructure,Enterprise Audit & Compliance Infrastructure
+Capability Coverage,Capability Coverage
+User Access Matrix,User Access Matrix
+CAPS Audit Report,CAPS Audit Report
+Capability Snapshots,Capability Snapshots
+Security Enforcement,Security Enforcement
+CAPS Onboarding,CAPS Onboarding
+Skip to Dashboard,Skip to Dashboard
+Welcome to CAPS,Welcome to CAPS
+System Architecture,System Architecture
+What's Your Role?,What's Your Role?
+IT Manager: System Setup,IT Manager: System Setup
+IT Manager: Visual Graph Explorer,IT Manager: Visual Graph Explorer
+InfoSec: Security Policies,InfoSec: Security Policies
+InfoSec: Audit & Compliance,InfoSec: Audit & Compliance
+ERPNext Admin: Roles & Bundles,ERPNext Admin: Roles & Bundles
+ERPNext Admin: Field & Action Control,ERPNext Admin: Field & Action Control
+Auditor: Review Process,Auditor: Review Process
+Auditor: Compliance Checks,Auditor: Compliance Checks
+You're All Set!,You're All Set!
+Onboarding Complete!,Onboarding Complete!
+Graph Explorer,Graph Explorer
+Full About Page,Full About Page
+Onboarding complete! Welcome to CAPS.,Onboarding complete! Welcome to CAPS.
+Go to CAPS Settings →,Go to CAPS Settings →
+Open Graph Explorer →,Open Graph Explorer →
+Configure Policies →,Configure Policies →
+View Audit Log →,View Audit Log →
+Configure Role Maps →,Configure Role Maps →
+Configure Field Maps →,Configure Field Maps →
+Open Audit Report →,Open Audit Report →
+View Snapshots →,View Snapshots →
+🖥️ IT Manager,🖥️ IT Manager
+🔐 InfoSec Manager,🔐 InfoSec Manager
+🏢 ERPNext Admin,🏢 ERPNext Admin
+📋 Auditor,📋 Auditor
+Cannot impersonate yourself,Cannot impersonate yourself
+Delegation is disabled in CAPS Settings,Delegation is disabled in CAPS Settings
+A reason is required for delegation,A reason is required for delegation
+Cannot delegate a capability to yourself,Cannot delegate a capability to yourself
+Capability is required when Grant Type is 'Capability',Capability is required when Grant Type is 'Capability'
+Bundle is required when Grant Type is 'Bundle',Bundle is required when Grant Type is 'Bundle'
+Ends On must be after Starts On,Ends On must be after Starts On
+Target Role is required when Target Type is 'Role',Target Role is required when Target Type is 'Role'
+Target Department is required when Target Type is 'Department',Target Department is required when Target Type is 'Department'
+Target Users is required when Target Type is 'User List',Target Users is required when Target Type is 'User List'
+At least one user email is required in Target Users,At least one user email is required in Target Users
+User Cache TTL must be at least 10 seconds.,User Cache TTL must be at least 10 seconds.
+Audit Log Retention must be at least 1 day.,Audit Log Retention must be at least 1 day.
+Guest users cannot submit capability requests,Guest users cannot submit capability requests
+At least one usage limit must be set (non-zero).,At least one usage limit must be set (non-zero).
+Total Capabilities,Total Capabilities
+Total Bundles,Total Bundles
+Users with Capabilities,Users with Capabilities
+Audit Logs (24h),Audit Logs (24h)
+Pending Requests,Pending Requests
+Active Policies,Active Policies
+Permission Groups,Permission Groups
+Capability Policies,Capability Policies
+Capability Requests,Capability Requests
+Integration Packs,Integration Packs
+Site Profiles,Site Profiles
+CAPS Graph Explorer,CAPS Graph Explorer
+Compare User Capabilities,Compare User Capabilities
+CAPS Administration,CAPS Administration
+Dashboard & Pages,Dashboard & Pages
+Capability Graph,Capability Graph
+Capability Management,Capability Management
+Assignment & Groups,Assignment & Groups
+Field & Action Restrictions,Field & Action Restrictions
+Policies & Requests,Policies & Requests
+Snapshots & Profiles,Snapshots & Profiles
+Rate Limiting,Rate Limiting
+Audit & Settings,Audit & Settings
+Reports,Reports
+Pages & Tools,Pages & Tools
+CAPS — Capability-Based Access Permission System,CAPS — Capability-Based Access Permission System
+Yes,Yes
+No,No
+Delegatable,Delegatable
+inherits,inherits
+hard prerequisite,hard prerequisite
+soft prerequisite,soft prerequisite
+Template,Template
+mandatory,mandatory
+optional,optional
+Type,Type
+Total,Total
+Unique,Unique
+Zone,Zone
+grouped into,grouped into
+grants,grants
+members,members
+auto-grants,auto-grants
+restricts,restricts
+Direct Users,Direct Users
+Group Users,Group Users
+Total Coverage,Total Coverage
+Circular parent group reference detected.,Circular parent group reference detected.

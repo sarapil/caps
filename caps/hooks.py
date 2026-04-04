@@ -6,7 +6,7 @@ app_email = "dev@arkanlabs.com"
 app_license = "Proprietary"
 app_version = "1.0.0"
 
-required_apps = ["frappe", "frappe_visual"]
+required_apps = ["frappe", "frappe_visual", "arkan_help"]
 
 # ---------------------------------------------------------------------------
 # App Icon / Logo / Desktop
