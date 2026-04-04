@@ -1,0 +1,63 @@
+{% extends "templates/web.html" %}
+
+{% block title %}{{ _("About CAPS") }}{% endblock %}
+
+{% block page_content %}
+<div id="caps-about-container" data-page="caps-about"></div>
+
+<style>
+  :root { --caps-primary: #10B981; --caps-gradient: linear-gradient(135deg, #10B981, #059669); }
+  #caps-about-container { min-height: 80vh; padding: 24px 0; }
+  .caps-about-hero { text-align: center; padding: 60px 20px; }
+  .caps-about-hero img { width: 140px; height: 140px; margin-bottom: 24px; }
+  .caps-about-hero h1 { font-size: 2.5rem; font-weight: 800; background: var(--caps-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 12px; }
+  .caps-about-hero p { font-size: 1.15rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 32px; }
+  .caps-features { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; padding: 40px 20px; max-width: 900px; margin: 0 auto; }
+  .caps-feature-card { padding: 28px; border-radius: 16px; background: var(--card-bg); border: 1px solid var(--border-color); transition: transform 0.2s; }
+  .caps-feature-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(16, 185, 129, 0.12); }
+  .caps-feature-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
+  .caps-feature-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
+  .caps-stat-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px; border-radius: 20px; background: rgba(16, 185, 129, 0.08); color: var(--caps-primary); font-weight: 600; font-size: 0.9rem; }
+  .caps-stats-row { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin: 32px 0; }
+  .caps-footer { text-align: center; padding: 40px 20px; color: var(--text-muted); font-size: 0.85rem; }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const container = document.getElementById('caps-about-container');
+  container.innerHTML = `
+    <div class="caps-about-hero">
+      <img src="/assets/caps/images/logo.svg" alt="CAPS" onerror="this.style.display='none'">
+      <h1>${__("CAPS")}</h1>
+      <p>${__("Capability-Based Access Control System — Fine-grained permissions, Role-Capability mapping, and Field-level restrictions for Frappe applications.")}</p>
+      <div class="caps-stats-row">
+        <span class="caps-stat-badge">🛡️ ${__("Capability-Based")}</span>
+        <span class="caps-stat-badge">🔑 ${__("Field-Level Control")}</span>
+        <span class="caps-stat-badge">👥 ${__("Role Mapping")}</span>
+      </div>
+    </div>
+    <div class="caps-features">
+      <div class="caps-feature-card">
+        <h3>🛡️ ${__("Capability System")}</h3>
+        <p>${__("Define granular capabilities per app — Module access, Action permissions, Field visibility, and Report restrictions. Each app declares its own capabilities.")}</p>
+      </div>
+      <div class="caps-feature-card">
+        <h3>👥 ${__("Role → Capability Mapping")}</h3>
+        <p>${__("Map Frappe roles to CAPS capabilities with visual drag-and-drop. See exactly what each role can do across all apps.")}</p>
+      </div>
+      <div class="caps-feature-card">
+        <h3>🔑 ${__("Field-Level Restrictions")}</h3>
+        <p>${__("Control individual field visibility and behavior — hide, mask, or make read-only based on user capabilities. Enforced server-side.")}</p>
+      </div>
+      <div class="caps-feature-card">
+        <h3>📊 ${__("Permission Analytics")}</h3>
+        <p>${__("Audit dashboards showing who has access to what, capability usage patterns, and permission conflict detection.")}</p>
+      </div>
+    </div>
+    <div class="caps-footer">
+      <p>${__("Built by")} <strong>Arkan Lab</strong> • ${__("Powered by")} <strong>Frappe Framework</strong></p>
+    </div>
+  `;
+});
+</script>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "templates/web.html" %}
+
+{% block title %}{{ _("CAPS Onboarding") }}{% endblock %}
+
+{% block page_content %}
+<div id="caps-onboarding-container" data-page="caps-onboarding"></div>
+
+<style>
+  #caps-onboarding-container { min-height: 80vh; padding: 24px 0; }
+  .caps-onboard-hero { text-align: center; padding: 60px 20px; }
+  .caps-onboard-hero h1 { font-size: 2rem; font-weight: 700; color: var(--text-color); margin-bottom: 16px; }
+  .caps-onboard-hero p { color: var(--text-muted); font-size: 1.1rem; max-width: 500px; margin: 0 auto 32px; }
+  .caps-onboard-steps { max-width: 700px; margin: 0 auto; padding: 0 20px; }
+  .caps-step { display: flex; gap: 16px; padding: 20px 0; border-bottom: 1px solid var(--border-color); }
+  .caps-step-num { width: 40px; height: 40px; border-radius: 50%; background: rgba(16, 185, 129, 0.1); color: #10B981; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
+  .caps-step h3 { font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
+  .caps-step p { font-size: 0.9rem; color: var(--text-muted); }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const container = document.getElementById('caps-onboarding-container');
+  const steps = [
+    { title: __("Review Capabilities"), desc: __("Explore the capabilities declared by each installed app in the CAPS workspace.") },
+    { title: __("Map Roles"), desc: __("Assign CAPS capabilities to Frappe roles using the visual mapping interface.") },
+    { title: __("Configure Field Restrictions"), desc: __("Set up field-level visibility rules — hide, mask, or read-only per capability.") },
+    { title: __("Test Permissions"), desc: __("Use the permission simulator to verify access patterns for different user roles.") },
+    { title: __("Monitor & Audit"), desc: __("Review the permission analytics dashboard for usage patterns and potential conflicts.") },
+  ];
+  container.innerHTML = `
+    <div class="caps-onboard-hero">
+      <h1>🚀 ${__("Get Started with CAPS")}</h1>
+      <p>${__("Follow these steps to configure capability-based access control.")}</p>
+    </div>
+    <div class="caps-onboard-steps">
+      ${steps.map((s, i) => `
+        <div class="caps-step">
+          <div class="caps-step-num">${i + 1}</div>
+          <div>
+            <h3>${s.title}</h3>
+            <p>${s.desc}</p>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+});
+</script>
+{% endblock %}

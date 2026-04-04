@@ -193,5 +193,8 @@ caps_field_maps = [
 # Website Route Rules
 # --------------------------------------------------------
 website_route_rules = [
+    {"from_route": "/caps-about", "to_route": "caps_about"},
+    {"from_route": "/caps-onboarding", "to_route": "caps_onboarding"},
+    {"from_route": "/عن-caps", "to_route": "caps_about"},
     {"from_route": "/caps/<path:app_path>", "to_route": "caps/<app_path>"},
 ]
