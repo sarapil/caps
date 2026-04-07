@@ -7,7 +7,7 @@
  * CAPS Onboarding — Storyboard Walkthrough
  * ══════════════════════════════════════════════════════════════
  * Comprehensive guided tour with persona-based paths:
- *   مدير IT | مدير أمن معلومات | مدير نظام ERPNext | مدقق
+ *   IT Manager | InfoSec Manager | ERPNext System Manager | Auditor
  * Uses: Storyboard, GraphEngine, FloatingWindow, VisualDashboard
  */
 frappe.pages["caps-onboarding"].on_page_load = async function (wrapper) {

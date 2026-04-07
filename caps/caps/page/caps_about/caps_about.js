@@ -20,7 +20,7 @@ frappe.pages["caps-about"].on_page_load = function (wrapper) {
 
 /* ══════════════════════════════════════════════════════════════ */
 /*  14-Slide Storyboard — CAPS About                            */
-/*  Tone: أمني / مهني — Enterprise-grade security governance    */
+/*  Tone: Security / Professional — Enterprise-grade security governance    */
 /* ══════════════════════════════════════════════════════════════ */
 function render_about_storyboard(page) {
     const BRAND = "#10B981";
@@ -150,7 +150,7 @@ function render_about_storyboard(page) {
                 }
             },
         },
-        /* ──── 5. Persona: IT Manager (مدير IT) ──── */
+        /* ──── 5. Persona: IT Manager ──── */
         {
             title: __("For IT Managers"),
             icon: "server-cog",
@@ -190,7 +190,7 @@ function render_about_storyboard(page) {
                     </div>
                 </div>`,
         },
-        /* ──── 6. Persona: Information Security Manager (مدير أمن معلومات) ──── */
+        /* ──── 6. Persona: Information Security Manager ──── */
         {
             title: __("For Information Security Managers"),
             icon: "shield-check",
@@ -232,7 +232,7 @@ function render_about_storyboard(page) {
                     </div>
                 </div>`,
         },
-        /* ──── 7. Persona: ERPNext System Manager (مدير نظام ERPNext) ──── */
+        /* ──── 7. Persona: ERPNext System Manager ──── */
         {
             title: __("For ERPNext System Managers"),
             icon: "building",
@@ -274,7 +274,7 @@ function render_about_storyboard(page) {
                     </div>
                 </div>`,
         },
-        /* ──── 8. Persona: Auditor (مدقق) ──── */
+        /* ──── 8. Persona: Auditor ──── */
         {
             title: __("For Auditors"),
             icon: "clipboard-check",
