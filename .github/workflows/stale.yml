@@ -1,0 +1,49 @@
+name: 📋 Stale Issues & PRs Cleanup
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"  # Every Monday at 6 AM UTC
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    name: 🧹 Mark Stale
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+          # Issues
+          stale-issue-message: >
+            ⏰ This issue has been automatically marked as stale because it has had no
+            activity for 30 days. It will be closed in 14 days if no further activity occurs.
+
+            هذه المشكلة تم وسمها تلقائياً كراكدة لعدم وجود نشاط لمدة ٣٠ يوماً.
+            سيتم إغلاقها خلال ١٤ يوماً إذا لم يحدث أي نشاط إضافي.
+          stale-issue-label: "stale"
+          days-before-issue-stale: 30
+          days-before-issue-close: 14
+          close-issue-message: >
+            🔒 This issue was closed because it has been stale for 14 days with no activity.
+            Feel free to reopen if the issue persists.
+
+            تم إغلاق هذه المشكلة لعدم وجود نشاط لمدة ١٤ يوماً. لا تتردد في إعادة فتحها.
+
+          # PRs
+          stale-pr-message: >
+            ⏰ This PR has been automatically marked as stale because it has had no
+            activity for 21 days. It will be closed in 7 days if no further activity occurs.
+
+            طلب الدمج هذا تم وسمه تلقائياً كراكد لعدم وجود نشاط لمدة ٢١ يوماً.
+          stale-pr-label: "stale"
+          days-before-pr-stale: 21
+          days-before-pr-close: 7
+
+          # Exempt labels
+          exempt-issue-labels: "priority: critical,in-progress,blocked,on-hold"
+          exempt-pr-labels: "priority: critical,in-progress,blocked"

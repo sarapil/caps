@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Community Discussion — نقاش المجتمع
+    url: https://github.com/orgs/sarapil/discussions
+    about: Ask general questions and discuss ideas — اطرح أسئلة عامة وناقش الأفكار
+  - name: 📖 Documentation — التوثيق
+    url: https://docs.arkan.it.com
+    about: Browse the documentation — تصفح التوثيق
+  - name: 🛡️ Security Vulnerability — ثغرة أمنية
+    url: https://github.com/sarapil/caps/security/advisories/new
+    about: Report security vulnerabilities privately — أبلغ عن الثغرات الأمنية بشكل خاص

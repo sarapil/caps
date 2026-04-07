@@ -1,0 +1,36 @@
+# CODEOWNERS — مالكو الكود
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+#
+# These owners will be automatically requested for review when a PR
+# modifies files matching the patterns.
+# سيتم طلب مراجعة هؤلاء المالكين تلقائياً عند تعديل ملفات مطابقة.
+
+# ─── Default Owner — المالك الافتراضي ─────────────────────────────────────────
+*                           @sarapil/caps-maintainers
+
+# ─── Core Configuration — الإعدادات الأساسية ──────────────────────────────────
+caps/hooks.py       @sarapil/caps-maintainers
+caps/install.py     @sarapil/caps-maintainers
+caps/seed.py        @sarapil/caps-maintainers
+pyproject.toml              @sarapil/caps-maintainers
+setup.cfg                   @sarapil/caps-maintainers
+
+# ─── API Layer — طبقة الواجهة البرمجية ────────────────────────────────────────
+caps/api/           @sarapil/caps-maintainers
+
+# ─── Security & Permissions — الأمان والصلاحيات ───────────────────────────────
+caps/caps/          @sarapil/caps-maintainers
+SECURITY.md                 @sarapil/caps-maintainers
+
+# ─── CI/CD — خط الأنابيب ─────────────────────────────────────────────────────
+.github/workflows/          @sarapil/caps-maintainers
+
+# ─── Frontend — الواجهة الأمامية ──────────────────────────────────────────────
+caps/public/        @sarapil/caps-maintainers
+
+# ─── Translations — الترجمات ──────────────────────────────────────────────────
+caps/translations/  @sarapil/caps-maintainers
+
+# ─── Documentation — التوثيق ──────────────────────────────────────────────────
+caps/help/          @sarapil/caps-maintainers
+*.md                        @sarapil/caps-maintainers

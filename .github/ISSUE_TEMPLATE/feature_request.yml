@@ -1,0 +1,81 @@
+name: ✨ Feature Request | طلب ميزة
+description: Suggest a new feature — اقتراح ميزة جديدة
+title: "[Feature] "
+labels: ["enhancement", "triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## نقدّر أفكارك لتحسين التطبيق!
+        **We appreciate your ideas to improve the app!**
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement — وصف المشكلة
+      description: What problem does this feature solve? — ما المشكلة التي تحلها هذه الميزة؟
+      placeholder: |
+        I'm always frustrated when... — أشعر بالإحباط دائماً عندما...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution — الحل المقترح
+      description: Describe the solution you'd like — صف الحل الذي تريده
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered — البدائل التي تم النظر فيها
+      description: Other approaches you've considered — الأساليب الأخرى التي فكرت فيها
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope — النطاق
+      options:
+        - "🏗️ New DocType — نوع مستند جديد"
+        - "📝 Existing DocType Enhancement — تحسين مستند موجود"
+        - "🔌 API / Integration — واجهة برمجة / تكامل"
+        - "🎨 UI / UX Improvement — تحسين واجهة المستخدم"
+        - "📊 Report / Dashboard — تقرير / لوحة معلومات"
+        - "🔒 Permission / Security — صلاحيات / أمان"
+        - "🌐 Translation / i18n — ترجمة"
+        - "📚 Documentation — توثيق"
+        - "⚡ Performance — أداء"
+        - "🔧 Other — أخرى"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority — الأولوية
+      options:
+        - "🔴 Critical — حرج (Blocking work)"
+        - "🟠 High — عالي (Significant improvement)"
+        - "🟡 Medium — متوسط (Nice to have)"
+        - "🟢 Low — منخفض (Future consideration)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: mockup
+    attributes:
+      label: Mockup / Wireframe — نموذج أولي
+      description: Attach any visual mockups or wireframes — أرفق أي نماذج أولية مرئية
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist — قائمة التحقق
+      options:
+        - label: I have searched for similar feature requests — بحثت عن طلبات مشابهة
+          required: true
+        - label: This feature aligns with the app's purpose — هذه الميزة تتوافق مع غرض التطبيق
+          required: true

@@ -1,0 +1,113 @@
+name: 🐛 Bug Report | تقرير خطأ
+description: Report a bug — الإبلاغ عن خطأ
+title: "[Bug] "
+labels: ["bug", "triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## شكراً لمساعدتنا في تحسين التطبيق!
+        **Thank you for helping us improve this app!**
+        Please fill in the details below. — يرجى ملء التفاصيل أدناه.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description — الوصف
+      description: A clear description of the bug — وصف واضح للخطأ
+      placeholder: |
+        What happened? — ماذا حدث؟
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce — خطوات إعادة الإنتاج
+      description: Steps to reproduce the behavior — خطوات إعادة إنتاج الخطأ
+      placeholder: |
+        1. Go to '...' — اذهب إلى '...'
+        2. Click on '...' — انقر على '...'
+        3. See error — شاهد الخطأ
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior — السلوك المتوقع
+      description: What did you expect to happen? — ماذا كنت تتوقع أن يحدث؟
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior — السلوك الفعلي
+      description: What actually happened? — ماذا حدث فعلاً؟
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity — الخطورة
+      options:
+        - "🔴 Critical — حرج (System down / data loss)"
+        - "🟠 High — عالي (Major feature broken)"
+        - "🟡 Medium — متوسط (Feature partially broken)"
+        - "🟢 Low — منخفض (Minor issue / cosmetic)"
+    validations:
+      required: true
+
+  - type: input
+    id: frappe-version
+    attributes:
+      label: Frappe Version — إصدار Frappe
+      placeholder: "v16.13.0"
+    validations:
+      required: true
+
+  - type: input
+    id: app-version
+    attributes:
+      label: App Version — إصدار التطبيق
+      placeholder: "1.0.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser — المتصفح
+      options:
+        - Chrome
+        - Firefox
+        - Safari
+        - Edge
+        - Other — آخر
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots / Logs — لقطات شاشة / سجلات
+      description: Attach screenshots or paste error logs — أرفق لقطات شاشة أو ألصق سجلات الأخطاء
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context — سياق إضافي
+      description: Any other information that might help — أي معلومات أخرى قد تساعد
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Checklist — قائمة التحقق
+      options:
+        - label: I have searched for existing issues — بحثت عن مشكلات مشابهة
+          required: true
+        - label: I have cleared cache and tried again — مسحت ذاكرة التخزين المؤقت وحاولت مرة أخرى
+          required: true

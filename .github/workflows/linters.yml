@@ -1,47 +1,103 @@
-name: Linters
+name: Linters — Code Quality
 
 on:
-  push:
-    branches: [main, develop]
   pull_request:
-    branches: [main]
+  workflow_dispatch:
 
-concurrency:
-  group: linters-${{ github.ref }}
-  cancel-in-progress: true
+permissions:
+  contents: read
+
+env:
+  APP_NAME: "caps"
 
 jobs:
   ruff:
-    name: Ruff (Python)
+    name: 🐍 Ruff (Python)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.12"
       - run: pip install ruff
-      - run: ruff check caps/ --config pyproject.toml
-      - run: ruff format --check caps/ --config pyproject.toml
-
-  semgrep:
-    name: Semgrep Rules
-    runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request'
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-      - run: pip install semgrep
-      - run: semgrep ci --config "p/frappe" || true
+      - name: Ruff lint
+        run: ruff check . --output-format=github
+      - name: Ruff format
+        run: ruff format --check .
 
   eslint:
-    name: ESLint (JavaScript)
+    name: 📜 ESLint (JavaScript)
     runs-on: ubuntu-latest
+    if: ${{ hashFiles('**/*.js', '**/*.jsx') != '' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 20
       - run: npm install -g eslint
-      - run: eslint caps/public/js/ --ext .js || true
+      - run: eslint ${{ env.APP_NAME }}/public/js/ --ext .js,.jsx || true
+
+  semgrep:
+    name: 🛡️ Semgrep (Security)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: semgrep/semgrep-action@v1
+        with:
+          config: >-
+            p/python
+            p/javascript
+            p/sql-injection
+            p/xss
+        env:
+          SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
+        continue-on-error: true
+
+  frappe-checks:
+    name: ⚙️ Frappe Conventions
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Forbidden patterns check
+        run: |
+          ERRORS=0
+          echo "Checking override_doctype_class..."
+          if grep -rn "override_doctype_class" ${{ env.APP_NAME }}/hooks.py 2>/dev/null; then
+            echo "::error::FORBIDDEN: override_doctype_class in hooks.py"
+            ERRORS=$((ERRORS + 1))
+          fi
+          echo "Checking f-string SQL..."
+          if grep -rn --include="*.py" -E "frappe\.db\.sql\(f[\"']" ${{ env.APP_NAME }}/ 2>/dev/null; then
+            echo "::error::FORBIDDEN: f-string SQL queries found"
+            ERRORS=$((ERRORS + 1))
+          fi
+          echo "Checking eval/exec..."
+          if grep -rn --include="*.py" -E '\beval\s*\(|\bexec\s*\(' ${{ env.APP_NAME }}/ 2>/dev/null | grep -v test | grep -v __pycache__; then
+            echo "::error::FORBIDDEN: eval()/exec() found"
+            ERRORS=$((ERRORS + 1))
+          fi
+          [[ $ERRORS -eq 0 ]] && echo "✅ All checks passed" || exit 1
+
+  translations:
+    name: 🌐 Translation Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check Arabic translation exists
+        run: |
+          if [[ -f "${{ env.APP_NAME }}/translations/ar.csv" ]]; then
+            LINES=$(wc -l < "${{ env.APP_NAME }}/translations/ar.csv")
+            echo "✅ Arabic translation found ($LINES entries)"
+          else
+            echo "⚠️ Arabic translation file missing: ${{ env.APP_NAME }}/translations/ar.csv"
+          fi
+      - name: Check for untranslated strings
+        run: |
+          # Find Python strings not wrapped in _()
+          UNWRAPPED=$(grep -rn --include="*.py" 'frappe.throw("[^_]' ${{ env.APP_NAME }}/ 2>/dev/null | head -20 || true)
+          if [[ -n "$UNWRAPPED" ]]; then
+            echo "⚠️ Possible untranslated strings in frappe.throw():"
+            echo "$UNWRAPPED"
+          else
+            echo "✅ No obvious untranslated strings found"
+          fi

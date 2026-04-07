@@ -1,0 +1,56 @@
+name: 📚 Documentation | توثيق
+description: Report missing or incorrect documentation — الإبلاغ عن توثيق ناقص أو غير صحيح
+title: "[Docs] "
+labels: ["documentation", "triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## التوثيق الجيد أساس النجاح!
+        **Good documentation is the foundation of success!**
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Documentation Type — نوع التوثيق
+      options:
+        - "📝 Missing documentation — توثيق ناقص"
+        - "❌ Incorrect documentation — توثيق خاطئ"
+        - "🔄 Outdated documentation — توثيق قديم"
+        - "🌐 Translation needed — ترجمة مطلوبة"
+        - "📖 New guide/tutorial needed — دليل/شرح جديد مطلوب"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description — الوصف
+      description: What documentation is needed or needs fixing? — ما التوثيق المطلوب أو الذي يحتاج إصلاح؟
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Affected Page/Section — الصفحة/القسم المتأثر
+      description: URL or file path of the documentation — رابط أو مسار ملف التوثيق
+      placeholder: "help/en/my_doctype.md or Wiki page URL"
+
+  - type: textarea
+    id: proposed-content
+    attributes:
+      label: Proposed Content — المحتوى المقترح
+      description: If you have suggested content, write it here — إذا كان لديك محتوى مقترح، اكتبه هنا
+
+  - type: checkboxes
+    id: languages
+    attributes:
+      label: Languages Affected — اللغات المتأثرة
+      options:
+        - label: "🇬🇧 English — الإنجليزية"
+        - label: "🇸🇦 Arabic — العربية"
+        - label: "🇹🇷 Turkish — التركية"
+        - label: "🇫🇷 French — الفرنسية"
+        - label: "Other — أخرى"

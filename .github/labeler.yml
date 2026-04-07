@@ -1,0 +1,84 @@
+# ============================================================================
+# Arkan Lab — PR Auto-Labeler Configuration
+# Used by .github/workflows/auto-label.yml
+# Maps file path patterns to labels
+# ============================================================================
+
+"scope: frontend":
+  - changed-files:
+    - any-glob-to-any-file:
+      - "*/public/js/**"
+      - "*/public/css/**"
+      - "**/*.js"
+      - "**/*.jsx"
+      - "**/*.ts"
+      - "**/*.scss"
+      - "**/*.css"
+
+"scope: backend":
+  - changed-files:
+    - any-glob-to-any-file:
+      - "**/*.py"
+      - "!**/public/**"
+
+"scope: doctype":
+  - changed-files:
+    - any-glob-to-any-file:
+      - "**/doctype/**/*.json"
+      - "**/doctype/**/*.py"
+
+"scope: api":
+  - changed-files:
+    - any-glob-to-any-file:
+      - "**/api/**"
+
+"scope: hooks":
+  - changed-files:
+    - any-glob-to-any-file:
+      - "**/hooks.py"
+
+"scope: report":
+  - changed-files:
+    - any-glob-to-any-file:
+      - "**/report/**"
+
+"scope: print":
+  - changed-files:
+    - any-glob-to-any-file:
+      - "**/print_format/**"
+
+"scope: workflow":
+  - changed-files:
+    - any-glob-to-any-file:
+      - "**/workflow/**"
+
+"scope: permissions":
+  - changed-files:
+    - any-glob-to-any-file:
+      - "**/caps/**"
+      - "**/permissions.py"
+
+"documentation":
+  - changed-files:
+    - any-glob-to-any-file:
+      - "**/*.md"
+      - "**/help/**"
+      - "docs/**"
+
+"translation":
+  - changed-files:
+    - any-glob-to-any-file:
+      - "**/translations/**"
+
+"test":
+  - changed-files:
+    - any-glob-to-any-file:
+      - "**/tests/**"
+      - "**/test_*.py"
+      - "**/conftest.py"
+
+"ci/cd":
+  - changed-files:
+    - any-glob-to-any-file:
+      - ".github/workflows/**"
+      - ".github/actions/**"
