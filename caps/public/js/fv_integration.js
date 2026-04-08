@@ -8,7 +8,7 @@
     // App branding registration
     const APP_CONFIG = {
         name: "caps",
-        title: __("CAPS"),
+        title: "CAPS",
         color: "#059669",
         module: "CAPS",
     };

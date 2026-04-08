@@ -12,7 +12,9 @@
 (function () {
 	"use strict";
 
-	frappe.provide("frappe.caps");
+	// Guard: skip if frappe core not loaded (transient HTTP/2 proxy failures)
+if (typeof frappe === "undefined" || typeof frappe.provide !== "function") { return; }
+frappe.provide("frappe.caps");
 
 	// ── Visual Bundle Lazy Loader ────────────────────────────────
 	frappe.caps._visual_loaded = false;
