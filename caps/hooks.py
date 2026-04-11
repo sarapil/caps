@@ -33,19 +33,9 @@ add_to_apps_screen = [
 # ---------------------------------------------------------------------------
 # Frontend Includes
 # ---------------------------------------------------------------------------
-app_include_js = [
-    "/assets/caps/js/caps_bootstrap.js",
-    "/assets/caps/js/caps_controller.js",
-    "/assets/caps/js/caps_sidebar.js",
-    "/assets/caps/js/caps_contextual_help.js",
-    "/assets/caps/js/fv_integration.js",
-]
+app_include_js = ["/assets/caps/js/caps_combined.js"]
 
-app_include_css = [
-    "/assets/caps/css/caps-theme.css",
-    "/assets/caps/css/caps_brand.css",
-    "/assets/caps/css/caps_sidebar.css",
-]
+app_include_css = ["/assets/caps/css/caps_combined.css"]
 
 # ---------------------------------------------------------------------------
 # After Install / Before Uninstall
