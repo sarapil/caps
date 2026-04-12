@@ -40,6 +40,8 @@ _IMPERSONATION_TTL = 1800  # 30 minutes
 
 @frappe.whitelist()
 def start_impersonation(target_user: str) -> dict:
+    frappe.only_for(["System Manager"])
+def start_impersonation(target_user: str) -> dict:
     """
     Start impersonating another user's capabilities.
 

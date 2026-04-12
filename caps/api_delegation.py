@@ -28,6 +28,7 @@ def delegate_capability(
     expires_on: str | None = None,
     reason: str | None = None,
 ) -> dict:
+    frappe.only_for(["System Manager"])
     """
     Delegate a capability to another user.
 

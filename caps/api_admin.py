@@ -24,6 +24,8 @@ from frappe.utils import now_datetime
 
 @frappe.whitelist()
 def bulk_grant(users: str | list, capabilities: str | list) -> dict:
+    frappe.only_for(["System Manager"])
+def bulk_grant(users: str | list, capabilities: str | list) -> dict:
     """
     Grant one or more capabilities to one or more users in a single call.
 

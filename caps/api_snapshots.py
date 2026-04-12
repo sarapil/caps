@@ -28,6 +28,7 @@ def take_snapshot(
     source: str = "manual",
     notes: str = "",
 ) -> dict:
+    frappe.only_for(["System Manager"])
     """
     Capture the current resolved capabilities for a user.
 
@@ -79,6 +80,8 @@ def take_snapshot(
 
 
 @frappe.whitelist()
+def compare_snapshots(snapshot1: str, snapshot2: str) -> dict:
+    frappe.only_for(["System Manager"])
 def compare_snapshots(snapshot1: str, snapshot2: str) -> dict:
     """
     Compare two snapshots and return the diff.
@@ -215,6 +218,7 @@ def get_snapshot_history(
 
 @frappe.whitelist()
 def restore_snapshot(snapshot_name: str, dry_run: bool = True) -> dict:
+    frappe.only_for(["System Manager"])
     """
     Restore a user's direct capabilities to match a snapshot.
 

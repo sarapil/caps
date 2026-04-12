@@ -77,6 +77,8 @@ def snapshot_site_config(profile_name: str | None = None) -> dict:
 
 @frappe.whitelist()
 def compare_site_profiles(profile_a: str, profile_b: str) -> dict:
+    frappe.only_for(["System Manager"])
+def compare_site_profiles(profile_a: str, profile_b: str) -> dict:
     """
     Compare two CAPS Site Profiles and return a structured diff.
 
@@ -163,6 +165,8 @@ def compare_with_current(profile_name: str) -> dict:
 
 
 @frappe.whitelist()
+def apply_site_profile(profile_name: str, mode: str = "merge") -> dict:
+    frappe.only_for(["System Manager"])
 def apply_site_profile(profile_name: str, mode: str = "merge") -> dict:
     """
     Apply a stored site profile's configuration to the current site.

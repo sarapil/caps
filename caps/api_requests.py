@@ -24,6 +24,7 @@ def submit_request(
     priority: str = "Medium",
     expires_on: str | None = None,
 ) -> dict:
+    frappe.only_for(["System Manager"])
     """
     Submit a new capability request.
 

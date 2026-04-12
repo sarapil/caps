@@ -46,6 +46,7 @@ def export_config(
     include_policies: bool = True,
     include_groups: bool = True,
 ) -> dict:
+    frappe.only_for(["System Manager"])
     """
     Export CAPS configuration as a JSON-serialisable dict.
 

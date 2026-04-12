@@ -78,6 +78,8 @@ def get_group_tree() -> list[dict]:
 
 @frappe.whitelist()
 def get_group_ancestors(group: str) -> list[str]:
+    frappe.only_for(["System Manager"])
+def get_group_ancestors(group: str) -> list[str]:
     """
     Return ordered list of ancestor groups (parent, grandparent, ...)
     for a given Permission Group.
@@ -110,6 +112,8 @@ def get_group_ancestors(group: str) -> list[str]:
 
 
 @frappe.whitelist()
+def get_group_descendants(group: str) -> list[str]:
+    frappe.only_for(["System Manager"])
 def get_group_descendants(group: str) -> list[str]:
     """
     Return flat list of all descendant groups (children, grandchildren, ...)
@@ -156,6 +160,8 @@ def get_group_descendants(group: str) -> list[str]:
 
 
 @frappe.whitelist()
+def get_effective_members(group: str, include_ancestors: bool = False) -> list[dict]:
+    frappe.only_for(["System Manager"])
 def get_effective_members(group: str, include_ancestors: bool = False) -> list[dict]:
     """
     Return members of a group, optionally including members inherited
@@ -231,6 +237,8 @@ def get_effective_members(group: str, include_ancestors: bool = False) -> list[d
 
 @frappe.whitelist()
 def add_temp_member(group: str, user: str, valid_from: str = None, valid_till: str = None) -> dict:
+    frappe.only_for(["System Manager"])
+def add_temp_member(group: str, user: str, valid_from: str = None, valid_till: str = None) -> dict:
     """
     Add a user to a Permission Group with optional temporary membership dates.
 
@@ -282,6 +290,8 @@ def add_temp_member(group: str, user: str, valid_from: str = None, valid_till: s
 
 
 @frappe.whitelist()
+def get_effective_capabilities(group: str, include_ancestors: bool = False) -> list[dict]:
+    frappe.only_for(["System Manager"])
 def get_effective_capabilities(group: str, include_ancestors: bool = False) -> list[dict]:
     """
     Return capabilities available to members of this group.
