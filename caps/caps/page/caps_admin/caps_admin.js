@@ -202,7 +202,7 @@ class CAPSAdminVisual {
 				callback: () => frappe.show_alert({ message: __("All CAPS caches cleared"), indicator: "green" }) });
 		});
 		this.$body.find("#btn-new-capability").on("click", () => frappe.new_doc("Capability"));
-		this.$body.find("#btn-caps-onboarding").on("click", () => frappe.set_route("caps-onboarding"));
+		this.$body.find("#btn-caps-onboarding").on("click", () => frappe.caps.open_onboarding());
 		this.$body.find("#btn-caps-help").on("click", () => this.show_help());
 	}
 
