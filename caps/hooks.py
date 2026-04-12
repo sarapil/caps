@@ -33,9 +33,9 @@ add_to_apps_screen = [
 # ---------------------------------------------------------------------------
 # Frontend Includes
 # ---------------------------------------------------------------------------
-# CODESPACES: app_include_js = ["/assets/caps/js/caps_combined.js"]
+app_include_js = ["/assets/caps/js/caps_combined.js"]
 
-# CODESPACES: app_include_css = ["/assets/caps/css/caps_combined.css"]
+app_include_css = ["/assets/caps/css/caps_combined.css"]
 
 # ---------------------------------------------------------------------------
 # After Install / Before Uninstall
