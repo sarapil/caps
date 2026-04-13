@@ -25,7 +25,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "CAPS Admin",
+   "label": "Admin",
    "link_count": 0,
    "link_to": "caps-admin",
    "link_type": "Page",
@@ -55,7 +55,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "CAPS Onboarding",
+   "label": "Onboarding",
    "link_count": 0,
    "link_to": "caps-onboarding",
    "link_type": "Page",
@@ -210,7 +210,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "CAPS Site Profile",
+   "label": "Site Profile",
    "link_count": 0,
    "link_to": "CAPS Site Profile",
    "link_type": "DocType",
@@ -220,7 +220,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "CAPS Integration Pack",
+   "label": "Integration Pack",
    "link_count": 0,
    "link_to": "CAPS Integration Pack",
    "link_type": "DocType",
@@ -258,7 +258,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "CAPS Settings",
+   "label": "Settings",
    "link_count": 0,
    "link_to": "CAPS Settings",
    "link_type": "DocType",
@@ -268,7 +268,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "CAPS Audit Log",
+   "label": "Audit Log",
    "link_count": 0,
    "link_to": "CAPS Audit Log",
    "link_type": "DocType",
@@ -307,7 +307,7 @@
   {
    "hidden": 0,
    "is_query_report": 1,
-   "label": "CAPS Audit Report",
+   "label": "Audit Report",
    "link_count": 0,
    "link_to": "CAPS Audit Report",
    "link_type": "Report",
