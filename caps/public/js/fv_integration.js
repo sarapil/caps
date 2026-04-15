@@ -48,7 +48,7 @@
                     { label: __('Active Policies'), status: 'info' }
                 ],
                 documents: [
-                    { 
+                    {
                         label: __('Recent Audit Logs'),
                         href: '/app/caps-audit-log',
                         color: '#6366f1'
@@ -152,14 +152,14 @@
         const duration = 1000;
         const start = 0;
         const startTime = performance.now();
-        
+
         function update(currentTime) {
             const elapsed = currentTime - startTime;
             const progress = Math.min(elapsed / duration, 1);
             const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
             const current = Math.round(start + (targetValue - start) * eased);
             element.textContent = current.toLocaleString();
-            
+
             if (progress < 1) {
                 requestAnimationFrame(update);
             }

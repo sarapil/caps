@@ -9,6 +9,7 @@ This document describes workflows that involve multiple roles interacting in the
 ## CR-001: Capability Request Workflow
 
 ### Participants
+
 - **Requester**: Regular user needing additional capability
 - **Manager**: CAPS Manager approving/rejecting requests
 - **Admin**: System Administrator (escalation)
@@ -28,6 +29,7 @@ This document describes workflows that involve multiple roles interacting in the
 ```
 
 ### Screens Involved
+
 - [capability-request-form](../screens/capability-request-form.md) — Requester
 - [capability-requests](../screens/capability-requests.md) — Manager
 - [dashboard](../screens/dashboard.md) — All roles (pending count badge)
@@ -37,6 +39,7 @@ This document describes workflows that involve multiple roles interacting in the
 ## CR-002: Delegation with Manager Oversight
 
 ### Participants
+
 - **Delegator**: User delegating their capability
 - **Delegate**: User receiving delegated capability
 - **Manager**: Oversight and audit
@@ -56,6 +59,7 @@ This document describes workflows that involve multiple roles interacting in the
 ```
 
 ### Screens Involved
+
 - [delegation-form](../screens/delegation-form.md) — Delegator
 - [my-capabilities](../screens/my-capabilities.md) — Delegate
 - [delegation-review](../screens/delegation-review.md) — Manager
@@ -65,6 +69,7 @@ This document describes workflows that involve multiple roles interacting in the
 ## CR-003: Onboarding New Employee
 
 ### Participants
+
 - **HR**: Creates employee record
 - **IT Admin**: System Administrator
 - **Manager**: Department manager
@@ -89,6 +94,7 @@ This document describes workflows that involve multiple roles interacting in the
 ```
 
 ### Screens Involved
+
 - [permission-group](../screens/permission-group.md) — IT Admin
 - [user-capability-form](../screens/user-capability-form.md) — IT Admin / Manager
 - [my-capabilities](../screens/my-capabilities.md) — Employee
@@ -98,6 +104,7 @@ This document describes workflows that involve multiple roles interacting in the
 ## CR-004: Compliance Audit Process
 
 ### Participants
+
 - **Auditor**: External/internal auditor
 - **Admin**: System Administrator
 - **Manager**: Department managers
@@ -127,6 +134,7 @@ This document describes workflows that involve multiple roles interacting in the
 ```
 
 ### Screens Involved
+
 - [snapshot-export](../screens/snapshot-export.md) — Admin
 - [audit-report](../screens/audit-report.md) — Admin / Auditor
 - [bulk-revocation](../screens/bulk-revocation.md) — Admin
@@ -136,6 +144,7 @@ This document describes workflows that involve multiple roles interacting in the
 ## CR-005: Policy-Based Auto-Provisioning
 
 ### Participants
+
 - **Admin**: Configures policies
 - **System**: Executes policies automatically
 - **Users**: Affected by policy changes
@@ -160,6 +169,7 @@ This document describes workflows that involve multiple roles interacting in the
 ```
 
 ### Screens Involved
+
 - [capability-policy](../screens/capability-policy.md) — Admin
 - [dashboard](../screens/dashboard.md) — Admin
 - [my-capabilities](../screens/my-capabilities.md) — Users
@@ -169,6 +179,7 @@ This document describes workflows that involve multiple roles interacting in the
 ## CR-006: Security Incident Response
 
 ### Participants
+
 - **InfoSec**: Security team
 - **Admin**: System Administrator
 - **Manager**: Department manager
@@ -197,6 +208,7 @@ This document describes workflows that involve multiple roles interacting in the
 ```
 
 ### Screens Involved
+
 - [audit-report](../screens/audit-report.md) — InfoSec
 - [bulk-revocation](../screens/bulk-revocation.md) — Admin
 - [snapshot-export](../screens/snapshot-export.md) — InfoSec

@@ -1,4 +1,5 @@
 # Manager — Usage Scenarios
+
 # سيناريوهات المدير التنفيذي
 
 ## Role Overview

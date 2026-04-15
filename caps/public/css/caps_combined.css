@@ -537,11 +537,11 @@ html[dir="rtl"] body:has(.caps-sidebar:not(.caps-sidebar-collapsed)) .page-conta
 		grid-template-columns: repeat(2, 1fr);
 		gap: 12px;
 	}
-	
+
 	.caps-kpi-value {
 		font-size: 24px;
 	}
-	
+
 	.caps-kpi-icon {
 		font-size: 22px;
 	}

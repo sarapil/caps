@@ -10,18 +10,21 @@
 ## Visual Design
 
 ### frappe_visual Components Used
+
 1. `VisualFormDashboard` — Member count and capability stats
 2. `KanbanBoard` — Drag-and-drop member management
 3. `TreeView` — Group hierarchy visualization
 4. `Sortable` — Reorder group capabilities
 
 ### CSS Effect Classes (minimum 3)
+
 - `.fv-fx-glass` — Group header card
 - `.fv-fx-hover-lift` — Member cards lift on hover
 - `.fv-fx-page-enter` — Form entrance animation
 - `.fv-fx-mouse-glow` — Subtle glow following cursor on form
 
 ### GSAP Animations
+
 - Member avatars fade in with stagger
 - Capability badges animate when added/removed
 - Tree nodes expand with smooth animation
@@ -58,49 +61,54 @@
 
 ## Responsive Behavior
 
-| Breakpoint | Layout Changes |
-|------------|----------------|
-| Desktop (>1200px) | Side-by-side members + hierarchy tree |
-| Tablet (768-1200px) | Tabs for members vs hierarchy |
-| Mobile (<768px) | Full-width member list, tree as modal |
+| Breakpoint          | Layout Changes                        |
+| ------------------- | ------------------------------------- |
+| Desktop (>1200px)   | Side-by-side members + hierarchy tree |
+| Tablet (768-1200px) | Tabs for members vs hierarchy         |
+| Mobile (<768px)     | Full-width member list, tree as modal |
 
 ## Member Management
 
 ```javascript
 // Kanban-style member management
-frappe.visual.kanban('#group-members', {
-    doctype: 'Permission Group Member',
-    filters: { parent: frm.doc.name },
-    columns: [
-        { label: __('Active'), filter: { is_active: 1 } },
-        { label: __('Temporary'), filter: { valid_till: ['is', 'set'] } },
-        { label: __('Expired'), filter: { valid_till: ['<', frappe.datetime.nowdate()] } }
-    ],
-    cardTemplate: (member) => `
+frappe.visual.kanban("#group-members", {
+  doctype: "Permission Group Member",
+  filters: { parent: frm.doc.name },
+  columns: [
+    { label: __("Active"), filter: { is_active: 1 } },
+    { label: __("Temporary"), filter: { valid_till: ["is", "set"] } },
+    {
+      label: __("Expired"),
+      filter: { valid_till: ["<", frappe.datetime.nowdate()] },
+    },
+  ],
+  cardTemplate: (member) => `
         <div class="member-card fv-fx-hover-lift">
             ${frappe.avatar(member.user)}
             <span>${member.full_name}</span>
-            ${member.valid_till ? `<small>Until ${member.valid_till}</small>` : ''}
+            ${member.valid_till ? `<small>Until ${member.valid_till}</small>` : ""}
         </div>
-    `
+    `,
 });
 ```
 
 ## Group Hierarchy Tree
 
 ```javascript
-frappe.visual.tree('#group-hierarchy', {
-    doctype: 'Permission Group',
-    parent_field: 'parent_group',
-    root_filters: { parent_group: ['is', 'not set'] },
-    highlight: frm.doc.name,
-    onNodeClick: (node) => frappe.set_route('Form', 'Permission Group', node.name)
+frappe.visual.tree("#group-hierarchy", {
+  doctype: "Permission Group",
+  parent_field: "parent_group",
+  root_filters: { parent_group: ["is", "not set"] },
+  highlight: frm.doc.name,
+  onNodeClick: (node) =>
+    frappe.set_route("Form", "Permission Group", node.name),
 });
 ```
 
 ## Effective Capabilities Calculation
 
 Shows all capabilities a member receives:
+
 1. Direct group capabilities
 2. Bundle capabilities
 3. Inherited from parent groups
@@ -139,17 +147,17 @@ Effective Capabilities for User in Group:
 
 ## Sync Options (for Auto-Sync groups)
 
-| Sync Source | Query | Frequency |
-|-------------|-------|-----------|
-| Department | `department = "Sales"` | Daily |
-| Branch | `branch = "Dubai"` | Daily |
-| Custom Query | SQL or Frappe filters | Configurable |
+| Sync Source  | Query                  | Frequency    |
+| ------------ | ---------------------- | ------------ |
+| Department   | `department = "Sales"` | Daily        |
+| Branch       | `branch = "Dubai"`     | Daily        |
+| Custom Query | SQL or Frappe filters  | Configurable |
 
 ## Actions
 
-| Action | Permission | Effect |
-|--------|------------|--------|
-| Save | CAPS Admin/Manager | Saves group definition |
-| Sync Members | CAPS Admin | Runs sync query immediately |
-| Clone Group | CAPS Admin | Creates copy with new name |
-| View Members | CAPS Manager | Opens member list view |
+| Action       | Permission         | Effect                      |
+| ------------ | ------------------ | --------------------------- |
+| Save         | CAPS Admin/Manager | Saves group definition      |
+| Sync Members | CAPS Admin         | Runs sync query immediately |
+| Clone Group  | CAPS Admin         | Creates copy with new name  |
+| View Members | CAPS Manager       | Opens member list view      |

@@ -10,18 +10,21 @@
 ## Visual Design
 
 ### frappe_visual Components Used
+
 1. `VisualFormDashboard` — Stats ribbon at form top
 2. `RelationshipExplorer` — Shows capability hierarchy and dependencies
 3. `KanbanBoard` — For managing capability bundles that include this capability
 4. `StatusBadge` — Active/Inactive status indicator
 
 ### CSS Effect Classes (minimum 3)
+
 - `.fv-fx-glass` — Form header card
 - `.fv-fx-hover-shine` — Action buttons shine on hover
 - `.fv-fx-page-enter` — Form slide-in animation
 - `.fv-fx-gradient-text` — Capability name heading
 
 ### GSAP Animations
+
 - Form sections fade in with stagger (0.15s)
 - Save button has success ripple effect
 - Relationship graph nodes animate on load
@@ -63,50 +66,50 @@
 
 ## Responsive Behavior
 
-| Breakpoint | Layout Changes |
-|------------|----------------|
-| Desktop (>1200px) | Side-by-side hierarchy + relationship explorer |
-| Tablet (768-1200px) | Stacked layout, tabs become scrollable |
-| Mobile (<768px) | Single column, relationship explorer as modal |
+| Breakpoint          | Layout Changes                                 |
+| ------------------- | ---------------------------------------------- |
+| Desktop (>1200px)   | Side-by-side hierarchy + relationship explorer |
+| Tablet (768-1200px) | Stacked layout, tabs become scrollable         |
+| Mobile (<768px)     | Single column, relationship explorer as modal  |
 
 ## Form Dashboard Configuration
 
 ```javascript
-frappe.visual.formDashboard('#capability-dashboard', {
-    doctype: 'Capability',
-    docname: frm.doc.name,
-    stats: [
-        {
-            label: __('Users'),
-            doctype: 'User Capability',
-            filters: { capability: frm.doc.name },
-            aggregate: 'count'
-        },
-        {
-            label: __('Bundles'),
-            doctype: 'Capability Bundle Item',
-            filters: { capability: frm.doc.name },
-            aggregate: 'count'
-        },
-        {
-            label: __('Policies'),
-            doctype: 'Capability Policy',
-            filters: { capability: frm.doc.name },
-            aggregate: 'count'
-        }
-    ]
+frappe.visual.formDashboard("#capability-dashboard", {
+  doctype: "Capability",
+  docname: frm.doc.name,
+  stats: [
+    {
+      label: __("Users"),
+      doctype: "User Capability",
+      filters: { capability: frm.doc.name },
+      aggregate: "count",
+    },
+    {
+      label: __("Bundles"),
+      doctype: "Capability Bundle Item",
+      filters: { capability: frm.doc.name },
+      aggregate: "count",
+    },
+    {
+      label: __("Policies"),
+      doctype: "Capability Policy",
+      filters: { capability: frm.doc.name },
+      aggregate: "count",
+    },
+  ],
 });
 ```
 
 ## Relationship Explorer Configuration
 
 ```javascript
-frappe.visual.relationshipExplorer('#cap-relations', {
-    doctype: 'Capability',
-    docname: frm.doc.name,
-    depth: 2,
-    directions: ['up', 'down'],
-    relationTypes: ['parent', 'prerequisite', 'bundle']
+frappe.visual.relationshipExplorer("#cap-relations", {
+  doctype: "Capability",
+  docname: frm.doc.name,
+  depth: 2,
+  directions: ["up", "down"],
+  relationTypes: ["parent", "prerequisite", "bundle"],
 });
 ```
 
@@ -125,6 +128,7 @@ frappe.visual.relationshipExplorer('#cap-relations', {
 ## Contextual Help (❓)
 
 Each section has inline help:
+
 - Hierarchy: "Parent capabilities allow inheritance of permissions"
 - Prerequisites: "Hard prerequisites must be granted before this capability"
 
@@ -136,9 +140,9 @@ Each section has inline help:
 
 ## Actions
 
-| Action | Permission | Effect |
-|--------|------------|--------|
-| Save | CAPS Admin | Saves capability definition |
-| Activate | CAPS Admin | Sets is_active = 1 |
-| Deactivate | CAPS Admin | Sets is_active = 0, warns if users affected |
-| View Graph | All | Opens Graph Explorer focused on this capability |
+| Action     | Permission | Effect                                          |
+| ---------- | ---------- | ----------------------------------------------- |
+| Save       | CAPS Admin | Saves capability definition                     |
+| Activate   | CAPS Admin | Sets is_active = 1                              |
+| Deactivate | CAPS Admin | Sets is_active = 0, warns if users affected     |
+| View Graph | All        | Opens Graph Explorer focused on this capability |

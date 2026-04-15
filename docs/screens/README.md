@@ -5,6 +5,7 @@ This directory contains visual screen design specifications for **CAPS** (Capabi
 ## Design Standards
 
 Every screen MUST comply with:
+
 - At least 1 `frappe_visual` component
 - At least 3 `.fv-fx-*` CSS effect classes
 - GSAP entrance animation (stagger on cards/items)
@@ -16,23 +17,23 @@ Every screen MUST comply with:
 
 ## Screen Index
 
-| Screen | File | Primary Role | Serves Scenarios |
-|--------|------|--------------|-----------------|
-| **Dashboard** | [dashboard.md](dashboard.md) | Admin, Manager | DS-001, CR-001, CR-005 |
-| **Capability Management** | [capability-management.md](capability-management.md) | Admin | DS-002 (Admin), WS-002 (Manager) |
-| **Permission Group** | [permission-group.md](permission-group.md) | Admin, Manager | DS-003, CR-003 |
+| Screen                    | File                                                 | Primary Role   | Serves Scenarios                 |
+| ------------------------- | ---------------------------------------------------- | -------------- | -------------------------------- |
+| **Dashboard**             | [dashboard.md](dashboard.md)                         | Admin, Manager | DS-001, CR-001, CR-005           |
+| **Capability Management** | [capability-management.md](capability-management.md) | Admin          | DS-002 (Admin), WS-002 (Manager) |
+| **Permission Group**      | [permission-group.md](permission-group.md)           | Admin, Manager | DS-003, CR-003                   |
 
 ## Planned Screens (stub placeholders)
 
-| Screen | Status |
-|--------|--------|
-| `capability-requests.md` | ⏳ Planned |
+| Screen                    | Status     |
+| ------------------------- | ---------- |
+| `capability-requests.md`  | ⏳ Planned |
 | `user-capability-form.md` | ⏳ Planned |
-| `my-capabilities.md` | ⏳ Planned |
-| `audit-report.md` | ⏳ Planned |
-| `capability-policy.md` | ⏳ Planned |
-| `delegation-form.md` | ⏳ Planned |
-| `graph-explorer.md` | ⏳ Planned |
+| `my-capabilities.md`      | ⏳ Planned |
+| `audit-report.md`         | ⏳ Planned |
+| `capability-policy.md`    | ⏳ Planned |
+| `delegation-form.md`      | ⏳ Planned |
+| `graph-explorer.md`       | ⏳ Planned |
 
 ## Responsive Matrix
 
@@ -42,18 +43,18 @@ See [responsive-matrix.md](responsive-matrix.md) for breakpoint behavior across 
 
 Primary components from frappe_visual used in CAPS screens:
 
-| Component | Usage |
-|-----------|-------|
-| `scenePresetOffice` | Dashboard header with animated KPIs |
-| `sceneDataBinder` | Live data binding for scene frames |
-| `DataCard` | KPI summary cards |
-| `Sparkline` | 7-day trend mini-charts |
-| `VisualFormDashboard` | Form stats ribbon |
-| `RelationshipExplorer` | Capability hierarchy visualization |
-| `KanbanBoard` | Permission group member management |
-| `TreeView` | Group hierarchy |
-| `NotificationStack` | Alert banners |
-| `StatusBadge` | Active/Inactive indicators |
+| Component              | Usage                               |
+| ---------------------- | ----------------------------------- |
+| `scenePresetOffice`    | Dashboard header with animated KPIs |
+| `sceneDataBinder`      | Live data binding for scene frames  |
+| `DataCard`             | KPI summary cards                   |
+| `Sparkline`            | 7-day trend mini-charts             |
+| `VisualFormDashboard`  | Form stats ribbon                   |
+| `RelationshipExplorer` | Capability hierarchy visualization  |
+| `KanbanBoard`          | Permission group member management  |
+| `TreeView`             | Group hierarchy                     |
+| `NotificationStack`    | Alert banners                       |
+| `StatusBadge`          | Active/Inactive indicators          |
 
 ## CSS Effect Classes
 

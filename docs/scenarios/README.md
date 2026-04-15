@@ -3,29 +3,30 @@
 This directory contains per-role usage scenarios for **CAPS** (Capability-Based Access Control System).
 
 Each scenario file documents:
+
 - Daily / Weekly / Monthly workflows
-- Pre-conditions and expected outcomes  
+- Pre-conditions and expected outcomes
 - Screen references (links to `../screens/`)
 - Device breakpoint compatibility
 - Error scenarios and edge cases
 
 ## Files
 
-| File | Role | Description |
-|------|------|-------------|
-| [admin.md](admin.md) | System Administrator | Setup, configuration, capability management |
-| [manager.md](manager.md) | CAPS Manager | User assignments, request approvals, group management |
-| [user.md](user.md) | Regular User | View capabilities, submit requests, delegation |
-| [cross-role.md](cross-role.md) | Multi-role | Workflows involving multiple participants |
+| File                           | Role                 | Description                                           |
+| ------------------------------ | -------------------- | ----------------------------------------------------- |
+| [admin.md](admin.md)           | System Administrator | Setup, configuration, capability management           |
+| [manager.md](manager.md)       | CAPS Manager         | User assignments, request approvals, group management |
+| [user.md](user.md)             | Regular User         | View capabilities, submit requests, delegation        |
+| [cross-role.md](cross-role.md) | Multi-role           | Workflows involving multiple participants             |
 
 ## Roles Overview — نظرة عامة على الأدوار
 
-| Role | Arabic | Primary Actions |
-|------|--------|-----------------|
+| Role                     | Arabic      | Primary Actions                                   |
+| ------------------------ | ----------- | ------------------------------------------------- |
 | **System Administrator** | مدير النظام | Full system configuration, capability definitions |
-| **CAPS Manager** | مدير CAPS | Approve requests, manage groups, assign bundles |
-| **Regular User** | مستخدم عادي | View own capabilities, submit requests, delegate |
-| **Auditor** | مدقق | View reports, compliance snapshots, audit logs |
+| **CAPS Manager**         | مدير CAPS   | Approve requests, manage groups, assign bundles   |
+| **Regular User**         | مستخدم عادي | View own capabilities, submit requests, delegate  |
+| **Auditor**              | مدقق        | View reports, compliance snapshots, audit logs    |
 
 ## How to Use
 
@@ -46,6 +47,7 @@ Each scenario file documents:
 ## Updating Scenarios
 
 When adding new features to CAPS:
+
 1. Create scenario(s) describing the workflow
 2. Link to screen spec in `../screens/`
 3. Update [cross-role.md](cross-role.md) if multiple roles involved
